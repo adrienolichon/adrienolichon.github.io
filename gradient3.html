@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr" id="text">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gradient</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="author" content="Adrien Olichon">
+
+    <meta name="description" content="Respire">
+    <meta name="keywords" content="Adrien, Olichon, Design">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+
+
+</head>
+
+<body id="genNew3">
+    <div id="grain">
+        <div class="content-rond">
+            <div class="rond" id="rond1"></div>
+            <div class="rond" id="rond2"></div>
+            <div class="rond" id="rond3"></div>
+            <div class="rond" id="rondblack"></div>
+        </div>
+        
+
+    <button id="fullgradient" onclick="openFullscreen();">
+        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24"
+            width="24px">
+            <rect fill="none" height="24" width="24" />
+            <path
+                d="M21,8.59V4c0-0.55-0.45-1-1-1h-4.59c-0.89,0-1.34,1.08-0.71,1.71l1.59,1.59l-10,10l-1.59-1.59C4.08,14.08,3,14.52,3,15.41 V20c0,0.55,0.45,1,1,1h4.59c0.89,0,1.34-1.08,0.71-1.71l-1.59-1.59l10-10l1.59,1.59C19.92,9.92,21,9.48,21,8.59z" />
+        </svg>
+    </button>
+</body>
+<script>
+
+    var rond1 = document.getElementById("rond1");
+    var rond2 = document.getElementById("rond2");
+    var rond3 = document.getElementById("rond3");
+    var rondblack = document.getElementById("rondblack");
+
+
+    var grain = document.getElementById("grain");
+
+    const setBg = () => {
+        const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+        const randomColordeux = Math.floor(Math.random() * 16777215).toString(16);
+
+        const randomColorrondun1 = Math.floor(Math.random() * 16777215).toString(16);
+        const randomColorronddeux1 = Math.floor(Math.random() * 16777215).toString(16);
+
+        const randomColorrondun2 = Math.floor(Math.random() * 16777215).toString(16);
+        const randomColorronddeux2 = Math.floor(Math.random() * 16777215).toString(16);
+
+        const randomColorrondun3 = Math.floor(Math.random() * 16777215).toString(16);
+        const randomColorronddeux3 = Math.floor(Math.random() * 16777215).toString(16);
+
+
+        grain.style.background = "radial-gradient(#" + randomColor + ", #" + randomColordeux + ")";
+        
+        rond1.style.background = "radial-gradient(#" + randomColorrondun1 + ", #" + randomColorronddeux1 + ")";
+        rond2.style.background = "radial-gradient(#" + randomColorrondun2 + ", #" + randomColorronddeux2 + ")";
+        rond3.style.background = "radial-gradient(#" + randomColorrondun3 + ", #" + randomColorronddeux3 + ")";
+        
+        
+    }
+    genNew3.addEventListener("click", setBg);
+    setBg();
+
+    var elemun = document.getElementById("grain");
+
+    /* When the openFullscreen() function is executed, open the video in fullscreen.
+    Note that we must include prefixes for different browsers, as they don't support the requestFullscreen method yet */
+    function openFullscreen() {
+        if (elemun.requestFullscreen) {
+            elemun.requestFullscreen();
+        } else if (elemun.webkitRequestFullscreen) { /* Safari */
+            elemun.webkitRequestFullscreen();
+
+        } else if (elemun.msRequestFullscreen) { /* IE11 */
+            elemun.msRequestFullscreen();
+        }
+    }
+
+</script>
+</body>

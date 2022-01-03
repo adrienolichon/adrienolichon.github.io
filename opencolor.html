@@ -1,0 +1,1766 @@
+<!DOCTYPE html>
+<html lang="fr" id="text">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Open color</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="author" content="Adrien Olichon">
+
+    <meta name="description" content="Open color">
+    <meta name="keywords" content="Adrien, Olichon, Design">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+
+
+</head>
+
+<body class="opencolor">
+    <header class="nom-nop">
+        <div class="section-content">
+            <div class="header-content">
+
+                <div class="link-header">
+                    <a class="home" href="https://adrien.static.app">
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                        <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+                            style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0 {
+                                    fill: none;
+                                }
+                            </style>
+                           
+                            <g>
+                                <g>
+                                    <path d="M21.7,6.8l-7.9-5.6c-1.1-0.8-2.6-0.8-3.6,0L2.3,6.8C1.5,7.4,1,8.3,1,9.3v12.5c0,0.9,0.7,1.6,1.6,1.6h6.3V14h6.3v9.4h6.3
+			c0.9,0,1.6-0.7,1.6-1.6V9.3C23,8.3,22.5,7.4,21.7,6.8z" />
+                                </g>
+                            </g>
+                        </svg>
+
+                    </a>
+                    <a class="header-title" href="opencolor">
+                        Open color
+                    </a>
+                </div>
+                <div class="theme-switch-wrapper">
+					<label class="theme-switch" for="checkbox">
+						<input type="checkbox" id="checkbox" />
+						<span class="slider round">
+							<span class="svg">
+								<svg xmlns='http://www.w3.org/2000/svg' class='ionicon moon' viewBox='0 0 512 512'>
+									<title>Sombre</title>
+									<path
+										d='M264 480A232 232 0 0132 248c0-94 54-178.28 137.61-214.67a16 16 0 0121.06 21.06C181.07 76.43 176 104.66 176 136c0 110.28 89.72 200 200 200 31.34 0 59.57-5.07 81.61-14.67a16 16 0 0121.06 21.06C442.28 426 358 480 264 480z' />
+								</svg>
+								<svg xmlns='http://www.w3.org/2000/svg' class='ionicon light' viewBox='0 0 512 512'>
+									<title>Clair</title>
+									<path
+										d='M256 118a22 22 0 01-22-22V48a22 22 0 0144 0v48a22 22 0 01-22 22zM256 486a22 22 0 01-22-22v-48a22 22 0 0144 0v48a22 22 0 01-22 22zM369.14 164.86a22 22 0 01-15.56-37.55l33.94-33.94a22 22 0 0131.11 31.11l-33.94 33.94a21.93 21.93 0 01-15.55 6.44zM108.92 425.08a22 22 0 01-15.55-37.56l33.94-33.94a22 22 0 1131.11 31.11l-33.94 33.94a21.94 21.94 0 01-15.56 6.45zM464 278h-48a22 22 0 010-44h48a22 22 0 010 44zM96 278H48a22 22 0 010-44h48a22 22 0 010 44zM403.08 425.08a21.94 21.94 0 01-15.56-6.45l-33.94-33.94a22 22 0 0131.11-31.11l33.94 33.94a22 22 0 01-15.55 37.56zM142.86 164.86a21.89 21.89 0 01-15.55-6.44l-33.94-33.94a22 22 0 0131.11-31.11l33.94 33.94a22 22 0 01-15.56 37.55zM256 358a102 102 0 11102-102 102.12 102.12 0 01-102 102z' />
+								</svg>
+							</span>
+						</span>
+					</label>
+				</div>
+				<!--
+				<a class="mail" href="mailto:olichon.adrien@gmail.com">
+					olichon.adrien@gmail.com
+				</a>
+				<a class="mailresponsive" href="mailto:olichon.adrien@gmail.com">
+					Mail<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'>
+						<title>Mail</title>
+						<path fill='#126EE6'
+							d='M424 80H88a56.06 56.06 0 00-56 56v240a56.06 56.06 0 0056 56h336a56.06 56.06 0 0056-56V136a56.06 56.06 0 00-56-56zm-14.18 92.63l-144 112a16 16 0 01-19.64 0l-144-112a16 16 0 1119.64-25.26L256 251.73l134.18-104.36a16 16 0 0119.64 25.26z' />
+					</svg>
+				</a>
+				-->
+
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="first-section">
+            <div class="section-content">
+                <div class="pb20">
+                    <h1 class="page-title nom-nop">Open color</h1>
+                    <p>
+                        Cette page est une reproduction de ce site : <a class="gitlink"
+                            href="https://yeun.github.io/open-color/" target="_blank"
+                            rel="noopener">https://yeun.github.io/open-color/</a>
+                    </p>
+                </div>
+                <h3 class="nom-nop pb10">
+                    Grey
+                </h3>
+                <div class="grid grid5">
+                    <div class="color-item">
+                        <div class="color" style="background-color: #f8f9fa;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Grey 0
+                            </p>
+                            <p class="hexa nom-nop">
+                                #f8f9fa
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="color-item">
+                        <div class="color" style="background-color: #f1f3f5;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Grey 1
+                            </p>
+                            <p class="hexa nom-nop">
+                                #f1f3f5
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #e9ecef;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Grey 2
+                            </p>
+                            <p class="hexa nom-nop">
+                                #e9ecef
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #dee2e6;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Grey 3
+                            </p>
+                            <p class="hexa nom-nop">
+                                #dee2e6
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #ced4da;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Grey 4
+                            </p>
+                            <p class="hexa nom-nop">
+                                #ced4da
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #adb5bd;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Grey 5
+                            </p>
+                            <p class="hexa nom-nop">
+                                #adb5bd
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #868e96;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Grey 6
+                            </p>
+                            <p class="hexa nom-nop">
+                                #868e96
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #495057;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Grey 7
+                            </p>
+                            <p class="hexa nom-nop">
+                                #495057
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #343a40;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Grey 8
+                            </p>
+                            <p class="hexa nom-nop">
+                                #343a40
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #212529;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Grey 9
+                            </p>
+                            <p class="hexa nom-nop">
+                                #212529
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="nom-nop pb10">
+                    Red
+                </h3>
+                <div class="grid grid5">
+                    <div class="color-item">
+                        <div class="color" style="background-color: #fff5f5;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Red 0
+                            </p>
+                            <p class="hexa nom-nop">
+                                #fff5f5
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="color-item">
+                        <div class="color" style="background-color: #ffe3e3;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Red 1
+                            </p>
+                            <p class="hexa nom-nop">
+                                #ffe3e3
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #ffc9c9;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Red 2
+                            </p>
+                            <p class="hexa nom-nop">
+                                #ffc9c9
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #ffa8a8;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Red 3
+                            </p>
+                            <p class="hexa nom-nop">
+                                #ffa8a8
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #ff8787;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Red 4
+                            </p>
+                            <p class="hexa nom-nop">
+                                #ff8787
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #ff6b6b;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Red 5
+                            </p>
+                            <p class="hexa nom-nop">
+                                #ff6b6b
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #fa5252;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Red 6
+                            </p>
+                            <p class="hexa nom-nop">
+                                #fa5252
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #f03e3e;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Red 7
+                            </p>
+                            <p class="hexa nom-nop">
+                                #f03e3e
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #e03131;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Red 8
+                            </p>
+                            <p class="hexa nom-nop">
+                                #e03131
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #c92a2a;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Red 9
+                            </p>
+                            <p class="hexa nom-nop">
+                                #c92a2a
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="nom-nop pb10">
+                    Pink
+                </h3>
+                <div class="grid grid5">
+                    <div class="color-item">
+                        <div class="color" style="background-color: #fff0f6;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Pink 0
+                            </p>
+                            <p class="hexa nom-nop">
+                                #fff0f6
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="color-item">
+                        <div class="color" style="background-color: #ffdeeb;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Pink 1
+                            </p>
+                            <p class="hexa nom-nop">
+                                #ffdeeb
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #fcc2d7;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Pink 2
+                            </p>
+                            <p class="hexa nom-nop">
+                                #fcc2d7
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #faa2c1;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Pink 3
+                            </p>
+                            <p class="hexa nom-nop">
+                                #faa2c1
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #f783ac;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Pink 4
+                            </p>
+                            <p class="hexa nom-nop">
+                                #f783ac
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #f06595;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Pink 5
+                            </p>
+                            <p class="hexa nom-nop">
+                                #f06595
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #e64980;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Pink 6
+                            </p>
+                            <p class="hexa nom-nop">
+                                #e64980
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #d6336c;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Pink 7
+                            </p>
+                            <p class="hexa nom-nop">
+                                #d6336c
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #c2255c;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Pink 8
+                            </p>
+                            <p class="hexa nom-nop">
+                                #c2255c
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #a61e4d;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Pink 9
+                            </p>
+                            <p class="hexa nom-nop">
+                                #a61e4d
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="nom-nop pb10">
+                    Grape
+                </h3>
+                <div class="grid grid5">
+                    <div class="color-item">
+                        <div class="color" style="background-color: #f8f0fc;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Grape 0
+                            </p>
+                            <p class="hexa nom-nop">
+                                #f8f0fc
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="color-item">
+                        <div class="color" style="background-color: #f3d9fa;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Grape 1
+                            </p>
+                            <p class="hexa nom-nop">
+                                #f3d9fa
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #eebefa;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Grape 2
+                            </p>
+                            <p class="hexa nom-nop">
+                                #eebefa
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #e599f7;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Grape 3
+                            </p>
+                            <p class="hexa nom-nop">
+                                #e599f7
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #da77f2;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Grape 4
+                            </p>
+                            <p class="hexa nom-nop">
+                                #da77f2
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #cc5de8;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Grape 5
+                            </p>
+                            <p class="hexa nom-nop">
+                                #cc5de8
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #be4bdb;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Grape 6
+                            </p>
+                            <p class="hexa nom-nop">
+                                #be4bdb
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #ae3ec9;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Grape 7
+                            </p>
+                            <p class="hexa nom-nop">
+                                #ae3ec9
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #9c36b5;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Grape 8
+                            </p>
+                            <p class="hexa nom-nop">
+                                #9c36b5
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #862e9c;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Grape 9
+                            </p>
+                            <p class="hexa nom-nop">
+                                #862e9c
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="nom-nop pb10">
+                    Violet
+                </h3>
+                <div class="grid grid5">
+                    <div class="color-item">
+                        <div class="color" style="background-color: #f3f0ff;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Violet 0
+                            </p>
+                            <p class="hexa nom-nop">
+                                #f3f0ff
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="color-item">
+                        <div class="color" style="background-color: #e5dbff;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Violet 1
+                            </p>
+                            <p class="hexa nom-nop">
+                                #e5dbff
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #d0bfff;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Violet 2
+                            </p>
+                            <p class="hexa nom-nop">
+                                #d0bfff
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #b197fc;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Violet 3
+                            </p>
+                            <p class="hexa nom-nop">
+                                #b197fc
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #9775fa;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Violet 4
+                            </p>
+                            <p class="hexa nom-nop">
+                                #9775fa
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #845ef7;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Violet 5
+                            </p>
+                            <p class="hexa nom-nop">
+                                #845ef7
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #7950f2;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Violet 6
+                            </p>
+                            <p class="hexa nom-nop">
+                                #7950f2
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #7048e8;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Violet 7
+                            </p>
+                            <p class="hexa nom-nop">
+                                #7048e8
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #6741d9;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Violet 8
+                            </p>
+                            <p class="hexa nom-nop">
+                                #6741d9
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #5f3dc4;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Violet 9
+                            </p>
+                            <p class="hexa nom-nop">
+                                #5f3dc4
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="nom-nop pb10">
+                    Indigo
+                </h3>
+                <div class="grid grid5">
+                    <div class="color-item">
+                        <div class="color" style="background-color: #edf2ff;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Indigo 0
+                            </p>
+                            <p class="hexa nom-nop">
+                                #edf2ff
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="color-item">
+                        <div class="color" style="background-color: #dbe4ff;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Indigo 1
+                            </p>
+                            <p class="hexa nom-nop">
+                                #dbe4ff
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #bac8ff;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Indigo 2
+                            </p>
+                            <p class="hexa nom-nop">
+                                #bac8ff
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #91a7ff;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Indigo 3
+                            </p>
+                            <p class="hexa nom-nop">
+                                #91a7ff
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #748ffc;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Indigo 4
+                            </p>
+                            <p class="hexa nom-nop">
+                                #748ffc
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #5c7cfa;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Indigo 5
+                            </p>
+                            <p class="hexa nom-nop">
+                                #5c7cfa
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #4c6ef5;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Indigo 6
+                            </p>
+                            <p class="hexa nom-nop">
+                                #4c6ef5
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #4263eb;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Indigo 7
+                            </p>
+                            <p class="hexa nom-nop">
+                                #4263eb
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #3b5bdb;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Indigo 8
+                            </p>
+                            <p class="hexa nom-nop">
+                                #3b5bdb
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #364fc7;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Indigo 9
+                            </p>
+                            <p class="hexa nom-nop">
+                                #364fc7
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="nom-nop pb10">
+                    Blue
+                </h3>
+                <div class="grid grid5">
+                    <div class="color-item">
+                        <div class="color" style="background-color: #e7f5ff;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Blue 0
+                            </p>
+                            <p class="hexa nom-nop">
+                                #e7f5ff
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="color-item">
+                        <div class="color" style="background-color: #d0ebff;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Blue 1
+                            </p>
+                            <p class="hexa nom-nop">
+                                #d0ebff
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #a5d8ff;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Blue 2
+                            </p>
+                            <p class="hexa nom-nop">
+                                #a5d8ff
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #74c0fc;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Blue 3
+                            </p>
+                            <p class="hexa nom-nop">
+                                #74c0fc
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #4dabf7;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Blue 4
+                            </p>
+                            <p class="hexa nom-nop">
+                                #4dabf7
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #339af0;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Blue 5
+                            </p>
+                            <p class="hexa nom-nop">
+                                #339af0
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #228be6;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Blue 6
+                            </p>
+                            <p class="hexa nom-nop">
+                                #228be6
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #1c7ed6;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Blue 7
+                            </p>
+                            <p class="hexa nom-nop">
+                                #1c7ed6
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #1971c2;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Blue 8
+                            </p>
+                            <p class="hexa nom-nop">
+                                #1971c2
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #1864ab;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Blue 9
+                            </p>
+                            <p class="hexa nom-nop">
+                                #1864ab
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="nom-nop pb10">
+                    Cyan
+                </h3>
+                <div class="grid grid5">
+                    <div class="color-item">
+                        <div class="color" style="background-color: #e3fafc;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Cyan 0
+                            </p>
+                            <p class="hexa nom-nop">
+                                #e3fafc
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="color-item">
+                        <div class="color" style="background-color: #c5f6fa;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Cyan 1
+                            </p>
+                            <p class="hexa nom-nop">
+                                #c5f6fa
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #99e9f2;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Cyan 2
+                            </p>
+                            <p class="hexa nom-nop">
+                                #99e9f2
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #66d9e8;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Cyan 3
+                            </p>
+                            <p class="hexa nom-nop">
+                                #66d9e8
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #3bc9db;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Cyan 4
+                            </p>
+                            <p class="hexa nom-nop">
+                                #3bc9db
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #22b8cf;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Cyan 5
+                            </p>
+                            <p class="hexa nom-nop">
+                                #22b8cf
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #15aabf;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Cyan 6
+                            </p>
+                            <p class="hexa nom-nop">
+                                #15aabf
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #1098ad;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Cyan 7
+                            </p>
+                            <p class="hexa nom-nop">
+                                #1098ad
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #0c8599;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Cyan 8
+                            </p>
+                            <p class="hexa nom-nop">
+                                #0c8599
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #0b7285;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Cyan 9
+                            </p>
+                            <p class="hexa nom-nop">
+                                #0b7285
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="nom-nop pb10">
+                    Teal
+                </h3>
+                <div class="grid grid5">
+                    <div class="color-item">
+                        <div class="color" style="background-color: #e6fcf5;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Teal 0
+                            </p>
+                            <p class="hexa nom-nop">
+                                #e6fcf5
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="color-item">
+                        <div class="color" style="background-color: #c3fae8;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Teal 1
+                            </p>
+                            <p class="hexa nom-nop">
+                                #c3fae8
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #96f2d7;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Teal 2
+                            </p>
+                            <p class="hexa nom-nop">
+                                #96f2d7
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #63e6be;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Teal 3
+                            </p>
+                            <p class="hexa nom-nop">
+                                #63e6be
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #38d9a9;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Teal 4
+                            </p>
+                            <p class="hexa nom-nop">
+                                #38d9a9
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #20c997;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Teal 5
+                            </p>
+                            <p class="hexa nom-nop">
+                                #20c997
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #12b886;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Teal 6
+                            </p>
+                            <p class="hexa nom-nop">
+                                #12b886
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #0ca678;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Teal 7
+                            </p>
+                            <p class="hexa nom-nop">
+                                #0ca678
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #099268;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Teal 8
+                            </p>
+                            <p class="hexa nom-nop">
+                                #099268
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #087f5b;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Teal 9
+                            </p>
+                            <p class="hexa nom-nop">
+                                #087f5b
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="nom-nop pb10">
+                    Green
+                </h3>
+                <div class="grid grid5">
+                    <div class="color-item">
+                        <div class="color" style="background-color: #ebfbee;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Green 0
+                            </p>
+                            <p class="hexa nom-nop">
+                                #ebfbee
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="color-item">
+                        <div class="color" style="background-color: #d3f9d8;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Green 1
+                            </p>
+                            <p class="hexa nom-nop">
+                                #d3f9d8
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #d3f9d8;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Green 2
+                            </p>
+                            <p class="hexa nom-nop">
+                                #d3f9d8
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #8ce99a;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Green 3
+                            </p>
+                            <p class="hexa nom-nop">
+                                #8ce99a
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #69db7c;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Green 4
+                            </p>
+                            <p class="hexa nom-nop">
+                                #69db7c
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #51cf66;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Green 5
+                            </p>
+                            <p class="hexa nom-nop">
+                                #51cf66
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #40c057;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Green 6
+                            </p>
+                            <p class="hexa nom-nop">
+                                #40c057
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #37b24d;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Green 7
+                            </p>
+                            <p class="hexa nom-nop">
+                                #37b24d
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #2f9e44;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Green 8
+                            </p>
+                            <p class="hexa nom-nop">
+                                #2f9e44
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #2b8a3e;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Green 9
+                            </p>
+                            <p class="hexa nom-nop">
+                                #2b8a3e
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="nom-nop pb10">
+                    Lime
+                </h3>
+                <div class="grid grid5">
+                    <div class="color-item">
+                        <div class="color" style="background-color: #f4fce3;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Lime 0
+                            </p>
+                            <p class="hexa nom-nop">
+                                #f4fce3
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="color-item">
+                        <div class="color" style="background-color: #e9fac8;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Lime 1
+                            </p>
+                            <p class="hexa nom-nop">
+                                #e9fac8
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #d8f5a2;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Lime 2
+                            </p>
+                            <p class="hexa nom-nop">
+                                #d8f5a2
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #c0eb75;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Lime 3
+                            </p>
+                            <p class="hexa nom-nop">
+                                #c0eb75
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #a9e34b;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Lime 4
+                            </p>
+                            <p class="hexa nom-nop">
+                                #a9e34b
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #94d82d;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Lime 5
+                            </p>
+                            <p class="hexa nom-nop">
+                                #94d82d
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #82c91e;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Lime 6
+                            </p>
+                            <p class="hexa nom-nop">
+                                #82c91e
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #74b816;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Lime 7
+                            </p>
+                            <p class="hexa nom-nop">
+                                #74b816
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #66a80f;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Lime 8
+                            </p>
+                            <p class="hexa nom-nop">
+                                #66a80f
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #5c940d;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Lime 9
+                            </p>
+                            <p class="hexa nom-nop">
+                                #5c940d
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="nom-nop pb10">
+                    Yellow
+                </h3>
+                <div class="grid grid5">
+                    <div class="color-item">
+                        <div class="color" style="background-color: #fff9db;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Yellow 0
+                            </p>
+                            <p class="hexa nom-nop">
+                                #fff9db
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="color-item">
+                        <div class="color" style="background-color: #fff3bf;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Yellow 1
+                            </p>
+                            <p class="hexa nom-nop">
+                                #fff3bf
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #ffec99;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Yellow 2
+                            </p>
+                            <p class="hexa nom-nop">
+                                #ffec99
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #ffe066;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Yellow 3
+                            </p>
+                            <p class="hexa nom-nop">
+                                #ffe066
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #ffd43b;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Yellow 4
+                            </p>
+                            <p class="hexa nom-nop">
+                                #ffd43b
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #fcc419;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Yellow 5
+                            </p>
+                            <p class="hexa nom-nop">
+                                #fcc419
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #fab005;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Yellow 6
+                            </p>
+                            <p class="hexa nom-nop">
+                                #fab005
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #f59f00;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Yellow 7
+                            </p>
+                            <p class="hexa nom-nop">
+                                #f59f00
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #f08c00;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Yellow 8
+                            </p>
+                            <p class="hexa nom-nop">
+                                #f08c00
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #e67700;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Yellow 9
+                            </p>
+                            <p class="hexa nom-nop">
+                                #e67700
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="nom-nop pb10">
+                    Orange
+                </h3>
+                <div class="grid grid5">
+                    <div class="color-item">
+                        <div class="color" style="background-color: #fff4e6;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Orange 0
+                            </p>
+                            <p class="hexa nom-nop">
+                                #fff4e6
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="color-item">
+                        <div class="color" style="background-color: #ffe8cc;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Orange 1
+                            </p>
+                            <p class="hexa nom-nop">
+                                #ffe8cc
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #ffd8a8;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Orange 2
+                            </p>
+                            <p class="hexa nom-nop">
+                                #ffd8a8
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #ffc078;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Orange 3
+                            </p>
+                            <p class="hexa nom-nop">
+                                #ffc078
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #ffa94d;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Orange 4
+                            </p>
+                            <p class="hexa nom-nop">
+                                #ffa94d
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #ff922b;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Orange 5
+                            </p>
+                            <p class="hexa nom-nop">
+                                #ff922b
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #fd7e14;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Orange 6
+                            </p>
+                            <p class="hexa nom-nop">
+                                #fd7e14
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #f76707;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Orange 7
+                            </p>
+                            <p class="hexa nom-nop">
+                                #f76707
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #e8590c;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Orange 8
+                            </p>
+                            <p class="hexa nom-nop">
+                                #e8590c
+                            </p>
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <div class="color" style="background-color: #d9480f;">
+                        </div>
+                        <div class="color-data">
+                            <p class="name nom-nop">
+                                Orange 9
+                            </p>
+                            <p class="hexa nom-nop">
+                                #d9480f
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer>
+		<button class="secret" onclick="gridshow();">
+			Grille
+		</button>
+
+    </footer>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
