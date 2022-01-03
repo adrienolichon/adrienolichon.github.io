@@ -460,12 +460,14 @@ button {
 						svg{
 							margin: auto;
 							width: 24px;
+							//transition: var(--transition1);
 						}
 						@media (hover: hover) {
 							&:hover {
 								background-color: rgb(var(--blue));
 								svg path{
 									fill:var(--white);
+									transition: var(--transition1);
 								}
 							}
 						}

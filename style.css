@@ -491,6 +491,7 @@ button {
   }
   .section-intro-index .section-content .grid .tile .grid-photo-mail .mail-intro:hover svg path {
     fill: var(--white);
+    transition: var(--transition1);
   }
 }
 .section-intro-index .section-content .grid .tile h2 {
