@@ -97,7 +97,7 @@ html {
 .mauto {
 	margin: auto;
 }
-.mtbautto {
+.mtbauto {
 	margin: auto 0;
 }
 .mb0 {
@@ -700,9 +700,11 @@ button {
 	min-height: 100px;
 	background-color: var(--white);
 	border-radius: var(--radius-large);
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 4px;
 	transition: var(--transition1);
+
 	/*
 	background-color: var(--bgmain);
 	border: 1px solid var(--black4);
@@ -723,8 +725,12 @@ button {
 		transition: var(--transition1);
 		@media (hover: hover) {
 			&:hover {
-				background-color: var(--buttonhover);
+				//background-color: var(--buttonhover);
 				padding: 16px;
+
+				background-color: transparent;
+				border:1px solid rgb(var(--blue));
+				//transform: scale(1.04);
 			}
 		}
 		p {
@@ -742,35 +748,19 @@ button {
 				color: var(--colortext);
 				opacity: 1;
 			}
-			&:before {
-				content: url(icon/open.svg);
-				position: absolute;
-				right: -20px;
-				top: 2.5px;
-				width: 20px;
-				height: 20px;
-				opacity: 0;
-				transition: var(--transition1);
-				transform-origin: left;
-			}
 		}
+		
 		@media (hover: hover) {
 			&:hover {
 				p {
 					color: rgb(var(--blue));
 				}
-				span {
-					&:before {
-						right: 0;
-						opacity: 1;
-					}
-				}
 				svg {
-					opacity: 0;
-					margin-right: 20px;
+					color: rgb(var(--blue));
 				}
 			}
 		}
+		
 	}
 	.half-table {
 		display: grid;
@@ -792,7 +782,7 @@ button {
 			padding-left: 0;
 			border-radius: var(--radius-large);
 			&:first-child {
-				padding-right: 16px;
+				//padding-right: 16px;
 				padding-left: 0;
 			}
 			&:last-child {
@@ -804,8 +794,12 @@ button {
 					border-left: 1px solid transparent;
 					border-right: 1px solid transparent;
 					border-radius: var(--radius-large);
-					background-color: var(--buttonhover);
+					//background-color: var(--buttonhover);
 					padding: 16px;
+
+					background-color: transparent;
+					border:1px solid rgb(var(--blue));
+					transform: scale(1.04);
 				}
 			}
 		}
@@ -1134,7 +1128,7 @@ input:checked + .slider .moon {
 input:checked + .slider .light {
 	transform: translateX(-16px);
 }
-
+/*
 .lien-tableau {
 	border-radius: var(--radius-large);
 	display: block;
@@ -1164,36 +1158,21 @@ input:checked + .slider .light {
 			color: var(--colortext);
 			opacity: 1;
 		}
-		&:before {
-			content: url(icon/open.svg);
-			position: absolute;
-			right: -20px;
-			top: 2.5px;
-			width: 20px;
-			height: 20px;
-			opacity: 0;
-			transition: var(--transition1);
-			transform-origin: left;
-		}
 	}
+
 	@media (hover: hover) {
 		&:hover {
 			h3 {
 				color: rgb(var(--blue));
 			}
-			span {
-				&:before {
-					right: 0;
-					opacity: 1;
-				}
-			}
 			svg {
-				opacity: 0;
-				margin-right: 20px;
+				color: rgb(var(--blue));
 			}
 		}
 	}
+
 }
+*/
 
 .recette {
 	.title-categorie {
