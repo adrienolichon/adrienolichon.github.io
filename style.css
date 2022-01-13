@@ -809,7 +809,6 @@ button {
     padding: 16px;
     background-color: transparent;
     border: 1px solid rgb(var(--blue));
-    transform: scale(1.04);
   }
 }
 
