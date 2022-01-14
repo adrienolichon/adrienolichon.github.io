@@ -725,6 +725,8 @@ button {
   grid-template-columns: 1fr;
   grid-gap: 4px;
   transition: var(--transition1);
+  grid-auto-rows: -webkit-min-content;
+  grid-auto-rows: min-content;
   /*
   background-color: var(--bgmain);
   border: 1px solid var(--black4);
@@ -748,7 +750,7 @@ button {
   .tile-tableau .lien-tableau:hover {
     padding: 16px;
     background-color: transparent;
-    border: 1px solid rgb(var(--blue));
+    box-shadow: 0 0 0 3px rgb(var(--blue));
   }
 }
 .tile-tableau .lien-tableau p {
@@ -770,6 +772,7 @@ button {
 @media (hover: hover) {
   .tile-tableau .lien-tableau:hover p {
     color: rgb(var(--blue));
+    font-weight: 600;
   }
   .tile-tableau .lien-tableau:hover svg {
     color: rgb(var(--blue));
@@ -808,7 +811,7 @@ button {
     border-radius: var(--radius-large);
     padding: 16px;
     background-color: transparent;
-    border: 1px solid rgb(var(--blue));
+    box-shadow: 0 0 0 3px rgb(var(--blue));
   }
 }
 
