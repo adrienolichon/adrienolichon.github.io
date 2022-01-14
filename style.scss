@@ -716,10 +716,6 @@ button {
 		width: 100%;
 		min-height: 36px;
 		padding: 16px 0;
-		border-top: 1px solid transparent;
-		border-left: 1px solid transparent;
-		border-right: 1px solid transparent;
-		border-bottom: 1px solid transparent;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
@@ -794,8 +790,6 @@ button {
 
 			@media (hover: hover) {
 				&:hover {
-					border-left: 1px solid transparent;
-					border-right: 1px solid transparent;
 					border-radius: var(--radius-large);
 					//background-color: var(--buttonhover);
 					padding: 16px;
