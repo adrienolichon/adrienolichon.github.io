@@ -687,6 +687,13 @@ button {
 		}
 	}
 }
+.tile-hover{
+	@media (hover: hover) {
+		&:hover {
+			box-shadow: 0 0 0 3px rgb(var(--blue));
+		}
+	}
+}
 .tile-item-1 {
 	width: 980px;
 }
