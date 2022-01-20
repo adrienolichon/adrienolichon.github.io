@@ -20,6 +20,7 @@
   --warning-rgb: 255, 198, 52;
   --radius-large: 14px;
   --radius-small: 7px;
+  --radius-medum: 10px;
 }
 
 [data-theme=dark] {

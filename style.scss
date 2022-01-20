@@ -19,6 +19,7 @@
 	--warning-rgb: 255, 198, 52;
 	--radius-large: 14px;
 	--radius-small: 7px;
+	--radius-medum: 10px;
 }
 [data-theme="dark"] {
 	--white: #1c1c1e;
@@ -40,7 +41,6 @@
 	--warning-rgb: 255, 198, 52;
 
 	header {
-		//box-shadow: 0 10px 50px rgb(255 255 255 / 30%);
 		border: 1px solid rgba(255, 255, 255, 0.5);
 		border-top: 0px solid transparent;
 	}
