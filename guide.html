@@ -1,0 +1,1600 @@
+<!DOCTYPE html>
+<html lang="fr" id="text">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Guide</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="style.css" rel="stylesheet" type="text/css">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="author" content="Adrien Olichon">
+
+	<meta name="description" content="Guide">
+	<meta name="keywords" content="Adrien, Olichon, Design">
+
+	<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+
+
+</head>
+
+<body class="guide">
+	<header class="nom-nop">
+		<div class="section-content">
+			<div class="header-content">
+
+				<div class="link-header">
+					<a class="home" href="https://adrienolichon.github.io">
+						<?xml version="1.0" encoding="utf-8"?>
+						<!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+						<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+							style="enable-background:new 0 0 24 24;" xml:space="preserve">
+							<style type="text/css">
+								.st0 {
+									fill: none;
+								}
+							</style>
+							<g>
+								<path class="st0" d="M0,0h24v24H0V0z" />
+							</g>
+							<g>
+								<g>
+									<path d="M21.7,6.8l-7.9-5.6c-1.1-0.8-2.6-0.8-3.6,0L2.3,6.8C1.5,7.4,1,8.3,1,9.3v12.5c0,0.9,0.7,1.6,1.6,1.6h6.3V14h6.3v9.4h6.3
+			c0.9,0,1.6-0.7,1.6-1.6V9.3C23,8.3,22.5,7.4,21.7,6.8z" />
+								</g>
+							</g>
+						</svg>
+
+					</a>
+					<a class="header-title" href="opencolor">
+						Guide
+					</a>
+				</div>
+				<div class="theme-switch-wrapper">
+					<label class="theme-switch" for="checkbox">
+						<input type="checkbox" id="checkbox" />
+						<span class="slider round">
+							<span class="svg">
+								<svg xmlns='http://www.w3.org/2000/svg' class='ionicon moon' viewBox='0 0 512 512'>
+									<title>Sombre</title>
+									<path
+										d='M264 480A232 232 0 0132 248c0-94 54-178.28 137.61-214.67a16 16 0 0121.06 21.06C181.07 76.43 176 104.66 176 136c0 110.28 89.72 200 200 200 31.34 0 59.57-5.07 81.61-14.67a16 16 0 0121.06 21.06C442.28 426 358 480 264 480z' />
+								</svg>
+								<svg xmlns='http://www.w3.org/2000/svg' class='ionicon light' viewBox='0 0 512 512'>
+									<title>Clair</title>
+									<path
+										d='M256 118a22 22 0 01-22-22V48a22 22 0 0144 0v48a22 22 0 01-22 22zM256 486a22 22 0 01-22-22v-48a22 22 0 0144 0v48a22 22 0 01-22 22zM369.14 164.86a22 22 0 01-15.56-37.55l33.94-33.94a22 22 0 0131.11 31.11l-33.94 33.94a21.93 21.93 0 01-15.55 6.44zM108.92 425.08a22 22 0 01-15.55-37.56l33.94-33.94a22 22 0 1131.11 31.11l-33.94 33.94a21.94 21.94 0 01-15.56 6.45zM464 278h-48a22 22 0 010-44h48a22 22 0 010 44zM96 278H48a22 22 0 010-44h48a22 22 0 010 44zM403.08 425.08a21.94 21.94 0 01-15.56-6.45l-33.94-33.94a22 22 0 0131.11-31.11l33.94 33.94a22 22 0 01-15.55 37.56zM142.86 164.86a21.89 21.89 0 01-15.55-6.44l-33.94-33.94a22 22 0 0131.11-31.11l33.94 33.94a22 22 0 01-15.56 37.55zM256 358a102 102 0 11102-102 102.12 102.12 0 01-102 102z' />
+								</svg>
+							</span>
+						</span>
+					</label>
+				</div>
+				<!--
+				<a class="mail" href="mailto:olichon.adrien@gmail.com">
+					olichon.adrien@gmail.com
+				</a>
+				<a class="mailresponsive" href="mailto:olichon.adrien@gmail.com">
+					Mail<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'>
+						<title>Mail</title>
+						<path fill='#126EE6'
+							d='M424 80H88a56.06 56.06 0 00-56 56v240a56.06 56.06 0 0056 56h336a56.06 56.06 0 0056-56V136a56.06 56.06 0 00-56-56zm-14.18 92.63l-144 112a16 16 0 01-19.64 0l-144-112a16 16 0 1119.64-25.26L256 251.73l134.18-104.36a16 16 0 0119.64 25.26z' />
+					</svg>
+				</a>
+				-->
+
+			</div>
+		</div>
+	</header>
+	<main>
+		<section class="first-section">
+			<div class="section-content">
+				<div class="pb20">
+					<h1 class="page-title nom-nop">Guide</h1>
+					<p>
+						Cette page est une liste de bonne pratiques de design.
+					</p>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="section-content">
+				<div class="block-bulles-guide">
+					<a class="bulle-guide" href="#font">
+						Font
+					</a>
+					<a class="bulle-guide" href="#mesure">
+						Unités de mesure
+					</a>
+					<a class="bulle-guide" href="#icone">
+						Icônes
+					</a>
+					<a class="bulle-guide" href="#structure">
+						Structure
+					</a>
+					<a class="bulle-guide" href="#actions">
+						Zone d’actions
+					</a>
+
+					<a class="bulle-guide" href="#">
+						Couleurs
+					</a>
+
+				</div>
+			</div>
+			<div class="section-content card-guide" id="font">
+
+				<div class="card-content">
+					<h2>
+						Font
+					</h2>
+					<div class="card-data">
+						<p>
+							La taille de police de base d'une page web est de 16 pixels.
+							<br>
+							Cette taille est défini sur la balise html du CSS.
+							<br>
+							Pour designer de manière efficace et adapté aux réglages utilisateurs, les tailles de textes
+							doivent être défini en utilisant des <a class="link-in-text"
+								href="https://developer.mozilla.org/fr/docs/Learn/CSS/Building_blocks/Values_and_units"
+								target="_blank" rel="noopener">unités relatives</a> comme les REM.
+						</p>
+						<p>
+							Il est préférable d'avoir une taille minimum de 14px (0.875rem).
+						</p>
+						<p>
+							Pour les hauteurs de lignes, le plus simple et efficace est de multiplier la taille de la
+							police fois 1,6. Par exemple, un texte de 16px aura une line-height de 25,6 (16*1,6 = 25,6).
+						</p>
+						<p>
+							Pour garder une consistante, utiliser uniquement des valeurs paires est idéale.
+						</p>
+						<p>
+							Il est important de savoir jouer avec les font-weight, qui vont de 100 à 900 en général et
+							qui dépende de la font.
+						</p>
+					</div>
+					<div class="card-blueprint">
+						<div class="rond-blueprint"></div>
+						<div class="rond-blueprint2"></div>
+						<div class="dashed-top"></div>
+						<div class="dashed-bottom"></div>
+						<div class="dashed-left"></div>
+						<div class="dashed-right"></div>
+						<div class="dashed-border">
+							<h4>
+								Récapitulatif
+							</h4>
+							<div class="blueprint-data">
+								<div class="blueprint-data-block">
+									<div class="data-label">
+										Taille de base
+									</div>
+									<div class="data-text">
+										16px
+									</div>
+								</div>
+								<div class="blueprint-data-block">
+									<div class="data-label">
+										Minimum
+									</div>
+									<div class="data-text">
+										14px
+									</div>
+								</div>
+								<div class="blueprint-data-block">
+									<div class="data-label">
+										Unités
+									</div>
+									<div class="data-text">
+										Relatives
+									</div>
+								</div>
+								<div class="blueprint-data-block">
+									<div class="data-label">
+										Line-height
+									</div>
+									<div class="data-text">
+										1.6 * taille police
+									</div>
+								</div>
+								<div class="blueprint-data-block">
+									<div class="data-label">
+										Valeurs
+									</div>
+									<div class="data-text">
+										Paires
+									</div>
+								</div>
+								<div class="blueprint-data-block">
+									<div class="data-label">
+										Utiliser les
+									</div>
+									<div class="data-text">
+										Font-weight
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="card-blueprint-apple">
+						<div class="trait-blueprint-h">
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+						</div>
+						<div class="trait-blueprint-v">
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+
+						</div>
+						<div class="blueprint-data">
+							<a href="https://rsms.me/inter" target="_blank" rel="noopener">
+								<div>Inter font family</div>
+								<span><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+										<title>Open</title>
+										<path
+											d="M384 224v184a40 40 0 01-40 40H104a40 40 0 01-40-40V168a40 40 0 0140-40h167.48M336 64h112v112M224 288L440 72"
+											fill="none" stroke="currentColor" stroke-linecap="round"
+											stroke-linejoin="round" stroke-width="32" />
+									</svg></span>
+							</a>
+							<a href="https://pangrampangram.com" target="_blank" rel="noopener">
+								<div>Pangrampangram</div>
+								<span><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+										<title>Open</title>
+										<path
+											d="M384 224v184a40 40 0 01-40 40H104a40 40 0 01-40-40V168a40 40 0 0140-40h167.48M336 64h112v112M224 288L440 72"
+											fill="none" stroke="currentColor" stroke-linecap="round"
+											stroke-linejoin="round" stroke-width="32" />
+									</svg></span>
+
+							</a>
+							<a href="https://open-foundry.com" target="_blank" rel="noopener">
+								<div>Open-foundry</div>
+								<span><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+										<title>Open</title>
+										<path
+											d="M384 224v184a40 40 0 01-40 40H104a40 40 0 01-40-40V168a40 40 0 0140-40h167.48M336 64h112v112M224 288L440 72"
+											fill="none" stroke="currentColor" stroke-linecap="round"
+											stroke-linejoin="round" stroke-width="32" />
+									</svg></span>
+
+							</a>
+
+							<a href="https://poussetafonte.com" target="_blank" rel="noopener">
+								<div>Poussetafonte</div>
+								<span><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+										<title>Open</title>
+										<path
+											d="M384 224v184a40 40 0 01-40 40H104a40 40 0 01-40-40V168a40 40 0 0140-40h167.48M336 64h112v112M224 288L440 72"
+											fill="none" stroke="currentColor" stroke-linecap="round"
+											stroke-linejoin="round" stroke-width="32" />
+									</svg></span>
+
+							</a>
+							<a href="https://fonts.google.com/" target="_blank" rel="noopener">
+								<div>Google Font</div>
+								<span><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+										<title>Open</title>
+										<path
+											d="M384 224v184a40 40 0 01-40 40H104a40 40 0 01-40-40V168a40 40 0 0140-40h167.48M336 64h112v112M224 288L440 72"
+											fill="none" stroke="currentColor" stroke-linecap="round"
+											stroke-linejoin="round" stroke-width="32" />
+									</svg></span>
+							</a>
+							<a href="https://github.com/qrpike/Web-Font-Load" target="_blank" rel="noopener">
+								<div>Installer tout Google Font</div>
+								<span><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+										<title>Open</title>
+										<path
+											d="M384 224v184a40 40 0 01-40 40H104a40 40 0 01-40-40V168a40 40 0 0140-40h167.48M336 64h112v112M224 288L440 72"
+											fill="none" stroke="currentColor" stroke-linecap="round"
+											stroke-linejoin="round" stroke-width="32" />
+									</svg></span>
+							</a>
+
+
+						</div>
+						<div class="blueprint-footer">
+							<div class="blueprint-footer-title">
+								<h4>
+									Ressources
+								</h4>
+								<h4>
+									Font
+								</h4>
+							</div>
+							<div class="blueprint-footer-copyright">
+								<a href="https://adrienolichon.github.io/ressources" target="_blank" rel="noopener">
+									adrienolichon.github.io/ressources
+								</a>
+								<h5>
+									2022
+								</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="section-content card-guide" id="mesure">
+
+				<div class="card-content">
+					<h2>
+						Unités de mesure
+					</h2>
+					<div class="card-data">
+						<p>
+							Utiliser les bonnes unités de mesure est primordiale dans la conception responsive.
+						</p>
+						<p>
+							Pour les font le mieux est d'utiliser les REM ou EM, qui sont relatives aux réglages de
+							l'utilisateur.
+						</p>
+						<p>
+							Pour les structure, on peut utiliser des pixels pour les margin, padding ou encore des
+							boutons qui contiennet seulement une icône et qui doivent être rond. On peut les utiliser
+							pour les structures en faisant des breakpoints précis en CSS.
+							<br>
+							Le plus simple étant d'utilisé les % ou les fr (CSS Grid). Les unités comme le VW
+							(ViewportWidth) ou VH (ViewportHeight) sont utiles dans certains cas précis, à ne pas
+							utiliser partout.
+						</p>
+						<p>
+							Les propriétés de <code>min-width ; min-height ; max-height ; max-height</code> sont
+							pratiques dans le responsive car cela fixe des limites.
+						</p>
+
+						<p>
+							Utiliser la règle de 8 au maximum pour les padding, margin garantie un équilibre dans le
+							design. Il est parfois autorisé d'utiliser du 2px ou du 4px. Mais avoir une cohérence de
+							8px, 16px, 24px assure une cohérence graphique entre les pages et les éléments.
+
+						</p>
+
+					</div>
+					<div class="card-blueprint">
+						<div class="rond-blueprint"></div>
+						<div class="rond-blueprint2"></div>
+						<div class="dashed-top"></div>
+						<div class="dashed-bottom"></div>
+						<div class="dashed-left"></div>
+						<div class="dashed-right"></div>
+						<div class="dashed-border">
+							<h4>
+								Récapitulatif
+							</h4>
+							<div class="blueprint-data">
+								<div class="blueprint-data-block">
+									<div class="data-label">
+										Règle des
+									</div>
+									<div class="data-text">
+										8px
+									</div>
+								</div>
+								<div class="blueprint-data-block">
+									<div class="data-label">
+										Font
+									</div>
+									<div class="data-text">
+										REM
+									</div>
+								</div>
+								<div class="blueprint-data-block">
+									<div class="data-label">
+										Structure
+									</div>
+									<div class="data-text">
+										Pixels, fr, %
+									</div>
+								</div>
+								<div class="blueprint-data-block">
+									<div class="data-label">
+										Propriétés importantes
+									</div>
+									<div class="data-text">
+										min- max-
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+
+					<div class="card-blueprint-apple">
+						<div class="trait-blueprint-h">
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+						</div>
+						<div class="trait-blueprint-v">
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+
+						</div>
+						<div class="blueprint-data">
+							<a href="" target="_blank" rel="noopener">
+								<div>Texte</div>
+								<span><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+										<title>Open</title>
+										<path
+											d="M384 224v184a40 40 0 01-40 40H104a40 40 0 01-40-40V168a40 40 0 0140-40h167.48M336 64h112v112M224 288L440 72"
+											fill="none" stroke="currentColor" stroke-linecap="round"
+											stroke-linejoin="round" stroke-width="32" />
+									</svg></span>
+							</a>
+
+						</div>
+						<div class="blueprint-footer">
+							<div class="blueprint-footer-title">
+								<h4>
+									Ressources
+								</h4>
+								<h4>
+									Unités de mesure
+								</h4>
+							</div>
+							<div class="blueprint-footer-copyright">
+								<a href="https://adrienolichon.github.io/ressources" target="_blank" rel="noopener">
+									adrienolichon.github.io/ressources
+								</a>
+								<h5>
+									2022
+								</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="section-content card-guide" id="icone">
+
+				<div class="card-content">
+					<h2>
+						Icônes
+					</h2>
+					<div class="card-data">
+						<div class="warning-p">
+							<span class="svgcontainer"><svg width='18px' height='18px'
+									xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'>
+									<title>Attention</title>
+									<path fill="#FFC634"
+										d='M449.07 399.08L278.64 82.58c-12.08-22.44-44.26-22.44-56.35 0L51.87 399.08A32 32 0 0080 446.25h340.89a32 32 0 0028.18-47.17zm-198.6-1.83a20 20 0 1120-20 20 20 0 01-20 20zm21.72-201.15l-5.74 122a16 16 0 01-32 0l-5.74-121.95a21.73 21.73 0 0121.5-22.69h.21a21.74 21.74 0 0121.73 22.7z' />
+								</svg></span>
+							<p> Dans cette partie on parlera d'icônes produits, ce qui est différent des logo ou du
+								branding d'un produit.
+							</p>
+						</div>
+						<p>
+							Il est très important d'avoir une cohérence des icônes.
+						</p>
+						<p>
+							Mais également de pouvoir les différencier et les distinguer facilement.
+							<br>
+							Avoir un style graphique trop commun entre les icônes apporte une cohérence graphique mais
+							perd énormément en&nbsp;lisibilité.
+							<br> Comme l'a fait Google récemment (2020)<a class="link-in-text"
+								href="https://bootcamp.uxdesign.cc/why-googles-new-app-icons-are-pretty-bad-10f1ec40ab04"
+								target="_blank">avec ces nouvelles icônes</a>. C'est certes assez joli mais pour
+							différencier les applications cela devient plus dur comparé au système<a
+								class="link-in-text"
+								href="https://www.reddit.com/r/iphone/comments/kiuwnm/lets_appreciate_apple_for_making_distinctive_and/"
+								target="_blank">d'Apple</a>.
+							<br>
+							Apple à trouvé comment avoir une cohérence entre les icônes et les faires uniques et
+							distinguables.
+						</p>
+						<p>
+							Pour les icônes dans un produit, on peut appliquer les mêmes règles.
+							<br>
+							Les icônes doivent être distinguable et les comprendres rapidement.
+							<br>
+							Il est donc recommandé d'avoir une librairie d'icône à utiliser et s'il faut en créer de
+							nouvelles, bien respecter les dimensions, espaces blancs, espacement et proportions.
+						</p>
+
+					</div>
+					<div class="card-blueprint">
+						<div class="rond-blueprint"></div>
+						<div class="rond-blueprint2"></div>
+						<div class="dashed-top"></div>
+						<div class="dashed-bottom"></div>
+						<div class="dashed-left"></div>
+						<div class="dashed-right"></div>
+						<div class="dashed-border">
+							<h4>
+								Récapitulatif
+							</h4>
+							<div class="blueprint-data">
+								<div class="blueprint-data-block">
+									<div class="data-label">
+										Cohérence
+									</div>
+									<div class="data-text">
+										Graphique
+									</div>
+								</div>
+								<div class="blueprint-data-block">
+									<div class="data-label">
+										Facilement
+									</div>
+									<div class="data-text">
+										Distinguable
+									</div>
+								</div>
+								<div class="blueprint-data-block">
+									<div class="data-label">
+										Rapidement
+									</div>
+									<div class="data-text">
+										Reconnaissable
+									</div>
+								</div>
+								<div class="blueprint-data-block">
+									<div class="data-label">
+										Lisibilité
+									</div>
+									<div class="data-text">
+										En petit et grand
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+
+					<div class="card-blueprint-apple">
+						<div class="trait-blueprint-h">
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+						</div>
+						<div class="trait-blueprint-v">
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+
+						</div>
+						<div class="blueprint-data">
+							<a href="https://developer.apple.com/sf-symbols" target="_blank" rel="noopener">
+								<div>SF Symbols</div>
+								<span><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+										<title>Open</title>
+										<path
+											d="M384 224v184a40 40 0 01-40 40H104a40 40 0 01-40-40V168a40 40 0 0140-40h167.48M336 64h112v112M224 288L440 72"
+											fill="none" stroke="currentColor" stroke-linecap="round"
+											stroke-linejoin="round" stroke-width="32" />
+									</svg></span>
+							</a>
+							<a href="https://fonts.google.com/icons?selected=Material+Icons" target="_blank"
+								rel="noopener">
+								<div>Material icons</div>
+								<span><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+										<title>Open</title>
+										<path
+											d="M384 224v184a40 40 0 01-40 40H104a40 40 0 01-40-40V168a40 40 0 0140-40h167.48M336 64h112v112M224 288L440 72"
+											fill="none" stroke="currentColor" stroke-linecap="round"
+											stroke-linejoin="round" stroke-width="32" />
+									</svg></span>
+							</a>
+							<a href="https://ionic.io/ionicons" target="_blank" rel="noopener">
+								<div>Ionicons</div>
+								<span><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+										<title>Open</title>
+										<path
+											d="M384 224v184a40 40 0 01-40 40H104a40 40 0 01-40-40V168a40 40 0 0140-40h167.48M336 64h112v112M224 288L440 72"
+											fill="none" stroke="currentColor" stroke-linecap="round"
+											stroke-linejoin="round" stroke-width="32" />
+									</svg></span>
+							</a>
+							<a href="https://www.common.wtf/" target="_blank" rel="noopener">
+								<div>Common.wtf</div>
+								<span><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+										<title>Open</title>
+										<path
+											d="M384 224v184a40 40 0 01-40 40H104a40 40 0 01-40-40V168a40 40 0 0140-40h167.48M336 64h112v112M224 288L440 72"
+											fill="none" stroke="currentColor" stroke-linecap="round"
+											stroke-linejoin="round" stroke-width="32" />
+									</svg></span>
+							</a>
+						</div>
+
+						<div class="blueprint-footer">
+							<div class="blueprint-footer-title">
+								<h4>
+									Ressources
+								</h4>
+								<h4>
+									Icônes
+								</h4>
+							</div>
+							<div class="blueprint-footer-copyright">
+								<a href="https://adrienolichon.github.io/ressources" target="_blank" rel="noopener">
+									adrienolichon.github.io/ressources
+								</a>
+								<h5>
+									2022
+								</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+
+			<div class="section-content card-guide" id="structure">
+
+				<div class="card-content">
+					<h2>
+						Structure
+					</h2>
+					<div class="card-data">
+						<p>
+							Une bonne structure de page est responsive, bien hiérarchisé et logique.
+						</p>
+						<p>
+							Pour arriver à créer des structures efficacement le mieux est d'utiliser le Flex et le Grid
+							CSS.
+							<br>
+							Ces deux propriétés permettent également de centrer très facilement des éléments avec les
+							propriétés <code>align-items</code> ou <code>justify-content</code>.
+						</p>
+						<p>
+							Le Grid possède un très grand avantage comparé au flex, c'est de pouvoir décrire la
+							structure voulu, par exemple 2 colonnes.
+							On peut écrire <code>grid-tempalte-columns: 1fr 1fr;</code> ou
+							<code>grid-tempalte-columns: 50% 50%;</code>
+						</p>
+						<p>
+							Et pourvoir mixer des pixels et des unités relatives :
+							<code>grid-tempalte-columns: 48px 1fr;</code>. De cette manière on aura toujours un espace
+							de 48px et le reste sera adapté à l'espace restant.
+						</p>
+
+					</div>
+					<div class="card-blueprint">
+						<div class="rond-blueprint"></div>
+						<div class="rond-blueprint2"></div>
+						<div class="dashed-top"></div>
+						<div class="dashed-bottom"></div>
+						<div class="dashed-left"></div>
+						<div class="dashed-right"></div>
+						<div class="dashed-border">
+							<h4>
+								Récapitulatif
+							</h4>
+							<div class="blueprint-data">
+								<div class="blueprint-data-block">
+									<div class="data-label">
+										Style
+									</div>
+									<div class="data-text">
+										Grid ou Flex
+									</div>
+								</div>
+								<div class="blueprint-data-block">
+									<div class="data-label">
+										Grid
+									</div>
+									<div class="data-text">
+										Mélanger PX et fr
+									</div>
+								</div>
+								<div class="blueprint-data-block">
+									<div class="data-label">
+										Alignement
+									</div>
+									<div class="data-text">
+										Facile
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+
+					<div class="card-blueprint-apple">
+						<div class="trait-blueprint-h">
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+						</div>
+						<div class="trait-blueprint-v">
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+
+						</div>
+						<div class="blueprint-data">
+							<a href="https://yoksel.github.io/flex-cheatsheet/" target="_blank" rel="noopener">
+								<div>Flex-cheatsheet</div>
+								<span><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+										<title>Open</title>
+										<path
+											d="M384 224v184a40 40 0 01-40 40H104a40 40 0 01-40-40V168a40 40 0 0140-40h167.48M336 64h112v112M224 288L440 72"
+											fill="none" stroke="currentColor" stroke-linecap="round"
+											stroke-linejoin="round" stroke-width="32" />
+									</svg></span>
+							</a>
+							<a href="https://yoksel.github.io/grid-cheatsheet/" target="_blank" rel="noopener">
+								<div>Grid-cheatsheet</div>
+								<span><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+										<title>Open</title>
+										<path
+											d="M384 224v184a40 40 0 01-40 40H104a40 40 0 01-40-40V168a40 40 0 0140-40h167.48M336 64h112v112M224 288L440 72"
+											fill="none" stroke="currentColor" stroke-linecap="round"
+											stroke-linejoin="round" stroke-width="32" />
+									</svg></span>
+							</a>
+							<a href="https://flexbox.malven.co/" target="_blank" rel="noopener">
+								<div>Flexbox properties</div>
+								<span><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+										<title>Open</title>
+										<path
+											d="M384 224v184a40 40 0 01-40 40H104a40 40 0 01-40-40V168a40 40 0 0140-40h167.48M336 64h112v112M224 288L440 72"
+											fill="none" stroke="currentColor" stroke-linecap="round"
+											stroke-linejoin="round" stroke-width="32" />
+									</svg></span>
+							</a>
+							<a href="https://grid.malven.co/" target="_blank" rel="noopener">
+								<div>Grid properties</div>
+								<span><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+										<title>Open</title>
+										<path
+											d="M384 224v184a40 40 0 01-40 40H104a40 40 0 01-40-40V168a40 40 0 0140-40h167.48M336 64h112v112M224 288L440 72"
+											fill="none" stroke="currentColor" stroke-linecap="round"
+											stroke-linejoin="round" stroke-width="32" />
+									</svg></span>
+							</a>
+							<a href="https://flexboxfroggy.com/#fr" target="_blank" rel="noopener">
+								<div>Flexbox froggy</div>
+								<span><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+										<title>Open</title>
+										<path
+											d="M384 224v184a40 40 0 01-40 40H104a40 40 0 01-40-40V168a40 40 0 0140-40h167.48M336 64h112v112M224 288L440 72"
+											fill="none" stroke="currentColor" stroke-linecap="round"
+											stroke-linejoin="round" stroke-width="32" />
+									</svg></span>
+							</a>
+							<a href="https://cssgridgarden.com/#fr" target="_blank" rel="noopener">
+								<div>Css Gridgarden</div>
+								<span><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+										<title>Open</title>
+										<path
+											d="M384 224v184a40 40 0 01-40 40H104a40 40 0 01-40-40V168a40 40 0 0140-40h167.48M336 64h112v112M224 288L440 72"
+											fill="none" stroke="currentColor" stroke-linecap="round"
+											stroke-linejoin="round" stroke-width="32" />
+									</svg></span>
+							</a>
+
+
+
+
+
+						</div>
+						<div class="blueprint-footer">
+							<div class="blueprint-footer-title">
+								<h4>
+									Ressources
+								</h4>
+								<h4>
+									Structure
+								</h4>
+
+							</div>
+							<div class="blueprint-footer-copyright">
+								<a href="https://adrienolichon.github.io/ressources" target="_blank" rel="noopener">
+									adrienolichon.github.io/ressources
+								</a>
+								<h5>
+									2022
+								</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="section-content card-guide" id="actions">
+
+				<div class="card-content">
+					<h2>
+						Zone d'actions
+					</h2>
+					<div class="card-data">
+						<p>
+							Pour assurer que les boutons et liens soient cliquables il est important d'avoir des zones
+							d'actions reconnaissables et assez grandes pour une souris ou un doigt.
+						</p>
+						<p>
+							Une bonne règle de base est d'avoir un minimum de 40px de hauteur pour tous les boutons, et
+							si le bouton contient uniquement une icône, avoir une hauteur/largeur minimum de 48px.
+						</p>
+						<p>
+							De la même manière les inputs doivent être suffisamment espacé les uns des autres pour ne
+							pas remplir le mauvais. Et les labels écrient assez gros pour être facilement lues. Un
+							minimum de 56px est une bonne base.
+						</p>
+
+					</div>
+					<div class="card-blueprint">
+						<div class="rond-blueprint"></div>
+						<div class="rond-blueprint2"></div>
+						<div class="dashed-top"></div>
+						<div class="dashed-bottom"></div>
+						<div class="dashed-left"></div>
+						<div class="dashed-right"></div>
+						<div class="dashed-border">
+							<h4>
+								Récapitulatif
+							</h4>
+							<div class="blueprint-data">
+								<div class="blueprint-data-block">
+									<div class="data-label">
+										Bouton
+									</div>
+									<div class="data-text">
+										Minimum 40px
+									</div>
+								</div>
+								<div class="blueprint-data-block">
+									<div class="data-label">
+										Bouton icône
+									</div>
+									<div class="data-text">
+										Minimum 48px
+									</div>
+								</div>
+								<div class="blueprint-data-block">
+									<div class="data-label">
+										Input
+									</div>
+									<div class="data-text">
+										Minimum 56px
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+
+					<div class="card-blueprint-apple">
+						<div class="trait-blueprint-h">
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+						</div>
+						<div class="trait-blueprint-v">
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+
+						</div>
+						<div class="blueprint-data">
+							<a href="" target="_blank" rel="noopener">
+								<div>Texte</div>
+								<span><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+										<title>Open</title>
+										<path
+											d="M384 224v184a40 40 0 01-40 40H104a40 40 0 01-40-40V168a40 40 0 0140-40h167.48M336 64h112v112M224 288L440 72"
+											fill="none" stroke="currentColor" stroke-linecap="round"
+											stroke-linejoin="round" stroke-width="32" />
+									</svg></span>
+							</a>
+
+						</div>
+						<div class="blueprint-footer">
+							<div class="blueprint-footer-title">
+								<h4>
+									Ressources
+								</h4>
+								<h4>
+									Texte
+								</h4>
+							</div>
+							<div class="blueprint-footer-copyright">
+								<a href="https://adrienolichon.github.io/ressources" target="_blank" rel="noopener">
+									adrienolichon.github.io/ressources
+								</a>
+								<h5>
+									2022
+								</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="section-content card-guide">
+
+				<div class="card-content">
+					<h2>
+						Texte
+					</h2>
+					<div class="card-data">
+						<p>
+							Texte
+						</p>
+
+					</div>
+					<div class="card-blueprint">
+						<div class="rond-blueprint"></div>
+						<div class="rond-blueprint2"></div>
+						<div class="dashed-top"></div>
+						<div class="dashed-bottom"></div>
+						<div class="dashed-left"></div>
+						<div class="dashed-right"></div>
+						<div class="dashed-border">
+							<h4>
+								Récapitulatif
+							</h4>
+							<div class="blueprint-data">
+								<div class="blueprint-data-block">
+									<div class="data-label">
+										Texte
+									</div>
+									<div class="data-text">
+										Texte
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+
+					<div class="card-blueprint-apple">
+						<div class="trait-blueprint-h">
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+							<div class="line-h"></div>
+						</div>
+						<div class="trait-blueprint-v">
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+							<div class="line-v"></div>
+
+						</div>
+						<div class="blueprint-data">
+							<a href="" target="_blank" rel="noopener">
+								<div>Texte</div>
+								<span><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+										<title>Open</title>
+										<path
+											d="M384 224v184a40 40 0 01-40 40H104a40 40 0 01-40-40V168a40 40 0 0140-40h167.48M336 64h112v112M224 288L440 72"
+											fill="none" stroke="currentColor" stroke-linecap="round"
+											stroke-linejoin="round" stroke-width="32" />
+									</svg></span>
+							</a>
+
+						</div>
+						<div class="blueprint-footer">
+							<div class="blueprint-footer-title">
+								<h4>
+									Ressources
+								</h4>
+								<h4>
+									Texte
+								</h4>
+							</div>
+							<div class="blueprint-footer-copyright">
+								<a href="https://adrienolichon.github.io/ressources" target="_blank" rel="noopener">
+									adrienolichon.github.io/ressources
+								</a>
+								<h5>
+									2022
+								</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+	</main>
+	<footer>
+		<button class="secret" onclick="gridshow();">
+			Grille
+		</button>
+
+	</footer>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
