@@ -3085,6 +3085,7 @@ input:checked + .slider .light {
   padding: 8px;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(0deg, #4673ee 0%, #4dabf7 100%);
 }
 .guide .card-guide .card-content .card-blueprint:after {
   content: "";
