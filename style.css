@@ -725,6 +725,9 @@ button {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 16px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 .section-intro-index .section-content .grid .tile .grid-photo-mail {
   display: grid;
@@ -795,7 +798,7 @@ button {
   font-weight: 600;
 }
 .section-intro-index .section-content .grid .intro-card .introduction {
-  font-size: 1.2rem;
+  font-size: 1.125rem;
 }
 
 .second-section {
@@ -2918,8 +2921,8 @@ input:checked + .slider .light {
 }
 .dieter .speaker .color-buttons .btn-rams .btn:before {
   content: "";
-  background: #dbdbdb;
-  background: radial-gradient(circle, #0a0a0a 20%, black 40%);
+  background: rgb(219, 219, 219);
+  background: radial-gradient(circle, rgb(10, 10, 10) 20%, rgb(0, 0, 0) 40%);
   opacity: 0.1;
   width: 70%;
   height: 70%;

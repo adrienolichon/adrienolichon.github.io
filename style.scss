@@ -720,6 +720,7 @@ button {
 				display: grid;
 				grid-template-columns: 1fr;
 				grid-gap: 16px;
+				height: max-content;
 				.grid-photo-mail {
 					display: grid;
 					grid-template-columns: 1fr 48px;
@@ -800,7 +801,7 @@ button {
 			}
 			.intro-card {
 				.introduction {
-					font-size: 1.2rem;
+					font-size: 1.125rem;
 				}
 			}
 		}
@@ -927,6 +928,7 @@ button {
 	display: flex;
 	flex-direction: column;
 	transition: var(--transition1);
+	//height: max-content;
 
 	.image-tile {
 		transition: var(--transition1);
