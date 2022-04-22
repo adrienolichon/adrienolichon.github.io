@@ -451,6 +451,15 @@ a:visited {
   transition: var(--transition1);
 }
 
+/* Material symbols */
+.material-symbols-rounded.icon-outline {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+.material-symbols-rounded.icon-full {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
 /* ------------------------ Style Text ------------------------ */
 h1 {
   font-weight: 500;
@@ -617,16 +626,15 @@ header .header-content .home {
   display: flex;
   width: 100%;
 }
-header .header-content .home svg {
+header .header-content .home span {
   margin: auto;
-  fill: var(--colortext);
-  width: 24px;
-  height: 24px;
+  color: var(--colortext);
   transition: var(--transition1);
+  font-size: 32px;
 }
 @media (hover: hover) {
-  header .header-content .home:hover svg {
-    fill: rgb(var(--blue));
+  header .header-content .home:hover span {
+    color: rgb(var(--blue));
     transition: var(--transition1);
   }
 }
@@ -779,16 +787,17 @@ button {
   display: flex;
   transition: var(--transition1);
 }
-.section-intro-index .section-content .grid .tile .grid-photo-mail .mail-intro svg {
+.section-intro-index .section-content .grid .tile .grid-photo-mail .mail-intro span {
   margin: auto;
-  width: 24px;
+  font-size: 24px;
+  color: rgb(var(--blue));
 }
 @media (hover: hover) {
   .section-intro-index .section-content .grid .tile .grid-photo-mail .mail-intro:hover {
     background-color: rgb(var(--blue));
   }
-  .section-intro-index .section-content .grid .tile .grid-photo-mail .mail-intro:hover svg path {
-    fill: var(--white);
+  .section-intro-index .section-content .grid .tile .grid-photo-mail .mail-intro:hover span {
+    color: var(--white);
     transition: var(--transition1);
   }
 }
@@ -814,8 +823,9 @@ button {
   margin: 0 8px auto 0;
   display: inline-flex;
 }
-.warning-p .svgcontainer svg {
-  margin: 2px auto auto auto;
+.warning-p .svgcontainer span {
+  margin: auto;
+  color: var(--warning);
 }
 .warning-p p {
   display: inline-block;
@@ -1066,21 +1076,32 @@ button {
   display: flex;
   position: relative;
 }
-.tile-tableau .lien-tableau span svg {
+.tile-tableau .lien-tableau span .material-symbols-rounded {
   transition: var(--transition1);
   margin: auto 0;
-  width: 24px;
-  height: 24px;
+  font-size: 32px;
   color: var(--colortext);
-  opacity: 1;
+  opacity: 0.16;
+  font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 0, "opsz" 48;
+}
+.tile-tableau .lien-tableau span .open-in-new {
+  transition: var(--transition1);
+  font-size: 24px;
+  opacity: 0.16;
 }
 @media (hover: hover) {
   .tile-tableau .lien-tableau:hover p {
     color: rgb(var(--blue));
     font-weight: 600;
   }
-  .tile-tableau .lien-tableau:hover svg {
+  .tile-tableau .lien-tableau:hover .material-symbols-rounded {
+    transition: var(--transition1);
     color: rgb(var(--blue));
+    opacity: 1;
+  }
+  .tile-tableau .lien-tableau:hover .open-in-new {
+    transition: var(--transition1);
+    opacity: 1;
   }
 }
 .tile-tableau .half-table {
@@ -1375,11 +1396,10 @@ button {
   margin: auto;
   display: flex;
 }
-.slider .svg svg {
+.slider .svg span {
   margin: auto;
-  fill: var(--colortext);
-  width: 20px;
-  height: 20px;
+  color: var(--colortext);
+  font-size: 24px;
   transition: var(--transition1);
   transform: translateX(13px);
 }
@@ -1390,8 +1410,8 @@ button {
   opacity: 0;
 }
 @media (hover: hover) {
-  .slider:hover svg {
-    fill: rgb(var(--blue));
+  .slider:hover span {
+    color: rgb(var(--blue));
   }
 }
 
@@ -1558,32 +1578,20 @@ input:checked + .slider .light {
   padding-right: 4px;
   vertical-align: top;
 }
-.recette .collection-recettes .card-recette .contenu .dessert:before {
-  content: url(icon/dessert.svg);
-}
 .recette .collection-recettes .card-recette .contenu .plat:before {
   content: url(icon/plat.svg);
 }
-.recette .collection-recettes .card-recette .contenu .sauce:before {
-  content: url(icon/sauce.svg);
+.recette .plat-categorie span {
+  color: #15aabf;
 }
-.recette .collection-recettes .card-recette .contenu .soupe:before {
-  content: url(icon/soupe.svg);
+.recette .dessert-categorie span {
+  color: #e64980;
 }
-.recette .plat-categorie {
-  padding-top: 0px;
+.recette .soupe-categorie .icon-soup {
+  color: rgb(121, 80, 242);
 }
-.recette .plat-categorie:before {
-  content: url(icon/plat.svg);
-}
-.recette .dessert-categorie:before {
-  content: url(icon/dessert.svg);
-}
-.recette .soupe-categorie:before {
-  content: url(icon/soupe.svg);
-}
-.recette .soupe-categorie:after {
-  content: url(icon/sauce.svg);
+.recette .soupe-categorie .icon-sauce {
+  color: rgb(252, 196, 25);
 }
 
 .page h1 {
@@ -1896,8 +1904,26 @@ input:checked + .slider .light {
 .data table {
   text-align: left;
   border-collapse: collapse;
-  border: 1px solid var(--black4);
-  margin-bottom: 50px;
+  margin-bottom: 32px;
+  margin-top: 32px;
+  border: 0px solid transparent;
+  padding: 32px;
+  display: block;
+  background-color: var(--white);
+  border-radius: var(--radius-large);
+}
+.data .grid-data-card {
+  margin-bottom: 32px;
+}
+.data .grid-data-card div {
+  background-color: var(--white);
+  border-radius: var(--radius-large);
+  padding: 32px;
+}
+.data .i {
+  background-color: var(--white);
+  border-radius: var(--radius-large);
+  padding: 32px;
 }
 
 .opencolor {
@@ -2012,6 +2038,10 @@ input:checked + .slider .light {
   border-radius: var(--radius-large);
   background-color: var(--white);
 }
+.respire .exercice .material-symbols-rounded {
+  font-size: 32px;
+  margin: auto;
+}
 .respire .exercice h3 {
   text-align: center;
   margin: 0;
@@ -2026,13 +2056,15 @@ input:checked + .slider .light {
 }
 .respire .exercice .title-bar button {
   width: 62px;
-  height: 48px;
+  min-height: 48px;
+  height: auto;
   padding: 7px;
   border: none;
   background-color: transparent;
   border: 1px solid var(--black4);
   border-radius: 100px;
   transition: var(--transition1);
+  display: flex;
 }
 @media (hover: hover) {
   .respire .exercice .title-bar button:hover {
@@ -2064,7 +2096,7 @@ input:checked + .slider .light {
 }
 .respire .exercice .title-bar .visible {
   visibility: visible !important;
-  display: block !important;
+  display: flex !important;
 }
 .respire .respire-un .dot {
   -webkit-animation: dotlong infinite 10000ms cubic-bezier(0.5, 0, 0.5, 1);
@@ -2250,15 +2282,10 @@ input:checked + .slider .light {
   height: 100%;
   display: flex;
 }
-.designsystem .grid-design-system .icones-item .icone svg {
-  width: 32px;
+.designsystem .grid-design-system .icones-item .icone span {
+  font-size: 32px;
   margin: auto;
-}
-.designsystem .grid-design-system .icones-item .icone svg path {
-  fill: var(--black1);
-}
-.designsystem .grid-design-system .icones-item .icone svg.nofill path {
-  fill: none;
+  color: var(--black1);
 }
 .designsystem .grid-design-system .icones-item .icone-data {
   display: grid;
@@ -2454,11 +2481,11 @@ input:checked + .slider .light {
   display: flex;
   border-color: black;
 }
-#genNew #fullgradient svg {
+#genNew #fullgradient span {
   margin: auto;
   width: 1.5rem;
   height: 1.5rem;
-  fill: black;
+  color: black;
 }
 
 .grain-img {
@@ -3076,8 +3103,9 @@ input:checked + .slider .light {
 .guide .card-guide .card-content .card-data p {
   margin-top: 0;
 }
-.guide .card-guide .card-content .card-data .warning-p {
-  margin-bottom: 8px;
+.guide .card-guide .card-content .card-data .warning-p .icon-full {
+  color: var(--warning);
+  margin: auto 8px auto 0;
 }
 .guide .card-guide .card-content .card-blueprint {
   margin-top: 32px;

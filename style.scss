@@ -462,6 +462,22 @@ a:visited {
 	}
 }
 
+/* Material symbols */
+.material-symbols-rounded.icon-outline {
+	font-variation-settings:
+	'FILL' 0,
+	'wght' 400,
+	'GRAD' 0,
+	'opsz' 48;
+  }
+  .material-symbols-rounded.icon-full {
+	font-variation-settings:
+	'FILL' 1,
+	'wght' 400,
+	'GRAD' 0,
+	'opsz' 48;
+  }
+
 /* ------------------------ Style Text ------------------------ */
 h1/*Large Title*/ {
 	font-weight: 500;
@@ -610,17 +626,16 @@ header {
 			height: 100%;
 			display: flex;
 			width: 100%;
-			svg {
+			span {
 				margin: auto;
-				fill: var(--colortext);
-				width: 24px;
-				height: 24px;
+				color: var(--colortext);
 				transition: var(--transition1);
+				font-size: 32px;
 			}
 			@media (hover: hover) {
 				&:hover {
-					svg {
-						fill: rgb(var(--blue));
+					span {
+						color: rgb(var(--blue));
 						transition: var(--transition1);
 					}
 				}
@@ -776,16 +791,17 @@ button {
 						display: flex;
 						transition: var(--transition1);
 
-						svg {
+						span {
 							margin: auto;
-							width: 24px;
+							font-size: 24px;
+							color: rgb(var(--blue));
 							//transition: var(--transition1);
 						}
 						@media (hover: hover) {
 							&:hover {
 								background-color: rgb(var(--blue));
-								svg path {
-									fill: var(--white);
+								span {
+									color: var(--white);
 									transition: var(--transition1);
 								}
 							}
@@ -817,8 +833,9 @@ button {
 		height: 25px;
 		margin: 0 8px auto 0;
 		display: inline-flex;
-		svg {
-			margin: 2px auto auto auto;
+		span {
+			margin: auto;
+			color: var(--warning);
 		}
 	}
 	p {
@@ -1067,13 +1084,22 @@ button {
 		span {
 			display: flex;
 			position: relative;
-			svg {
+			.material-symbols-rounded {
 				transition: var(--transition1);
 				margin: auto 0;
-				width: 24px;
-				height: 24px;
+				font-size: 32px;
 				color: var(--colortext);
-				opacity: 1;
+				opacity: 0.16;
+				font-variation-settings:
+				'FILL' 1,
+				'wght' 500,
+				'GRAD' 0,
+				'opsz' 48;
+			}
+			.open-in-new{
+				transition: var(--transition1);
+				font-size: 24px;
+				opacity: 0.16;
 			}
 		}
 
@@ -1083,8 +1109,14 @@ button {
 					color: rgb(var(--blue));
 					font-weight: 600;
 				}
-				svg {
+				.material-symbols-rounded {
+					transition: var(--transition1);
 					color: rgb(var(--blue));
+					opacity: 1;
+				}
+				.open-in-new{
+					transition: var(--transition1);
+					opacity: 1;
 				}
 			}
 		}
@@ -1414,11 +1446,10 @@ button {
 		transition: var(--transition1);
 		margin: auto;
 		display: flex;
-		svg {
+		span {
 			margin: auto;
-			fill: var(--colortext);
-			width: 20px;
-			height: 20px;
+			color: var(--colortext);
+			font-size: 24px;
 			transition: var(--transition1);
 			transform: translateX(13px);
 		}
@@ -1431,8 +1462,8 @@ button {
 	}
 	@media (hover: hover) {
 		&:hover {
-			svg {
-				fill: rgb(var(--blue));
+			span {
+				color: rgb(var(--blue));
 			}
 		}
 	}
@@ -1607,46 +1638,30 @@ input:checked + .slider .light {
 						vertical-align: top;
 					}
 				}
-				.dessert {
-					&:before {
-						content: url(icon/dessert.svg);
-					}
-				}
 				.plat {
 					&:before {
 						content: url(icon/plat.svg);
-					}
-				}
-				.sauce {
-					&:before {
-						content: url(icon/sauce.svg);
-					}
-				}
-				.soupe {
-					&:before {
-						content: url(icon/soupe.svg);
 					}
 				}
 			}
 		}
 	}
 	.plat-categorie {
-		padding-top: 0px;
-		&:before {
-			content: url(icon/plat.svg);
+		span{
+			color: #15aabf;
 		}
 	}
 	.dessert-categorie {
-		&:before {
-			content: url(icon/dessert.svg);
+		span{
+			color: #e64980;
 		}
 	}
 	.soupe-categorie {
-		&:before {
-			content: url(icon/soupe.svg);
+		.icon-soup{
+			color: rgb(121, 80, 242);
 		}
-		&:after {
-			content: url(icon/sauce.svg);
+		.icon-sauce{
+			color: rgb(252, 196, 25);
 		}
 	}
 }
@@ -1975,8 +1990,26 @@ input:checked + .slider .light {
 	table {
 		text-align: left;
 		border-collapse: collapse;
-		border: 1px solid var(--black4);
-		margin-bottom: 50px;
+		margin-bottom: 32px;
+		margin-top: 32px;
+		border: 0px solid transparent;
+		padding: 32px;
+		display: block;
+		background-color: var(--white);
+		border-radius: var(--radius-large);
+	}
+	.grid-data-card{
+		margin-bottom: 32px;
+		div{
+			background-color: var(--white);
+			border-radius: var(--radius-large);
+			padding: 32px;
+		}
+	}
+	.i{
+		background-color: var(--white);
+		border-radius: var(--radius-large);
+		padding: 32px;
 	}
 }
 
@@ -2097,6 +2130,10 @@ input:checked + .slider .light {
 		grid-template-rows: 100px 1fr 100px;
 		border-radius: var(--radius-large);
 		background-color: var(--white);
+		.material-symbols-rounded{
+			font-size: 32px;
+			margin: auto;
+		}
 		h3 {
 			text-align: center;
 			margin: 0;
@@ -2111,13 +2148,15 @@ input:checked + .slider .light {
 
 			button {
 				width: 62px;
-				height: 48px;
+				min-height: 48px;
+				height: auto;
 				padding: 7px;
 				border: none;
 				background-color: transparent;
 				border: 1px solid var(--black4);
 				border-radius: 100px;
 				transition: var(--transition1);
+				display: flex;
 
 				@media (hover: hover) {
 					&:hover {
@@ -2153,7 +2192,7 @@ input:checked + .slider .light {
 			}
 			.visible {
 				visibility: visible !important;
-				display: block !important;
+				display: flex !important;
 			}
 		}
 	}
@@ -2367,17 +2406,10 @@ input:checked + .slider .light {
 				width: 100%;
 				height: 100%;
 				display: flex;
-				svg {
-					width: 32px;
+				span {
+					font-size: 32px;
 					margin: auto;
-					path {
-						fill: var(--black1);
-					}
-				}
-				svg.nofill {
-					path {
-						fill: none;
-					}
+					color: var(--black1);
 				}
 			}
 			.icone-data {
@@ -2581,11 +2613,11 @@ input:checked + .slider .light {
 		right: 16px;
 		display: flex;
 		border-color: black;
-		svg {
+		span {
 			margin: auto;
 			width: 1.5rem;
 			height: 1.5rem;
-			fill: black;
+			color: black;
 		}
 	}
 }
@@ -3123,7 +3155,11 @@ input:checked + .slider .light {
 					margin-top: 0;
 				}
 				.warning-p{
-					margin-bottom: 8px;
+				
+					.icon-full{
+						color: var(--warning);
+						margin: auto 8px auto 0;
+					}
 				}
 			}
 			.card-blueprint{
