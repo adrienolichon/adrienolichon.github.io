@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr" id="text">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Clock</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet"
+        href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="author" content="Adrien Olichon">
+
+    <meta name="description"
+        content="Passionné de design, j'aime créer des sites web, des applications et des identités graphiques. Je donne mes photos sur internet et j'adore le design d’intérieur.">
+    <meta name="keywords" content="Adrien, Olichon, Design">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+</head>
+
+<body>
+
+    <header class="nom-nop">
+        <div class="section-content">
+            <div class="header-content">
+                <div class="link-header">
+                    <a class="home" href="https://adrienolichon.github.io">
+                        <span class="material-symbols-rounded icon-full">
+                            home
+                        </span>
+                    </a>
+                    <a class="header-title" href="https://adrienolichon.github.io">
+                        Clock
+                    </a>
+                </div>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <span class="slider round">
+                            <span class="svg">
+                                <span class="material-symbols-rounded icon-full moon">
+                                    dark_mode
+                                </span>
+                                <span class="material-symbols-rounded icon-full light">
+                                    light_mode
+                                </span>
+                            </span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="clock">
+        <div class="container-backlight">
+    <div class="contain-text-button-align">
+        <span class="text-backlight">
+            Light
+        </span>
+
+            <div id="clock-container" class="clock-container">
+
+                <div id="clock">
+                    <div class="row-date">
+                        <div id="daydate">
+
+                        </div>
+                        <div id="month">
+
+                        </div>
+
+                    </div>
+                    <div class="row-heure">
+                        <div id="heure-minute">
+                            8:56
+                        </div>
+                        <div id="seconde">
+                            20
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="backlight-text-button">
+               
+                <button id="backlight"></button>
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        <button class="secret" onclick="gridshow();">
+            Grille
+        </button>
+
+    </footer>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript">
+
+        const button = document.querySelector('#backlight');
+        button.addEventListener('click', addClass, false);
+
+        function addClass() {
+            var x = document.querySelector('.clock-container');
+            x.classList.add('backlightclass');
+            setTimeout(function () {
+                x.classList.remove('backlightclass');
+            }, 2000);
+
+        }
+
+        setInterval(displayTime, 1000);
+
+        function displayTime() {
+
+            const timeNow = new Date();
+
+            let hoursOfDay = timeNow.getHours();
+            let minutes = timeNow.getMinutes();
+            let seconds = timeNow.getSeconds();
+            let weekDay = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+            let today = weekDay[timeNow.getDay()];
+            let months = timeNow.toLocaleString("default", {
+                month: "long"
+            });
+            let year = timeNow.getFullYear();
+
+            hoursOfDay = hoursOfDay < 10 ? "0" + hoursOfDay : hoursOfDay;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            document.getElementById('month').innerHTML = months + " " + year;
+            document.getElementById('daydate').innerHTML = today;
+
+            document.getElementById('heure-minute').innerHTML = hoursOfDay + ":" + minutes;
+
+            document.getElementById('seconde').innerHTML = seconds;
+
+        }
+        displayTime();
+    </script>
+</body>
+
+</html>
