@@ -3460,20 +3460,19 @@ input:checked + .slider .light {
 		display: flex;
 		flex-direction: row;
 		gap: 16px;
-		.contain-text-button-align{
+		.contain-text-button-align {
 			display: flex;
 			flex-direction: column;
 			gap: 4px;
 			padding-top: 12px;
-			.text-backlight{
+			.text-backlight {
 				font-family: "Inter", system-ui, sans-serif;
 				color: var(--black-1);
 				text-align: right;
 			}
 		}
-		.backlight-text-button{
+		.backlight-text-button {
 			position: relative;
-			
 
 			#backlight {
 				width: 48px;
@@ -3489,9 +3488,8 @@ input:checked + .slider .light {
 					}
 				}
 			}
-		
 		}
-		
+
 		.backlightclass {
 			background: linear-gradient(90deg, #de7e079c, #de7e07);
 			filter: contrast(2.4);
@@ -3566,3 +3564,4 @@ input:checked + .slider .light {
 		}
 	}
 }
+
