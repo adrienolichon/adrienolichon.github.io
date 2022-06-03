@@ -3792,7 +3792,7 @@ input:checked + .slider .light {
 		}
 		100% {
 			opacity: 0;
-			transform: translateX(8px);
+			transform: translateY(-16px);
 		}
 	}
 	@keyframes datamenuitems {
