@@ -3055,6 +3055,194 @@ input:checked + .slider .light {
   background-color: black;
 }
 
+.guide .card-blueprint, .index .card-blueprint {
+  margin-top: 32px;
+  background-color: rgb(var(--blueprint));
+  min-height: 80px;
+  width: 100%;
+  border-radius: 16px;
+  padding: 8px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(0deg, #4673ee 0%, #4dabf7 100%);
+}
+.guide .card-blueprint:after, .index .card-blueprint:after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.guide .card-blueprint:before, .index .card-blueprint:before {
+  content: "";
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.guide .card-blueprint .rond-blueprint, .index .card-blueprint .rond-blueprint {
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.guide .card-blueprint .rond-blueprint:after, .index .card-blueprint .rond-blueprint:after {
+  content: "";
+  position: absolute;
+  width: 620px;
+  height: 620px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.guide .card-blueprint .rond-blueprint:before, .index .card-blueprint .rond-blueprint:before {
+  content: "";
+  position: absolute;
+  width: 760px;
+  height: 760px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.guide .card-blueprint .rond-blueprint2, .index .card-blueprint .rond-blueprint2 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.guide .card-blueprint .rond-blueprint2:before, .index .card-blueprint .rond-blueprint2:before {
+  content: "";
+  position: absolute;
+  width: 900px;
+  height: 900px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.guide .card-blueprint .dashed-top, .index .card-blueprint .dashed-top {
+  position: absolute;
+  top: 16px;
+  left: -16px;
+  width: calc(100% + 32px);
+  height: 2px;
+  border-top: 2px dashed rgba(255, 255, 255, 0.7);
+}
+.guide .card-blueprint .dashed-bottom, .index .card-blueprint .dashed-bottom {
+  position: absolute;
+  bottom: 16px;
+  left: -16px;
+  width: calc(100% + 32px);
+  height: 2px;
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.7);
+}
+.guide .card-blueprint .dashed-left, .index .card-blueprint .dashed-left {
+  position: absolute;
+  top: -16px;
+  left: 16px;
+  height: calc(100% + 32px);
+  width: 2px;
+  border-left: 2px dashed rgba(255, 255, 255, 0.7);
+}
+.guide .card-blueprint .dashed-right, .index .card-blueprint .dashed-right {
+  position: absolute;
+  top: -16px;
+  right: 16px;
+  height: calc(100% + 32px);
+  width: 2px;
+  border-right: 2px dashed rgba(255, 255, 255, 0.7);
+}
+.guide .card-blueprint .dashed-border, .index .card-blueprint .dashed-border {
+  border-radius: 8px;
+  min-height: 80px;
+  padding: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  position: relative;
+}
+.guide .card-blueprint .dashed-border:before, .index .card-blueprint .dashed-border:before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: -8px;
+  width: calc(100% + 16px);
+  height: calc(100% + 16px);
+  background: linear-gradient(to top right, transparent calc(50% - 1px), rgba(255, 255, 255, 0.1), transparent calc(50% + 1px));
+}
+.guide .card-blueprint .dashed-border:after, .index .card-blueprint .dashed-border:after {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: -8px;
+  width: calc(100% + 16px);
+  height: calc(100% + 16px);
+  background: linear-gradient(to top left, transparent calc(50% - 1px), rgba(255, 255, 255, 0.1), transparent calc(50% + 1px));
+}
+.guide .card-blueprint .dashed-border h2, .index .card-blueprint .dashed-border h2 {
+  font-weight: 700;
+  padding: 0;
+  margin: 16px 16px 0 16px;
+  text-align: left;
+  color: white;
+}
+.guide .card-blueprint .dashed-border h4, .index .card-blueprint .dashed-border h4 {
+  font-weight: 700;
+  padding: 0;
+  margin: 16px 16px 0 16px;
+  text-align: left;
+  color: white;
+}
+.guide .card-blueprint .dashed-border p, .index .card-blueprint .dashed-border p {
+  color: white;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+.guide .card-blueprint .dashed-border .blueprint-data, .index .card-blueprint .dashed-border .blueprint-data {
+  z-index: 10;
+  min-height: 80px;
+  padding: 32px 16px 0 16px;
+  display: block;
+}
+.guide .card-blueprint .dashed-border .blueprint-data .blueprint-data-block, .index .card-blueprint .dashed-border .blueprint-data .blueprint-data-block {
+  display: inline-block;
+  margin: 0 32px 32px 0;
+  min-width: 150px;
+}
+.guide .card-blueprint .dashed-border .blueprint-data .blueprint-data-block .data-label, .index .card-blueprint .dashed-border .blueprint-data .blueprint-data-block .data-label {
+  font-size: 1rem;
+  line-height: 1rem;
+  color: white;
+  font-weight: 500;
+}
+.guide .card-blueprint .dashed-border .blueprint-data .blueprint-data-block .data-text, .index .card-blueprint .dashed-border .blueprint-data .blueprint-data-block .data-text {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: white;
+  font-weight: 600;
+}
+
 .guide p {
   line-height: 1.6;
 }
