@@ -1145,16 +1145,19 @@ button {
   overflow: hidden;
   background-color: rgba(var(--warning-rgb), 0.05);
   position: relative;
-}
-.tile-warning:before {
-  content: "";
-  position: absolute;
-  width: 7px;
-  height: 100%;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  background-color: var(--warning);
+  box-shadow: 0 0 0 3px var(--warning);
+  /*
+  	&:before {
+  		content: "";
+  		position: absolute;
+  		width: 7px;
+  		height: 100%;
+  		left: 0;
+  		top: 0;
+  		bottom: 0;
+  		background-color: var(--warning);
+  	}
+  	*/
 }
 
 .title-grid #lottie {
