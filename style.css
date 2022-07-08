@@ -1802,8 +1802,8 @@ input:checked + .slider .light {
 .top10 .movie-card .image-tile .chernobyl {
   background-position: center 70%;
 }
-.top10 .movie-card .image-tile .crown {
-  background-position: center 70%;
+.top10 .movie-card .image-tile .robot {
+  background-position: center 50%;
 }
 .top10 .movie-card .numero {
   z-index: 2;
