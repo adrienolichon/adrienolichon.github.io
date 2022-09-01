@@ -1046,13 +1046,16 @@ button {
   transition: var(--transition1);
   grid-auto-rows: -webkit-min-content;
   grid-auto-rows: min-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   /*
   background-color: var(--bgmain);
   border: 1px solid var(--black4);
   */
 }
 .tile-tableau .lien-tableau {
-  border-radius: var(--radius-large);
+  border-radius: var(--radius-small);
   width: 100%;
   min-height: 36px;
   padding: 16px 0;
@@ -1123,7 +1126,7 @@ button {
 }
 .tile-tableau .half-table a {
   padding-left: 0;
-  border-radius: var(--radius-large);
+  border-radius: var(--radius-small);
 }
 .tile-tableau .half-table a:first-child {
   padding-left: 0;
