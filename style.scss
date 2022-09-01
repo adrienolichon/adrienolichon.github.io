@@ -1102,7 +1102,7 @@ button {
 			&:hover {
 				p {
 					color: rgb(var(--blue));
-					font-weight: 600;
+					font-variation-settings: 'wght' 600;
 				}
 				.material-symbols-rounded {
 					transition: var(--transition1);

@@ -853,7 +853,6 @@ button {
     margin-right: auto;
     width: 692px;
   }
-
   header {
     max-width: calc(692px + 4rem);
   }
@@ -865,23 +864,19 @@ button {
     width: 87.5%;
     max-width: 366px;
   }
-
   .mail {
     display: none;
   }
-
   header .header-content .mailresponsive {
     display: none;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
     text-align: right;
   }
-
   .first-section,
 .section-intro-index {
     padding-top: 100px;
   }
-
   header {
     top: 10px;
     max-width: calc(366px + 4rem);
@@ -891,11 +886,9 @@ button {
   .first-section {
     padding-top: 100px;
   }
-
   header .header-content .header-title {
     font-size: 17px;
   }
-
   header {
     top: 0;
     border-radius: 0 0 7px 7px;
@@ -1099,7 +1092,7 @@ button {
 @media (hover: hover) {
   .tile-tableau .lien-tableau:hover p {
     color: rgb(var(--blue));
-    font-weight: 600;
+    font-variation-settings: "wght" 600;
   }
   .tile-tableau .lien-tableau:hover .material-symbols-rounded {
     transition: var(--transition1);
@@ -1246,21 +1239,17 @@ button {
   .grid {
     margin: 0 0 48px 0;
   }
-
   .grid2 {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 24px;
   }
-
   .grid5 {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 24px;
   }
-
   .tile-item-1 {
     width: 692px;
   }
-
   .tile-item-2 {
     width: 333px;
   }
@@ -1269,26 +1258,21 @@ button {
   .grid1 .tile {
     min-height: 200px;
   }
-
   .grid2 {
     grid-template-columns: repeat(1, 1fr);
     grid-column-gap: 0;
     grid-row-gap: 24px;
   }
-
   .gridcontact {
     grid-template-columns: 1fr;
   }
-
   .grid5 {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 12px;
   }
-
   .tile-item-1 {
     width: 100%;
   }
-
   .tile-item-2 {
     width: 100%;
   }
