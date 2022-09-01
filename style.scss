@@ -1079,6 +1079,7 @@ button {
 		p {
 			transition: var(--transition1);
 			position: relative;
+			font-variation-settings: 'wght' 400;
 		}
 		span {
 			display: flex;

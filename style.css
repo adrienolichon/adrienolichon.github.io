@@ -1071,6 +1071,7 @@ button {
 .tile-tableau .lien-tableau p {
   transition: var(--transition1);
   position: relative;
+  font-variation-settings: "wght" 400;
 }
 .tile-tableau .lien-tableau span {
   display: flex;
