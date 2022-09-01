@@ -620,6 +620,7 @@ header .header-content .header-title {
   letter-spacing: 0.011em;
   margin: auto 0;
   transition: var(--transition1);
+  font-variation-settings: "wght" 600;
 }
 @media (hover: hover) {
   header .header-content .header-title:hover {
