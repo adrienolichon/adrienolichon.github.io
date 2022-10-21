@@ -466,6 +466,8 @@ a:visited {
   color: rgb(var(--blue)) !important;
   transition: var(--transition1);
   padding: 2px 4px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
   border-radius: var(--radius-small);
 }
 @media (hover: hover) {
@@ -473,6 +475,7 @@ a:visited {
     color: var(--white) !important;
     background: rgb(var(--blue));
     transition: var(--transition1);
+    text-underline-offset: 8px;
   }
 }
 
@@ -816,6 +819,7 @@ button {
   height: 48px;
   border-radius: var(--radius-large);
   display: flex;
+  padding: 0;
   transition: var(--transition1);
 }
 .section-intro-index .section-content .grid .tile .grid-photo-mail .mail-intro span {

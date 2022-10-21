@@ -480,6 +480,8 @@ a:visited {
 	color: rgb(var(--blue)) !important;
 	transition: var(--transition1);
 	padding: 2px 4px;
+	text-decoration: underline;
+	text-underline-offset: 4px;
 	border-radius: var(--radius-small);
 	@media (hover: hover) {
 		&:hover {
@@ -487,9 +489,11 @@ a:visited {
 			color: var(--white) !important;
 			background: rgb(var(--blue));
 			transition: var(--transition1);
+			text-underline-offset: 8px;
 		}
 	}
 }
+ 
 
 /* Material symbols */
 .material-symbols-rounded.icon-outline {
@@ -601,6 +605,7 @@ a,
 button {
 	touch-action: manipulation;
 }
+
 
 /* ------------------------ Base ------------------------ */
 header {
@@ -814,6 +819,7 @@ button {
 						height: 48px;
 						border-radius: var(--radius-large);
 						display: flex;
+						padding: 0;
 						transition: var(--transition1);
 
 						span {
