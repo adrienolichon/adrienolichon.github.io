@@ -4578,6 +4578,7 @@ input:checked + .slider .light {
   font-size: 28px;
   border-radius: 200px;
   transition-duration: 0.3s;
+  font-variation-settings: "wght" 800;
 }
 .dashboard-page .website .content .timeline .add-item .choix-item-add {
   position: absolute;
