@@ -3071,6 +3071,12 @@ input:checked + .slider .light {
 .dieter .calculatrice .color-buttons .black .btn {
   background-color: black;
 }
+.dieter .calculatrice .color-buttons .yellow .btn {
+  background-color: #ca8932;
+}
+.dieter .calculatrice .color-buttons .yellow .btn .text {
+  color: black;
+}
 
 .guide .card-blueprint,
 .index .card-blueprint {
@@ -4432,6 +4438,9 @@ input:checked + .slider .light {
   }
 }
 
+.dashboard-page .material-symbols-rounded {
+  font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 0, "opsz" 48;
+}
 .dashboard-page .main {
   display: grid;
   grid-template-columns: 364px minmax(20px, 1fr);
@@ -4923,7 +4932,7 @@ input:checked + .slider .light {
   font-size: 14px;
   color: var(--oc-gray-8);
 }
-.dashboard-page .sidebar .filariane .material-icons-round {
+.dashboard-page .sidebar .filariane .material-symbols-rounded {
   font-size: 20px;
   color: var(--oc-gray-6);
   width: 18px;
@@ -4959,7 +4968,7 @@ input:checked + .slider .light {
   height: 20px;
   line-height: 20px;
 }
-.dashboard-page .sidebar .dropdown .dropdown-label .material-icons-round {
+.dashboard-page .sidebar .dropdown .dropdown-label .material-symbols-rounded {
   font-size: 20px;
   color: var(--oc-gray-6);
   width: 20px;
@@ -5010,11 +5019,11 @@ input:checked + .slider .light {
     background-color: var(--oc-gray-0);
     color: rgb(76, 110, 245);
   }
-  .dashboard-page .sidebar .dropdown .dropdown-item:hover .material-icons-round {
+  .dashboard-page .sidebar .dropdown .dropdown-item:hover .material-symbols-rounded {
     color: var(--oc-gray-5);
   }
 }
-.dashboard-page .sidebar .dropdown .dropdown-item .material-icons-round {
+.dashboard-page .sidebar .dropdown .dropdown-item .material-symbols-rounded {
   font-size: 20px;
   color: var(--oc-gray-5);
   width: 18px;
@@ -5070,10 +5079,11 @@ input:checked + .slider .light {
 .dashboard-page .sidebar .listeliens .lien:first-child {
   background-color: var(--oc-gray-0);
 }
-.dashboard-page .sidebar .listeliens .lien .material-icons-round {
+.dashboard-page .sidebar .listeliens .lien .material-symbols-rounded {
   font-size: 24px;
   width: 40px;
   padding: 8px;
+  font-variation-settings: "FILL" 0;
 }
 .dashboard-page .sidebar .listeliens .lien p {
   height: 24px;
@@ -5093,11 +5103,12 @@ input:checked + .slider .light {
   transition-duration: 0.3s;
   color: var(--oc-gray-8);
 }
-.dashboard-page .sidebar .listeliens .lien.active .material-icons-round {
+.dashboard-page .sidebar .listeliens .lien.active .material-symbols-rounded {
   background-color: var(--oc-gray-9);
   color: var(--white);
   border-radius: 8px;
   box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+  font-variation-settings: "FILL" 1;
 }
 .dashboard-page .sidebar .listeliens .lien.active p {
   font-variation-settings: "wght" 700;
@@ -5200,7 +5211,7 @@ input:checked + .slider .light {
     grid-template-columns: 40px;
     width: 54px;
   }
-  .dashboard-page .sidebar .listeliens .lien .material-icons-round {
+  .dashboard-page .sidebar .listeliens .lien .material-symbols-rounded {
     padding: 8px 7px;
   }
   .dashboard-page .sidebar .listeliens .lien p {
