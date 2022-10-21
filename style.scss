@@ -12,7 +12,7 @@
 	--grey1: #e5e5ea;
 	--greydatecat: #6e6e73;
 	--transition1: 400ms cubic-bezier(0.4, 0, 0.25, 1);
-	--header: rgba(255, 255, 255, 0.7);
+	--header: rgba(255, 255, 255, 0.5);
 	--buttonhover: #f1f3f5;
 	--input: #f5f5f5;
 	--warning: #ffc632;
@@ -21,6 +21,8 @@
 	--radius-large: 14px;
 	--radius-small: 7px;
 	--radius-medum: 10px;
+
+	--shadow-header:0 0 50px rgb(206 212 218 / 70%), 0 0 0 1px rgb(0 0 0 / 5%), 0 0px 4px rgb(0 0 0 / 10%);
 
 	--animation1: 0.3192s;
 	--animation2: 0.5s;
@@ -358,11 +360,13 @@
 	--colortext: #f5f5f7;
 	--grey1: #e5e5ea;
 	--greydatecat: #86868b;
-	--header: rgba(0, 0, 0, 0.7);
+	--header: rgba(0, 0, 0, 0.5);
 	--buttonhover: #343a40;
 	--input: #343a40;
 	--warning: #ffc632;
 	--warning-rgb: 255, 198, 52;
+
+	--shadow-header:0 0 50px rgb(206 212 218 / 70%), 0 0 0 1px rgb(255 255 255 / 5%), 0 0px 4px rgb(255 255 255 / 10%);
 
 	--oc-gray-9: #f8f9fa;
 	--oc-gray-9-rgb: 248, 249, 250;
@@ -385,10 +389,6 @@
 	--oc-gray-0: #212529;
 	--oc-gray-0-rgb: 33, 37, 41;
 
-	header {
-		border: 1px solid rgba(255, 255, 255, 0.5);
-		border-top: 0px solid transparent;
-	}
 }
 * {
 	box-sizing: border-box;
@@ -605,20 +605,23 @@ button {
 /* ------------------------ Base ------------------------ */
 header {
 	position: fixed;
-	backdrop-filter: saturate(180%) blur(20px);
+	backdrop-filter: blur(24px);
 	background-color: var(--header);
 	height: 52px;
-	width: calc(100vw - 2rem);
+	width: fit-content;
 	max-width: calc(980px + 3rem);
-	top: 0;
+	top: 8px;
 	left: 50%;
 	transform: translateX(-50%);
 	right: 0;
 	z-index: 10;
-	border-radius: 0 0 7px 7px;
-	box-shadow: 0 0 50px rgb(206 212 218 / 70%);
+	border-radius: var(--radius-large);
+	box-shadow: var(--shadow-header);
+	
 	overflow: hidden;
-
+	.section-content{
+		width: auto;
+	}
 	.header-content {
 		height: 52px;
 		display: grid;
@@ -633,7 +636,7 @@ header {
 			line-height: 1;
 			font-weight: 500;
 			letter-spacing: 0.011em;
-			margin: auto 0;
+			margin: auto 0 12px 0px;
 			transition: var(--transition1);
 			font-variation-settings: "wght" 600;
 			@media (hover: hover) {
