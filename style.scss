@@ -773,8 +773,8 @@ button {
 					.photo {
 						width: 96px;
 						height: 96px;
-						border-radius: 50%;
-						background-image: url("img/Adrien.jpeg");
+						border-radius: 0;
+						background-image: url("favicon/android-chrome-512x512.png");
 						background-size: cover;
 						//filter: brightness(1.25);
 						position: relative;
@@ -844,6 +844,14 @@ button {
 					padding: 0;
 					margin: 0;
 					font-weight: 600;
+					background: linear-gradient(0deg, #4673ee 20%, #fff 100%);
+					background-size: auto 200%;
+					-webkit-background-clip: text;
+					background-clip: text;
+					text-fill-color: transparent;
+					-webkit-text-fill-color: transparent;
+
+					animation: h2home 2s linear forwards;
 				}
 			}
 			.intro-card {
@@ -854,6 +862,15 @@ button {
 		}
 	}
 }
+@keyframes h2home {
+	0%{
+		background-position: initial initial;
+	}	
+	100%{
+		background-position: center 100%;
+	}
+}
+
 .second-section {
 	padding-top: 80px;
 }
