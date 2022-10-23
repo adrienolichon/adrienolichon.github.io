@@ -1,5 +1,6 @@
 @charset "UTF-8";
 :root {
+  font-family: "Inter", system-ui, sans-serif;
   --white: #ffffff;
   --opencolor: #ffffff;
   --bgmain: #f2f2f6;
@@ -22,7 +23,7 @@
   --radius-large: 14px;
   --radius-small: 7px;
   --radius-medum: 10px;
-  --shadow-header:0 0 50px rgb(206 212 218 / 70%), 0 0 0 1px rgb(0 0 0 / 5%), 0 0px 4px rgb(0 0 0 / 10%);
+  --shadow-header: 0 0 50px rgb(206 212 218 / 70%), 0 0 0 1px rgb(0 0 0 / 5%), 0 0px 4px rgb(0 0 0 / 10%);
   --animation1: 0.3192s;
   --animation2: 0.5s;
   /*  General
@@ -337,7 +338,7 @@
   --input: #343a40;
   --warning: #ffc632;
   --warning-rgb: 255, 198, 52;
-  --shadow-header:0 0 50px rgb(206 212 218 / 70%), 0 0 0 1px rgb(255 255 255 / 5%), 0 0px 4px rgb(255 255 255 / 10%);
+  --shadow-header: 0 0 50px rgb(206 212 218 / 70%), 0 0 0 1px rgb(255 255 255 / 5%), 0 0px 4px rgb(255 255 255 / 10%);
   --oc-gray-9: #f8f9fa;
   --oc-gray-9-rgb: 248, 249, 250;
   --oc-gray-8: #f1f3f5;
@@ -360,18 +361,18 @@
   --oc-gray-0-rgb: 33, 37, 41;
 }
 
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: "Inter var", system-ui, sans-serif;
+  }
+}
 * {
   box-sizing: border-box;
   text-rendering: optimizeLegibility;
 }
 
-@font-face {
-  font-family: "Inter";
-  src: url("Font/Inter.ttf") format("truetype");
-}
 html {
   font-size: 17px;
-  font-family: "Inter", system-ui, sans-serif;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
 }
@@ -770,6 +771,7 @@ button {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  box-shadow: 0 0 0 1px var(--oc-gray-3);
 }
 .section-intro-index .section-content .grid .tile .grid-photo-mail {
   display: grid;
@@ -971,6 +973,7 @@ button {
   display: flex;
   flex-direction: column;
   transition: var(--transition1);
+  box-shadow: 0 0 0 1px var(--oc-gray-3);
 }
 .tile .image-tile {
   transition: var(--transition1);
@@ -1077,6 +1080,7 @@ button {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  box-shadow: 0 0 0 1px var(--oc-gray-3);
   /*
   background-color: var(--bgmain);
   border: 1px solid var(--black4);

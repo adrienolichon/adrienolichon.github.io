@@ -1,4 +1,6 @@
 :root {
+	font-family: "Inter", system-ui, sans-serif;
+
 	--white: #ffffff;
 	--opencolor: #ffffff;
 	--bgmain: #f2f2f6;
@@ -22,7 +24,7 @@
 	--radius-small: 7px;
 	--radius-medum: 10px;
 
-	--shadow-header:0 0 50px rgb(206 212 218 / 70%), 0 0 0 1px rgb(0 0 0 / 5%), 0 0px 4px rgb(0 0 0 / 10%);
+	--shadow-header: 0 0 50px rgb(206 212 218 / 70%), 0 0 0 1px rgb(0 0 0 / 5%), 0 0px 4px rgb(0 0 0 / 10%);
 
 	--animation1: 0.3192s;
 	--animation2: 0.5s;
@@ -366,7 +368,7 @@
 	--warning: #ffc632;
 	--warning-rgb: 255, 198, 52;
 
-	--shadow-header:0 0 50px rgb(206 212 218 / 70%), 0 0 0 1px rgb(255 255 255 / 5%), 0 0px 4px rgb(255 255 255 / 10%);
+	--shadow-header: 0 0 50px rgb(206 212 218 / 70%), 0 0 0 1px rgb(255 255 255 / 5%), 0 0px 4px rgb(255 255 255 / 10%);
 
 	--oc-gray-9: #f8f9fa;
 	--oc-gray-9-rgb: 248, 249, 250;
@@ -388,21 +390,20 @@
 	--oc-gray-1-rgb: 52, 58, 64;
 	--oc-gray-0: #212529;
 	--oc-gray-0-rgb: 33, 37, 41;
-
+}
+@supports (font-variation-settings: normal) {
+	:root {
+		font-family: "Inter var", system-ui, sans-serif;
+	}
 }
 * {
 	box-sizing: border-box;
 	text-rendering: optimizeLegibility;
 }
 
-@font-face {
-	font-family: "Inter";
-	src: url("Font/Inter.ttf") format("truetype");
-}
-
 html {
 	font-size: 17px;
-	font-family: "Inter", system-ui, sans-serif;
+	//font-family: 'Inter', system-ui, sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-webkit-font-smoothing: antialiased;
 }
@@ -493,7 +494,6 @@ a:visited {
 		}
 	}
 }
- 
 
 /* Material symbols */
 .material-symbols-rounded.icon-outline {
@@ -606,7 +606,6 @@ button {
 	touch-action: manipulation;
 }
 
-
 /* ------------------------ Base ------------------------ */
 header {
 	position: fixed;
@@ -622,9 +621,9 @@ header {
 	z-index: 10;
 	border-radius: var(--radius-large);
 	box-shadow: var(--shadow-header);
-	
+
 	overflow: hidden;
-	.section-content{
+	.section-content {
 		width: auto;
 	}
 	.header-content {
@@ -766,6 +765,7 @@ button {
 				grid-template-columns: 1fr;
 				grid-gap: 16px;
 				height: max-content;
+				box-shadow: 0 0 0 1px var(--oc-gray-3);
 				.grid-photo-mail {
 					display: grid;
 					grid-template-columns: 1fr 48px;
@@ -975,6 +975,7 @@ button {
 	display: flex;
 	flex-direction: column;
 	transition: var(--transition1);
+	box-shadow: 0 0 0 1px var(--oc-gray-3);
 	//height: max-content;
 
 	.image-tile {
@@ -1083,7 +1084,7 @@ button {
 	transition: var(--transition1);
 	grid-auto-rows: min-content;
 	height: max-content;
-
+	box-shadow: 0 0 0 1px var(--oc-gray-3);
 	/*
 	background-color: var(--bgmain);
 	border: 1px solid var(--black4);
@@ -3134,7 +3135,7 @@ input:checked + .slider .light {
 			.yellow {
 				.btn {
 					background-color: #ca8932;
-					.text{
+					.text {
 						color: black;
 					}
 				}
@@ -4373,11 +4374,7 @@ input:checked + .slider .light {
 
 .dashboard-page {
 	.material-symbols-rounded {
-		font-variation-settings:
-		'FILL' 1,
-		'wght' 500,
-		'GRAD' 0,
-		'opsz' 48
+		font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 0, "opsz" 48;
 	}
 	.main {
 		display: grid;
@@ -4529,7 +4526,7 @@ input:checked + .slider .light {
 						font-size: 28px;
 						border-radius: 200px;
 						transition-duration: 0.3s;
-						font-variation-settings:'wght' 800
+						font-variation-settings: "wght" 800;
 					}
 					.choix-item-add {
 						position: absolute;
@@ -4711,7 +4708,7 @@ input:checked + .slider .light {
 								font-size: 28px;
 								padding: 0;
 								margin: auto;
-								color:rgba(var(--oc-blue-7-rgb), 1);;
+								color: rgba(var(--oc-blue-7-rgb), 1);
 							}
 						}
 						.data {
@@ -4906,7 +4903,6 @@ input:checked + .slider .light {
 				font-size: 20px;
 				color: var(--oc-gray-6);
 				width: 18px;
-				
 			}
 		}
 
@@ -5073,9 +5069,7 @@ input:checked + .slider .light {
 					font-size: 24px;
 					width: 40px;
 					padding: 8px;
-					font-variation-settings:
-							'FILL' 0;
-						
+					font-variation-settings: "FILL" 0;
 				}
 				p {
 					height: 24px;
@@ -5102,9 +5096,7 @@ input:checked + .slider .light {
 						border-radius: 8px;
 						box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
 
-							font-variation-settings:
-							'FILL' 1;
-					
+						font-variation-settings: "FILL" 1;
 					}
 					p {
 						font-variation-settings: "wght" 700;
