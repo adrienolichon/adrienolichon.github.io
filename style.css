@@ -789,7 +789,6 @@ button {
   }
 }
 .section-intro-index .section-content .grid .tile .grid-photo-mail .mail-intro {
-  background-color: rgba(var(--blue), 0.04);
   width: 48px;
   height: 48px;
   border-radius: var(--radius-large);
