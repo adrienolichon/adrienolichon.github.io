@@ -3,7 +3,7 @@
 
 	--white: #ffffff;
 	--opencolor: #ffffff;
-	--bgmain: #f2f2f6;
+	--bgmain: #f5f5f7;
 	--black1: #1c1c1e;
 	--black2: #3a3a3c;
 	--black3: #8e8e93;
@@ -736,7 +736,7 @@ button {
 				grid-template-columns: 1fr;
 				grid-gap: 16px;
 				height: max-content;
-				box-shadow: 0 0 0 1px var(--oc-gray-3);
+				//box-shadow: 0 0 0 1px var(--oc-gray-3);
 				.grid-photo-mail {
 					display: grid;
 					grid-template-columns: 1fr 48px;
@@ -1045,7 +1045,7 @@ button {
 	display: flex;
 	flex-direction: column;
 	transition: var(--transition1);
-	box-shadow: 0 0 0 1px var(--oc-gray-3);
+	//box-shadow: 0 0 0 1px var(--oc-gray-3);
 	//height: max-content;
 
 	.image-tile {
@@ -1154,7 +1154,7 @@ button {
 	transition: var(--transition1);
 	grid-auto-rows: min-content;
 	height: max-content;
-	box-shadow: 0 0 0 1px var(--oc-gray-3);
+	//box-shadow: 0 0 0 1px var(--oc-gray-3);
 	/*
 	background-color: var(--bgmain);
 	border: 1px solid var(--black4);
