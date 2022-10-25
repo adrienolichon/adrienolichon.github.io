@@ -22,7 +22,8 @@
 	--warning-rgb: 255, 198, 52;
 	--radius-large: 14px;
 	--radius-small: 7px;
-	--radius-medum: 10px;
+	--radius-medium: 10px;
+	--radius-large-top: 14px 14px 0 0;
 
 	--dark-blue-gradient:#4673ee;
 	--light-blue-gradient:#4dabf7;
@@ -624,7 +625,7 @@ header {
 	transform: translateX(-50%);
 	right: 0;
 	z-index: 10;
-	border-radius: var(--radius-large);
+	border-radius: var(--radius-medium);
 	
 	.section-content {
 		width: auto;
@@ -643,7 +644,7 @@ header {
 			padding: 0 16px 0 0;
 			box-shadow: var(--shadow-header);
 			background-color: var(--header);
-			border-radius: var(--radius-large);
+			border-radius: var(--radius-medium);
 			width: max-content;
 		}
 		.header-title {
@@ -1053,7 +1054,7 @@ button {
 		overflow: hidden;
 		height: 266px;
 		width: 100%;
-		border-radius: 14px 14px 0 0;
+		border-radius: var(--radius-large-top);
 		position: relative;
 		&:after {
 			opacity: 0;
@@ -1069,7 +1070,7 @@ button {
 		}
 		.image-content {
 			transition: var(--transition1);
-			border-radius: 14px 14px 0 0;
+			border-radius: var(--radius-large-top);
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-position: center;
@@ -1465,8 +1466,8 @@ button {
 	@media (hover: hover) {
 		&:hover {
 			color: var(--white);
-			border: 1px solid #f7aa3d;
-			background: #f7aa3d;
+			border: 1px solid #0046FE;
+			background: #0046FE;
 		}
 	}
 }
@@ -1475,42 +1476,51 @@ button {
 	0% {
 		transform: scale(0);
 		opacity: 0;
+		filter: blur(4px);
 	}
 	50% {
 		transform: scale(1);
 		opacity: 1;
+		filter: blur(0px);
 	}
 	100% {
 		transform: scale(0);
 		opacity: 0;
+		filter: blur(4px);
 	}
 }
 @-moz-keyframes dot {
 	0% {
 		transform: scale(0);
 		opacity: 0;
+		filter: blur(4px);
 	}
 	50% {
 		transform: scale(1);
 		opacity: 1;
+		filter: blur(0px);
 	}
 	100% {
 		transform: scale(0);
 		opacity: 0;
+		filter: blur(4px);
 	}
 }
 @keyframes dot {
 	0% {
 		transform: scale(0);
 		opacity: 0;
+		filter: blur(4px);
 	}
 	50% {
 		transform: scale(1);
 		opacity: 1;
+		filter: blur(0px);
 	}
 	100% {
 		transform: scale(0);
 		opacity: 0;
+		filter: blur(4px);
 	}
 }
 
@@ -1523,7 +1533,7 @@ button {
     background-color: var(--header);
     box-shadow: var(--shadow-header);
     align-items: center;
-    border-radius: var(--radius-large);
+    border-radius: var(--radius-medium);
 	overflow: hidden;
 }
 .theme-switch {
@@ -1971,7 +1981,7 @@ input:checked + .slider .light {
 			}
 			.image-content {
 				transition: var(--transition1);
-				border-radius: 14px 14px 0 0;
+				border-radius: var(--radius-large-top);
 				background-size: 105%;
 				background-repeat: no-repeat;
 				background-position: center;
@@ -3227,7 +3237,7 @@ input:checked + .slider .light {
 		background-color: rgb(var(--blueprint));
 		min-height: 80px;
 		width: 100%;
-		border-radius: 16px;
+		border-radius: var(--radius-large);
 		padding: 8px;
 		position: relative;
 		overflow: hidden;
@@ -3553,7 +3563,7 @@ input:checked + .slider .light {
 				background-color: rgb(var(--blueprint));
 				min-height: 80px;
 				width: 100%;
-				border-radius: 16px;
+				border-radius: var(--radius-medium);
 				padding: 8px;
 				position: relative;
 				overflow: hidden;
@@ -3738,7 +3748,7 @@ input:checked + .slider .light {
 				border: 4px solid rgb(var(--blueprint));
 				min-height: 80px;
 				width: 100%;
-				border-radius: 16px;
+				border-radius: var(--radius-large);
 				position: relative;
 				overflow: hidden;
 				z-index: 0;
@@ -4383,7 +4393,7 @@ input:checked + .slider .light {
 			max-width: 300px;
 			height: 100%;
 			height: 300px;
-			border-radius: 16px;
+			border-radius: var(--radius-medium);
 			flex: 0 0 300px;
 			align-items: center;
 			justify-content: center;
@@ -4473,7 +4483,7 @@ input:checked + .slider .light {
 		.content {
 			padding: 32px 16px 32px 32px;
 			//background-color: var(--oc-gray-0);
-			border-radius: 16px;
+			border-radius: var(--radius-medium);
 			min-height: 200px;
 			width: 100%;
 			max-width: 800px;
@@ -4609,7 +4619,7 @@ input:checked + .slider .light {
 						position: absolute;
 						box-shadow: 0 0 20px rgb(0 0 0 / 20%);
 						width: auto;
-						border-radius: 16px;
+						border-radius: var(--radius-medium);
 						margin-top: 8px;
 						background-color: var(--white);
 						padding: 0 8px;
