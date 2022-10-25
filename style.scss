@@ -754,7 +754,7 @@ button {
 						opacity: 0;
 						filter: blur(4px);
 						animation: elementintro .5s ease-in-out forwards;
-						animation-delay: .3s;
+						animation-delay: .8s;
 
 						.localisation-photo {
 							display: grid;
@@ -801,7 +801,7 @@ button {
 						opacity: 0;
 						filter: blur(4px);
 						animation: elementintro .5s ease-in-out forwards;
-						animation-delay: .5s;
+						animation-delay: .9s;
 
 
 						span {
@@ -829,7 +829,7 @@ button {
 					background-image: linear-gradient(90deg, var(--dark-blue-gradient) -200%, var(--light-blue-gradient) -100%, var(--white) 0%);
 					filter: blur(5px);
 					animation: h2home .8s ease-in-out forwards;
-					animation-delay: .5s;
+					animation-delay: .9s;
 					width: fit-content;
 					background-size: auto 200%;
 					-webkit-background-clip: text;
@@ -875,19 +875,38 @@ button {
 					}
 				}
 			}
+			.intro-card-left{
+				position: relative;
+				&:after{
+					content: "";
+					background: var(--bgmain);
+					inset: auto 0 0 0;
+					width: 100%;
+					animation: introcard var(--transition1) forwards;
+					animation-delay: 0.4s;
+					position: absolute;
+					height: 100%;
+					border-radius: var(--radius-large);
+					opacity: 1;
+					
+					transform: scale(1.01);
+				}
+			}
 			.intro-card {
 				position: relative;
 				&:after{
 					content: "";
-					background-image: linear-gradient(90deg, var(--bgmain) 0%, var(--bgmain) 100%);
+					background: var(--bgmain);
 					inset: auto 0 0 0;
 					width: 100%;
-					animation: introcard .5s ease-in-out forwards;
+					animation: introcard var(--transition1) forwards;
 					animation-delay: 1.8s;
 					position: absolute;
 					height: 100%;
 					border-radius: var(--radius-large);
+					opacity: 1;
 					
+					transform: scale(1.01);
 				}
 				
 
@@ -900,10 +919,10 @@ button {
 }
 @keyframes introcard {
 	0%{
-		height: 100%;
+		opacity: 1;
 	}
 	100%{
-		height: 0%;
+		opacity: 0;
 	}
 }
 @keyframes elementintro {

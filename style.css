@@ -761,8 +761,8 @@ button {
   filter: blur(4px);
   -webkit-animation: elementintro 0.5s ease-in-out forwards;
           animation: elementintro 0.5s ease-in-out forwards;
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
 }
 .section-intro-index .section-content .grid .tile .grid-photo-mail .photo .localisation-photo {
   display: grid;
@@ -805,8 +805,8 @@ button {
   filter: blur(4px);
   -webkit-animation: elementintro 0.5s ease-in-out forwards;
           animation: elementintro 0.5s ease-in-out forwards;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
 }
 .section-intro-index .section-content .grid .tile .grid-photo-mail .mail-intro span {
   margin: auto;
@@ -830,8 +830,8 @@ button {
   filter: blur(5px);
   -webkit-animation: h2home 0.8s ease-in-out forwards;
           animation: h2home 0.8s ease-in-out forwards;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -882,21 +882,41 @@ button {
     border-bottom: 2px solid rgb(var(--blue));
   }
 }
+.section-intro-index .section-content .grid .intro-card-left {
+  position: relative;
+}
+.section-intro-index .section-content .grid .intro-card-left:after {
+  content: "";
+  background: var(--bgmain);
+  inset: auto 0 0 0;
+  width: 100%;
+  -webkit-animation: introcard var(--transition1) forwards;
+          animation: introcard var(--transition1) forwards;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+  position: absolute;
+  height: 100%;
+  border-radius: var(--radius-large);
+  opacity: 1;
+  transform: scale(1.01);
+}
 .section-intro-index .section-content .grid .intro-card {
   position: relative;
 }
 .section-intro-index .section-content .grid .intro-card:after {
   content: "";
-  background-image: linear-gradient(90deg, var(--bgmain) 0%, var(--bgmain) 100%);
+  background: var(--bgmain);
   inset: auto 0 0 0;
   width: 100%;
-  -webkit-animation: introcard 0.5s ease-in-out forwards;
-          animation: introcard 0.5s ease-in-out forwards;
+  -webkit-animation: introcard var(--transition1) forwards;
+          animation: introcard var(--transition1) forwards;
   -webkit-animation-delay: 1.8s;
           animation-delay: 1.8s;
   position: absolute;
   height: 100%;
   border-radius: var(--radius-large);
+  opacity: 1;
+  transform: scale(1.01);
 }
 .section-intro-index .section-content .grid .intro-card .introduction {
   font-size: 1.125rem;
@@ -904,19 +924,19 @@ button {
 
 @-webkit-keyframes introcard {
   0% {
-    height: 100%;
+    opacity: 1;
   }
   100% {
-    height: 0%;
+    opacity: 0;
   }
 }
 
 @keyframes introcard {
   0% {
-    height: 100%;
+    opacity: 1;
   }
   100% {
-    height: 0%;
+    opacity: 0;
   }
 }
 @-webkit-keyframes elementintro {
