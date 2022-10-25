@@ -757,6 +757,12 @@ button {
   background-image: url("favicon/android-chrome-512x512.png");
   background-size: cover;
   position: relative;
+  opacity: 0;
+  filter: blur(4px);
+  -webkit-animation: elementintro 0.5s ease-in-out forwards;
+          animation: elementintro 0.5s ease-in-out forwards;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 .section-intro-index .section-content .grid .tile .grid-photo-mail .photo .localisation-photo {
   display: grid;
@@ -795,6 +801,12 @@ button {
   display: flex;
   padding: 0;
   transition: var(--transition1);
+  opacity: 0;
+  filter: blur(4px);
+  -webkit-animation: elementintro 0.5s ease-in-out forwards;
+          animation: elementintro 0.5s ease-in-out forwards;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 .section-intro-index .section-content .grid .tile .grid-photo-mail .mail-intro span {
   margin: auto;
@@ -847,10 +859,86 @@ button {
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
+.section-intro-index .section-content .grid .tile .intro-paragraphe .link-in-text {
+  font-weight: 600;
+  text-underline-offset: 4px;
+  border-radius: 0;
+  border-bottom: 0 solid rgb(var(--blue));
+  background-image: linear-gradient(90deg, var(--dark-blue-gradient) -200%, var(--light-blue-gradient) -100%, var(--white) 0%);
+  -webkit-animation: h2home 0.8s ease-in-out forwards;
+          animation: h2home 0.8s ease-in-out forwards;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+@media (hover: hover) {
+  .section-intro-index .section-content .grid .tile .intro-paragraphe .link-in-text:hover {
+    transition: var(--transition1);
+    text-underline-offset: 4px;
+    border-bottom: 2px solid rgb(var(--blue));
+  }
+}
+.section-intro-index .section-content .grid .intro-card {
+  position: relative;
+}
+.section-intro-index .section-content .grid .intro-card:after {
+  content: "";
+  background-image: linear-gradient(90deg, var(--bgmain) 0%, var(--bgmain) 100%);
+  inset: auto 0 0 0;
+  width: 100%;
+  -webkit-animation: introcard 0.5s ease-in-out forwards;
+          animation: introcard 0.5s ease-in-out forwards;
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+  position: absolute;
+  height: 100%;
+  border-radius: var(--radius-large);
+}
 .section-intro-index .section-content .grid .intro-card .introduction {
   font-size: 1.125rem;
 }
 
+@-webkit-keyframes introcard {
+  0% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+
+@keyframes introcard {
+  0% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+@-webkit-keyframes elementintro {
+  0% {
+    opacity: 0;
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+@keyframes elementintro {
+  0% {
+    opacity: 0;
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
 @-webkit-keyframes h2home {
   0% {
     background-image: linear-gradient(90deg, var(--dark-blue-gradient) -200%, var(--light-blue-gradient) -100%, var(--white) 0%);
@@ -937,7 +1025,6 @@ button {
     filter: blur(0px);
   }
 }
-
 @keyframes h2home {
   0% {
     background-image: linear-gradient(90deg, var(--dark-blue-gradient) -200%, var(--light-blue-gradient) -100%, var(--white) 0%);
@@ -1315,6 +1402,7 @@ button {
 }
 
 .tile {
+  position: relative;
   height: 100%;
   min-height: 100px;
   background-color: var(--white);

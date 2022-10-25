@@ -750,6 +750,11 @@ button {
 						background-size: cover;
 						//filter: brightness(1.25);
 						position: relative;
+						
+						opacity: 0;
+						filter: blur(4px);
+						animation: elementintro .5s ease-in-out forwards;
+						animation-delay: .3s;
 
 						.localisation-photo {
 							display: grid;
@@ -793,6 +798,11 @@ button {
 						display: flex;
 						padding: 0;
 						transition: var(--transition1);
+						opacity: 0;
+						filter: blur(4px);
+						animation: elementintro .5s ease-in-out forwards;
+						animation-delay: .5s;
+
 
 						span {
 							margin: auto;
@@ -840,9 +850,47 @@ button {
 					-webkit-text-fill-color: transparent;
 					-webkit-box-decoration-break: clone;
 					box-decoration-break: clone;
+					.link-in-text{
+						font-weight: 600;
+					text-underline-offset: 4px;
+					border-radius: 0;
+					border-bottom: 0 solid rgb(var(--blue));
+					background-image: linear-gradient(90deg, var(--dark-blue-gradient) -200%, var(--light-blue-gradient) -100%, var(--white) 0%);
+					animation: h2home .8s ease-in-out forwards;
+					animation-delay: 1.2s;
+					-webkit-background-clip: text;
+					background-clip: text;
+					-webkit-text-fill-color: transparent;
+					-webkit-box-decoration-break: clone;
+					box-decoration-break: clone;
+
+						@media (hover: hover){
+							&:hover{
+								transition: var(--transition1);
+								text-underline-offset: 4px;
+								border-bottom: 2px solid rgb(var(--blue));
+								
+							}
+						}
+					}
 				}
 			}
 			.intro-card {
+				position: relative;
+				&:after{
+					content: "";
+					background-image: linear-gradient(90deg, var(--bgmain) 0%, var(--bgmain) 100%);
+					inset: auto 0 0 0;
+					width: 100%;
+					animation: introcard .5s ease-in-out forwards;
+					animation-delay: 1.8s;
+					position: absolute;
+					height: 100%;
+					border-radius: var(--radius-large);
+					
+				}
+				
+
 				.introduction {
 					font-size: 1.125rem;
 				}
@@ -850,6 +898,26 @@ button {
 		}
 	}
 }
+@keyframes introcard {
+	0%{
+		height: 100%;
+	}
+	100%{
+		height: 0%;
+	}
+}
+@keyframes elementintro {
+	0%{
+		opacity: 0;
+		filter: blur(4px);
+	}
+	100%{
+		opacity: 1;
+		filter: blur(0);
+	}
+}
+
+
 @keyframes h2home {
 	0%{
 		background-image: linear-gradient(90deg, var(--dark-blue-gradient) -200%, var(--light-blue-gradient) -100%, var(--white) 0%);
@@ -1137,6 +1205,7 @@ button {
 	grid-gap: 4px;
 }
 .tile {
+	position: relative;
 	height: 100%;
 	min-height: 100px;
 	background-color: var(--white);
