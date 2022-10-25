@@ -621,12 +621,16 @@ header {
   width: -moz-fit-content;
   width: fit-content;
   max-width: calc(980px + 3rem);
-  top: 8px;
+  top: -60px;
   left: 50%;
   transform: translateX(-50%);
   right: 0;
   z-index: 10;
   border-radius: var(--radius-medium);
+  -webkit-animation: headeranim 0.4s cubic-bezier(0.5, 0.09, 0.15, 1.33) forwards;
+          animation: headeranim 0.4s cubic-bezier(0.5, 0.09, 0.15, 1.33) forwards;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 header .section-content {
   width: auto;
@@ -688,6 +692,23 @@ header .header-content .home span {
   }
 }
 
+@-webkit-keyframes headeranim {
+  0% {
+    top: -60px;
+  }
+  100% {
+    top: 8px;
+  }
+}
+
+@keyframes headeranim {
+  0% {
+    top: -60px;
+  }
+  100% {
+    top: 8px;
+  }
+}
 main {
   width: 100%;
   display: block;
@@ -888,7 +909,7 @@ button {
 .section-intro-index .section-content .grid .intro-card-left:after {
   content: "";
   background: var(--bgmain);
-  inset: auto 0 0 0;
+  inset: 0;
   width: 100%;
   -webkit-animation: introcard var(--transition1) forwards;
           animation: introcard var(--transition1) forwards;
@@ -906,7 +927,7 @@ button {
 .section-intro-index .section-content .grid .intro-card:after {
   content: "";
   background: var(--bgmain);
-  inset: auto 0 0 0;
+  inset: 0;
   width: 100%;
   -webkit-animation: introcard var(--transition1) forwards;
           animation: introcard var(--transition1) forwards;
@@ -932,6 +953,22 @@ button {
 }
 
 @keyframes introcard {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes introcard2 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes introcard2 {
   0% {
     opacity: 1;
   }
@@ -1305,6 +1342,24 @@ button {
 }
 .second-section {
   padding-top: 80px;
+  position: relative;
+}
+.second-section:after {
+  content: "";
+  background: var(--bgmain);
+  inset: 0;
+  width: 100%;
+  -webkit-animation: introcard var(--transition1) forwards;
+          animation: introcard var(--transition1) forwards;
+  position: absolute;
+  height: 100%;
+  border-radius: var(--radius-large);
+  opacity: 1;
+  transform: scale(1.01);
+  -webkit-animation: introcard2 var(--transition1) forwards;
+          animation: introcard2 var(--transition1) forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 .warning-p {
@@ -1364,7 +1419,7 @@ button {
     padding-top: 100px;
   }
   header {
-    top: 10px;
+    top: -60px;
     max-width: calc(366px + 4rem);
   }
 }
@@ -1376,7 +1431,7 @@ button {
     font-size: 17px;
   }
   header {
-    top: 10px;
+    top: -60px;
     border-radius: 0 0 7px 7px;
     width: 100%;
   }
