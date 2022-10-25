@@ -835,8 +835,8 @@ button {
   filter: blur(5px);
   -webkit-animation: phome 0.8s ease-in-out forwards;
           animation: phome 0.8s ease-in-out forwards;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
