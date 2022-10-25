@@ -621,16 +621,12 @@ header {
   width: -moz-fit-content;
   width: fit-content;
   max-width: calc(980px + 3rem);
-  top: -60px;
+  top: 8px;
   left: 50%;
   transform: translateX(-50%);
   right: 0;
   z-index: 10;
   border-radius: var(--radius-medium);
-  -webkit-animation: headeranim 0.4s cubic-bezier(0.5, 0.09, 0.15, 1.33) forwards;
-          animation: headeranim 0.4s cubic-bezier(0.5, 0.09, 0.15, 1.33) forwards;
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
 }
 header .section-content {
   width: auto;
@@ -692,23 +688,6 @@ header .header-content .home span {
   }
 }
 
-@-webkit-keyframes headeranim {
-  0% {
-    top: -60px;
-  }
-  100% {
-    top: 8px;
-  }
-}
-
-@keyframes headeranim {
-  0% {
-    top: -60px;
-  }
-  100% {
-    top: 8px;
-  }
-}
 main {
   width: 100%;
   display: block;
@@ -778,12 +757,6 @@ button {
   background-image: url("favicon/android-chrome-512x512.png");
   background-size: cover;
   position: relative;
-  opacity: 0;
-  filter: blur(4px);
-  -webkit-animation: elementintro 0.5s ease-in-out forwards;
-          animation: elementintro 0.5s ease-in-out forwards;
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
 }
 .section-intro-index .section-content .grid .tile .grid-photo-mail .photo .localisation-photo {
   display: grid;
@@ -822,12 +795,6 @@ button {
   display: flex;
   padding: 0;
   transition: var(--transition1);
-  opacity: 0;
-  filter: blur(4px);
-  -webkit-animation: elementintro 0.5s ease-in-out forwards;
-          animation: elementintro 0.5s ease-in-out forwards;
-  -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
 }
 .section-intro-index .section-content .grid .tile .grid-photo-mail .mail-intro span {
   margin: auto;
@@ -863,139 +830,10 @@ button {
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
-.section-intro-index .section-content .grid .tile .intro-paragraphe {
-  background-image: linear-gradient(90deg, var(--colortext) -200%, var(--colortext) -100%, var(--white) 0%);
-  filter: blur(5px);
-  -webkit-animation: phome 0.8s ease-in-out forwards;
-          animation: phome 0.8s ease-in-out forwards;
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  background-size: auto 200%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-}
-.section-intro-index .section-content .grid .tile .intro-paragraphe .link-in-text {
-  font-weight: 600;
-  text-underline-offset: 4px;
-  border-radius: 0;
-  border-bottom: 0 solid rgb(var(--blue));
-  background-image: linear-gradient(90deg, var(--dark-blue-gradient) -200%, var(--light-blue-gradient) -100%, var(--white) 0%);
-  -webkit-animation: h2home 0.8s ease-in-out forwards;
-          animation: h2home 0.8s ease-in-out forwards;
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-}
-@media (hover: hover) {
-  .section-intro-index .section-content .grid .tile .intro-paragraphe .link-in-text:hover {
-    transition: var(--transition1);
-    text-underline-offset: 4px;
-    border-bottom: 2px solid rgb(var(--blue));
-  }
-}
-.section-intro-index .section-content .grid .intro-card-left {
-  position: relative;
-}
-.section-intro-index .section-content .grid .intro-card-left:after {
-  content: "";
-  background: var(--bgmain);
-  inset: 0;
-  width: 100%;
-  -webkit-animation: introcard var(--transition1) forwards;
-          animation: introcard var(--transition1) forwards;
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-  position: absolute;
-  height: 100%;
-  border-radius: var(--radius-large);
-  opacity: 1;
-  transform: scale(1.01);
-}
-.section-intro-index .section-content .grid .intro-card {
-  position: relative;
-}
-.section-intro-index .section-content .grid .intro-card:after {
-  content: "";
-  background: var(--bgmain);
-  inset: 0;
-  width: 100%;
-  -webkit-animation: introcard var(--transition1) forwards;
-          animation: introcard var(--transition1) forwards;
-  -webkit-animation-delay: 1.8s;
-          animation-delay: 1.8s;
-  position: absolute;
-  height: 100%;
-  border-radius: var(--radius-large);
-  opacity: 1;
-  transform: scale(1.01);
-}
 .section-intro-index .section-content .grid .intro-card .introduction {
   font-size: 1.125rem;
 }
 
-@-webkit-keyframes introcard {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes introcard {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@-webkit-keyframes introcard2 {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes introcard2 {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@-webkit-keyframes elementintro {
-  0% {
-    opacity: 0;
-    filter: blur(4px);
-  }
-  100% {
-    opacity: 1;
-    filter: blur(0);
-  }
-}
-@keyframes elementintro {
-  0% {
-    opacity: 0;
-    filter: blur(4px);
-  }
-  100% {
-    opacity: 1;
-    filter: blur(0);
-  }
-}
 @-webkit-keyframes h2home {
   0% {
     background-image: linear-gradient(90deg, var(--dark-blue-gradient) -200%, var(--light-blue-gradient) -100%, var(--white) 0%);
@@ -1082,6 +920,7 @@ button {
     filter: blur(0px);
   }
 }
+
 @keyframes h2home {
   0% {
     background-image: linear-gradient(90deg, var(--dark-blue-gradient) -200%, var(--light-blue-gradient) -100%, var(--white) 0%);
@@ -1168,198 +1007,8 @@ button {
     filter: blur(0px);
   }
 }
-@-webkit-keyframes phome {
-  0% {
-    background-image: linear-gradient(90deg, var(--colortext) -200%, var(--colortext) -100%, var(--white) 0%);
-    filter: blur(5px);
-  }
-  5% {
-    background-image: linear-gradient(90deg, var(--colortext) -190%, var(--colortext) -90%, var(--white) 10%);
-    filter: blur(5px);
-  }
-  10% {
-    background-image: linear-gradient(90deg, var(--colortext) -180%, var(--colortext) -80%, var(--white) 20%);
-    filter: blur(5px);
-  }
-  15% {
-    background-image: linear-gradient(90deg, var(--colortext) -170%, var(--colortext) -70%, var(--white) 30%);
-    filter: blur(5px);
-  }
-  20% {
-    background-image: linear-gradient(90deg, var(--colortext) -160%, var(--colortext) -60%, var(--white) 40%);
-    filter: blur(4px);
-  }
-  25% {
-    background-image: linear-gradient(90deg, var(--colortext) -150%, var(--colortext) -50%, var(--white) 50%);
-    filter: blur(4px);
-  }
-  30% {
-    background-image: linear-gradient(90deg, var(--colortext) -140%, var(--colortext) -40%, var(--white) 60%);
-    filter: blur(4px);
-  }
-  35% {
-    background-image: linear-gradient(90deg, var(--colortext) -130%, var(--colortext) -30%, var(--white) 70%);
-    filter: blur(4px);
-  }
-  40% {
-    background-image: linear-gradient(90deg, var(--colortext) -120%, var(--colortext) -20%, var(--white) 80%);
-    filter: blur(3px);
-  }
-  45% {
-    background-image: linear-gradient(90deg, var(--colortext) -110%, var(--colortext) -10%, var(--white) 90%);
-    filter: blur(3px);
-  }
-  50% {
-    background-image: linear-gradient(90deg, var(--colortext) -100%, var(--colortext) 0%, var(--white) 100%);
-    filter: blur(3px);
-  }
-  55% {
-    background-image: linear-gradient(90deg, var(--colortext) -90%, var(--colortext) 10%, var(--white) 110%);
-    filter: blur(3px);
-  }
-  60% {
-    background-image: linear-gradient(90deg, var(--colortext) -80%, var(--colortext) 20%, var(--white) 120%);
-    filter: blur(2px);
-  }
-  65% {
-    background-image: linear-gradient(90deg, var(--colortext) -70%, var(--colortext) 30%, var(--white) 130%);
-    filter: blur(2px);
-  }
-  70% {
-    background-image: linear-gradient(90deg, var(--colortext) -60%, var(--colortext) 40%, var(--white) 140%);
-    filter: blur(2px);
-  }
-  75% {
-    background-image: linear-gradient(90deg, var(--colortext) -50%, var(--colortext) 50%, var(--white) 150%);
-    filter: blur(2px);
-  }
-  80% {
-    background-image: linear-gradient(90deg, var(--colortext) -40%, var(--colortext) 60%, var(--white) 160%);
-    filter: blur(1px);
-  }
-  85% {
-    background-image: linear-gradient(90deg, var(--colortext) -30%, var(--colortext) 70%, var(--white) 170%);
-    filter: blur(1px);
-  }
-  90% {
-    background-image: linear-gradient(90deg, var(--colortext) -20%, var(--colortext) 80%, var(--white) 180%);
-    filter: blur(1px);
-  }
-  95% {
-    background-image: linear-gradient(90deg, var(--colortext) -10%, var(--colortext) 90%, var(--white) 190%);
-    filter: blur(0px);
-  }
-  100% {
-    background-image: linear-gradient(90deg, var(--colortext) 0%, var(--colortext) 100%, var(--white) 200%);
-    filter: blur(0px);
-  }
-}
-@keyframes phome {
-  0% {
-    background-image: linear-gradient(90deg, var(--colortext) -200%, var(--colortext) -100%, var(--white) 0%);
-    filter: blur(5px);
-  }
-  5% {
-    background-image: linear-gradient(90deg, var(--colortext) -190%, var(--colortext) -90%, var(--white) 10%);
-    filter: blur(5px);
-  }
-  10% {
-    background-image: linear-gradient(90deg, var(--colortext) -180%, var(--colortext) -80%, var(--white) 20%);
-    filter: blur(5px);
-  }
-  15% {
-    background-image: linear-gradient(90deg, var(--colortext) -170%, var(--colortext) -70%, var(--white) 30%);
-    filter: blur(5px);
-  }
-  20% {
-    background-image: linear-gradient(90deg, var(--colortext) -160%, var(--colortext) -60%, var(--white) 40%);
-    filter: blur(4px);
-  }
-  25% {
-    background-image: linear-gradient(90deg, var(--colortext) -150%, var(--colortext) -50%, var(--white) 50%);
-    filter: blur(4px);
-  }
-  30% {
-    background-image: linear-gradient(90deg, var(--colortext) -140%, var(--colortext) -40%, var(--white) 60%);
-    filter: blur(4px);
-  }
-  35% {
-    background-image: linear-gradient(90deg, var(--colortext) -130%, var(--colortext) -30%, var(--white) 70%);
-    filter: blur(4px);
-  }
-  40% {
-    background-image: linear-gradient(90deg, var(--colortext) -120%, var(--colortext) -20%, var(--white) 80%);
-    filter: blur(3px);
-  }
-  45% {
-    background-image: linear-gradient(90deg, var(--colortext) -110%, var(--colortext) -10%, var(--white) 90%);
-    filter: blur(3px);
-  }
-  50% {
-    background-image: linear-gradient(90deg, var(--colortext) -100%, var(--colortext) 0%, var(--white) 100%);
-    filter: blur(3px);
-  }
-  55% {
-    background-image: linear-gradient(90deg, var(--colortext) -90%, var(--colortext) 10%, var(--white) 110%);
-    filter: blur(3px);
-  }
-  60% {
-    background-image: linear-gradient(90deg, var(--colortext) -80%, var(--colortext) 20%, var(--white) 120%);
-    filter: blur(2px);
-  }
-  65% {
-    background-image: linear-gradient(90deg, var(--colortext) -70%, var(--colortext) 30%, var(--white) 130%);
-    filter: blur(2px);
-  }
-  70% {
-    background-image: linear-gradient(90deg, var(--colortext) -60%, var(--colortext) 40%, var(--white) 140%);
-    filter: blur(2px);
-  }
-  75% {
-    background-image: linear-gradient(90deg, var(--colortext) -50%, var(--colortext) 50%, var(--white) 150%);
-    filter: blur(2px);
-  }
-  80% {
-    background-image: linear-gradient(90deg, var(--colortext) -40%, var(--colortext) 60%, var(--white) 160%);
-    filter: blur(1px);
-  }
-  85% {
-    background-image: linear-gradient(90deg, var(--colortext) -30%, var(--colortext) 70%, var(--white) 170%);
-    filter: blur(1px);
-  }
-  90% {
-    background-image: linear-gradient(90deg, var(--colortext) -20%, var(--colortext) 80%, var(--white) 180%);
-    filter: blur(1px);
-  }
-  95% {
-    background-image: linear-gradient(90deg, var(--colortext) -10%, var(--colortext) 90%, var(--white) 190%);
-    filter: blur(0px);
-  }
-  100% {
-    background-image: linear-gradient(90deg, var(--colortext) 0%, var(--colortext) 100%, var(--white) 200%);
-    filter: blur(0px);
-  }
-}
 .second-section {
   padding-top: 80px;
-  position: relative;
-}
-.second-section:after {
-  content: "";
-  background: var(--bgmain);
-  inset: 0;
-  width: 100%;
-  -webkit-animation: introcard var(--transition1) forwards;
-          animation: introcard var(--transition1) forwards;
-  position: absolute;
-  height: 100%;
-  border-radius: var(--radius-large);
-  opacity: 1;
-  transform: scale(1.01);
-  -webkit-animation: introcard2 var(--transition1) forwards;
-          animation: introcard2 var(--transition1) forwards;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
 }
 
 .warning-p {
@@ -1419,7 +1068,7 @@ button {
     padding-top: 100px;
   }
   header {
-    top: -60px;
+    top: 8px;
     max-width: calc(366px + 4rem);
   }
 }
@@ -1431,8 +1080,7 @@ button {
     font-size: 17px;
   }
   header {
-    top: -60px;
-    border-radius: 0 0 7px 7px;
+    top: 8px;
     width: 100%;
   }
 }
