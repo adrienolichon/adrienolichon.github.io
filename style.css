@@ -650,9 +650,9 @@ header .header-content .link-header {
   box-shadow: var(--shadow-header);
   background-color: var(--header);
   border-radius: var(--radius-medium);
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 header .header-content .header-title {
   font-size: 21px;
@@ -1052,7 +1052,7 @@ button {
     margin-left: auto;
     margin-right: auto;
     width: 87.5%;
-    max-width: 366px;
+    max-width: 640px;
   }
   .mail {
     display: none;
@@ -1069,6 +1069,7 @@ button {
   }
   header {
     top: 8px;
+    width: 100%;
     max-width: calc(366px + 4rem);
   }
 }

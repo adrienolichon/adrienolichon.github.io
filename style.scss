@@ -645,7 +645,7 @@ header {
 			box-shadow: var(--shadow-header);
 			background-color: var(--header);
 			border-radius: var(--radius-medium);
-			width: max-content;
+			width: fit-content;
 		}
 		.header-title {
 			font-size: 21px;
@@ -976,7 +976,7 @@ button {
 		margin-left: auto;
 		margin-right: auto;
 		width: 87.5%;
-		max-width: 366px;
+		max-width: 640px;
 	}
 	.mail {
 		display: none;
@@ -994,6 +994,7 @@ button {
 	}
 	header {
 		top: 8px;
+		width: 100%;
 		max-width: calc(366px + 4rem);
 	}
 }
