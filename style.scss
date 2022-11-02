@@ -5654,10 +5654,10 @@ input:checked + .slider .light {
 }
 
 .vasarely {
-	section{
+	section {
 		display: flex;
 		margin-top: 24px;
-		button{
+		button {
 			margin: auto;
 		}
 	}
@@ -5671,7 +5671,8 @@ input:checked + .slider .light {
 		display: grid;
 		grid-template-rows: repeat(30, 1fr);
 		border: 16px solid black;
-		gap: 16px;transition: var(--transition1);
+		gap: 16px;
+		transition: var(--transition1);
 		.row {
 			transition: var(--transition1);
 			width: 100%;
@@ -5680,7 +5681,7 @@ input:checked + .slider .light {
 			grid-template-columns: repeat(20, 1fr);
 			gap: 16px;
 			background-color: black !important;
-			div{
+			div {
 				transition: var(--transition1);
 				width: 100%;
 				height: 100%;
@@ -5706,7 +5707,7 @@ input:checked + .slider .light {
 				height: 100%;
 				background-color: white;
 			}
-			.rotate2{
+			.rotate2 {
 				transform: rotate(-20deg);
 				width: 100%;
 				height: 100%;
@@ -5724,26 +5725,26 @@ input:checked + .slider .light {
 				height: 100%;
 				background-color: white;
 			}
-			.skew3{
+			.skew3 {
 				transform: skew(20deg, 0);
 				width: 100%;
 				height: 100%;
 				background-color: white;
 			}
-			.skew4{
+			.skew4 {
 				transform: skew(-20deg, 0);
 				width: 100%;
 				height: 100%;
 				background-color: white;
 			}
-			.skew5{
+			.skew5 {
 				transform: skew(0, -20deg);
 				width: 100%;
 				height: 100%;
 				background-color: white;
 			}
-			.skew6{
-				transform:skew(20deg, 20deg);
+			.skew6 {
+				transform: skew(20deg, 20deg);
 				width: 100%;
 				height: 100%;
 				background-color: white;
@@ -5753,13 +5754,235 @@ input:checked + .slider .light {
 			&:hover {
 				gap: 0;
 				transition-delay: 1s;
-				.row{
-
-				transition-delay: 1s;
+				.row {
+					transition-delay: 1s;
 					gap: 0;
-					div{
-						transform: skew(0,0) rotate(0);
+					div {
+						transform: skew(0, 0) rotate(0);
 						transition: var(--transition1);
+					}
+				}
+			}
+		}
+	}
+}
+.vasarely-2 {
+	.rond-contain {
+		width: 1000px;
+		height: 1000px;
+		margin: 80px auto auto auto;
+		background-color: #696060;
+		position: relative;
+		div {
+			position: absolute;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			border-radius: 50%;
+			width: 96%;
+			height: 96%;
+			left: 49%;
+		}
+		.rondgris {
+			background-color: #b7b4b4;
+		}
+		.rond1 {
+			left: 50%;
+			background-color: #442d0a;
+			width: 100%;
+			height: 100%;
+			.rondgris {
+				left: 48.2%;
+			}
+
+			.rond2 {
+				background-color: #5f3f0e;
+				left: 48.2%;
+				.rondgris {
+					left: 48.2%;
+				}
+				.rond3 {
+					background-color: #744d12;
+					left: 48.2%;
+					.rondgris {
+						left: 48.2%;
+					}
+					.rond4 {
+						background-color: #8e5e17;
+						left: 48.4%;
+						.rondgris {
+							left: 48.4%;
+						}
+						.rond5 {
+							background-color: #a76e1a;
+							border: 1px solid #a76e1a;
+							left: 48.6%;
+							.rondgris {
+								background-color: #9c9a9a;
+								left: 48.6%;
+							}
+							.rond6 {
+								background-color: #a76e1a;
+								border: 2px solid #a76e1a;
+								left: 48.8%;
+								.rondgris {
+									background-color: #817f7f;
+									left: 48.8%;
+								}
+								.rond7 {
+									background-color: #ba7b1c;
+									border: 3px solid #ba7b1c;
+									left: 49%;
+									.rondgris {
+										background-color: #676767;
+										left: 49%;
+									}
+									.rond8 {
+										background-color: #c78118;
+										border: 4px solid #c78118;
+										left: 49.2%;
+										.rondgris {
+											background-color: #565555;
+											left: 49.2%;
+										}
+										.rond9 {
+											background-color: #de8e15;
+											border: 5px solid #de8e15;
+											left: 49.4%;
+											.rondgris {
+												background-color: #484747;
+												left: 49.4%;
+											}
+											.rond10 {
+												background-color: #ea930f;
+												border: 6px solid #ea930f;
+												left: 49.8%;
+												width: 94%;
+												height: 94%;
+												.rondgris {
+													background-color: #5a5858;
+													left: 49.8%;
+													width: 94%;
+													height: 94%;
+												}
+												.rond11 {
+													background-color: #d78408;
+													border: 7px solid #d78408;
+													left: 50.2%;
+													width: 94%;
+													height: 94%;
+													.rondgris {
+														background-color: #717070;
+														left: 50.2%;
+														width: 94%;
+														height: 94%;
+													}
+													.rond12 {
+														background-color: #cb7c07;
+														border: 8px solid #cb7c07;
+														left: 50.6%;
+														width: 94%;
+														height: 94%;
+														.rondgris {
+															background-color: #807d7d;
+															left: 50.6%;
+															width: 94%;
+															height: 94%;
+														}
+														.rond13 {
+															background-color: #b66f04;
+															border: 9px solid #b56f05;
+															left: 51%;
+															width: 94%;
+															height: 94%;
+															.rondgris {
+																background-color: #979797;
+																left: 51%;
+																width: 94%;
+																height: 94%;
+															}
+															.rond14 {
+																background-color: #a36405;
+																border: 9px solid #a36405;
+																left: 51.4%;
+																width: 94%;
+																height: 94%;
+																.rondgris {
+																	background-color: rgb(154, 154, 154);
+																	left: 51.4%;
+																	width: 94%;
+																	height: 94%;
+																}
+																.rond15 {
+																	background-color: #905804;
+																	border: 8px solid #905804;
+																	left: 51.8%;
+																	width: 94%;
+																	height: 94%;
+																	.rondgris {
+																		background-color: #b6b6b6;
+																		left: 51.8%;
+																		width: 94%;
+																		height: 94%;
+																	}
+																	.rond16 {
+																		background-color: #764805;
+																		border: 8px solid #764805;
+																		left: 52.2%;
+																		width: 94%;
+																		height: 94%;
+																		.rondgris {
+																			background-color: rgb(185, 185, 185);
+																			left: 52.2%;
+																			width: 94%;
+																			height: 94%;
+																		}
+																		.rond17 {
+																			background-color: #674108;
+																			border: 10px solid #674108;
+																			left: 52.6%;
+																			width: 94%;
+																			height: 94%;
+																			.rondgris {
+																				background-color: rgb(198, 198, 198);
+																				left: 52.6%;
+																				width: 94%;
+																				height: 94%;
+																			}
+																			.rond18 {
+																				background-color: #543506;
+																				border: 12px solid #543506;
+																				left: 53%;
+																				width: 94%;
+																				height: 94%;
+																				.rondgris {
+																					background-color: rgb(217, 217, 217);
+																					left: 53%;
+																					width: 94%;
+																					height: 94%;
+																				}
+																				.rond19 {
+																					background-color: #482d05;
+																					transform: scale(0.7)
+																						translate(-50%, -50%);
+																					left: 57%;
+																					transform-origin: top;
+																					width: 74%;
+																					height: 74%;
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
 					}
 				}
 			}
