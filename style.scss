@@ -688,7 +688,7 @@ header {
 main {
 	width: 100%;
 	display: block;
-	padding-top: 40px;
+	padding-top: 60px;
 }
 .section-content {
 	margin-left: auto;
@@ -3649,7 +3649,6 @@ input:checked + .slider .light {
 			margin-bottom: 24px;
 			font-size: 2rem;
 			margin-top: 0;
-			
 		}
 		.card-content {
 			background-color: var(--white);
@@ -3657,7 +3656,6 @@ input:checked + .slider .light {
 			width: 100%;
 			border-radius: 32px;
 			.card-data {
-				
 				h3 {
 					font-weight: 600;
 					margin-bottom: 8px;
@@ -5443,6 +5441,304 @@ input:checked + .slider .light {
 
 			span {
 				transform: rotate(90deg);
+			}
+		}
+	}
+}
+.loader-page {
+	.container,
+	.container2,
+	.container3,
+	.container4 {
+		margin: 32px auto;
+		width: 100%;
+		height: 200px;
+		border-radius: 8px;
+		box-shadow: 0 0 0 2px var(--oc-gray-2);
+		padding: 32px;
+		position: relative;
+	}
+	.container {
+		.loading {
+			position: absolute;
+			left: calc(50% - 24px);
+			top: calc(50% - 24px);
+			display: inline-block;
+			width: 48px;
+			height: 48px;
+			border: 8px solid rgba(255, 255, 255, 0);
+			border-radius: 200px;
+			border-top-color: var(--oc-gray-4);
+			z-index: 4;
+		}
+		.loading1 {
+			animation: spin 1.2s ease-in-out infinite;
+		}
+		.loading2 {
+			animation: spin 1.2s linear infinite;
+		}
+		.loading3 {
+			position: absolute;
+			left: calc(50% - 24px);
+			top: calc(50% - 24px);
+			display: inline-block;
+			width: 48px;
+			height: 48px;
+			border: 8px solid var(--oc-gray-9);
+			border-radius: 200px;
+			z-index: 0;
+		}
+	}
+
+	@keyframes spin {
+		to {
+			transform: rotate(720deg);
+		}
+	}
+
+	.container2 {
+		.little-dot {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			display: block;
+			width: 40px;
+			height: 16px;
+			background: var(--oc-gray-9);
+			border-radius: 200px;
+			transform-origin: 0 250%;
+			z-index: 4;
+			animation: spin2 1.2s linear infinite;
+		}
+		.little-dot2 {
+			animation: spin2 1.2s ease-in-out infinite;
+		}
+		.overflow-dot {
+			display: block;
+			position: absolute;
+			left: 50%;
+			top: 70%;
+			transform: translate(-50%, -50%) scale(0.3);
+			width: 300px;
+			height: 300px;
+			background: var(--oc-gray-1);
+			border-radius: 200px;
+			z-index: 9;
+			&:after {
+				content: "";
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				display: block;
+				width: 320px;
+				height: 320px;
+				background: transparent;
+				box-shadow: 0 0 0 100px var(--oc-gray-1);
+				border-radius: 200px;
+				z-index: 9;
+			}
+		}
+	}
+
+	@keyframes spin2 {
+		from {
+			transform: rotate(0deg) translate(-50%, -50%);
+		}
+		to {
+			transform: rotate(360deg) translate(-50%, -50%);
+		}
+	}
+
+	.container3 {
+		.little-dot {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			display: block;
+			width: 40px;
+			height: 16px;
+			background: var(--oc-gray-9);
+			border-radius: 200px;
+			z-index: 4;
+			transform-origin: center;
+			animation: spin3 1.4s linear infinite;
+		}
+		.little-dot2 {
+			animation: spin3back 1.2s ease-in-out infinite;
+		}
+	}
+	@keyframes spin3 {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
+	@keyframes spin3back {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(-360deg);
+		}
+	}
+
+	.container4 {
+		.little-dot {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			display: block;
+			width: 40px;
+			height: 16px;
+			background: white;
+			border-radius: 200px;
+			z-index: 4;
+			transform-origin: center;
+			box-shadow: 0 0 0 4px black;
+			animation: spin4 2.8s linear infinite;
+			mix-blend-mode: lighten;
+		}
+		.little-dot2 {
+			animation: spin4back 2.4s ease-in-out infinite;
+			background: white;
+		}
+	}
+	.container5 {
+		.little-dot {
+			mix-blend-mode: difference;
+		}
+	}
+	.container6 {
+		.little-dot {
+			mix-blend-mode: initial;
+		}
+	}
+	.container7 {
+		.little-dot {
+			mix-blend-mode: multiply;
+		}
+	}
+
+	@keyframes spin4 {
+		0% {
+			box-shadow: 0 0 0 4px black;
+			transform: rotate(0deg) matrix(0, -1, -1, 0, 0, 0);
+		}
+		50% {
+			box-shadow: 0 0 2px 4px black;
+			transform: rotate(360deg) matrix(0, 1, 1, 0, 0, 0);
+		}
+		100% {
+			box-shadow: 0 0 0 4px black;
+			transform: rotate(720deg) matrix(0, -1, -1, 0, 0, 0);
+		}
+	}
+
+	@keyframes spin4back {
+		0% {
+			box-shadow: 0 0 0 4px black;
+			transform: rotate(0deg) matrix(0, -1, -1, 0, 0, 0);
+		}
+		50% {
+			box-shadow: 0 0 2px 4px black;
+			transform: rotate(-360deg) matrix(0, 1, 1, 0, 0, 0);
+		}
+		100% {
+			box-shadow: 0 0 0 4px black;
+			transform: rotate(-720deg) matrix(0, -1, -1, 0, 0, 0);
+		}
+	}
+}
+
+.vasarely {
+	.art-contain {
+		margin: 40px auto auto auto;
+		background-color: black;
+		width: 100%;
+		max-width: 1000px;
+		height: 1600px;
+		display: grid;
+		grid-template-rows: repeat(30, 1fr);
+		border: 16px solid black;
+		gap: 16px;transition: var(--transition1);
+		.row {
+			transition: var(--transition1);
+			width: 100%;
+			height: 100%;
+			display: grid;
+			grid-template-columns: repeat(20, 1fr);
+			gap: 16px;
+			div{
+				transition: var(--transition1);
+				width: 100%;
+				height: 100%;
+				background-color: white;
+			}
+			.rotate {
+				transform: rotate(20deg);
+				width: 100%;
+				height: 100%;
+				background-color: white;
+			}
+			.rotate2{
+				transform: rotate(-20deg);
+				width: 100%;
+				height: 100%;
+				background-color: white;
+			}
+			.skew {
+				transform: skew(0deg, 20deg);
+				width: 100%;
+				height: 100%;
+				background-color: white;
+			}
+			.skew2 {
+				transform: skew(-20deg, -20deg);
+				width: 100%;
+				height: 100%;
+				background-color: white;
+			}
+			.skew3{
+				transform: skew(20deg, 0);
+				width: 100%;
+				height: 100%;
+				background-color: white;
+			}
+			.skew4{
+				transform: skew(-20deg, 0);
+				width: 100%;
+				height: 100%;
+				background-color: white;
+			}
+			.skew5{
+				transform: skew(0, -20deg);
+				width: 100%;
+				height: 100%;
+				background-color: white;
+			}
+			.skew6{
+				transform:skew(20deg, 20deg);
+				width: 100%;
+				height: 100%;
+				background-color: white;
+			}
+		}
+		@media (hover: hover) {
+			&:hover {
+				gap: 0;
+				transition-delay: 1s;
+				.row{
+
+				transition-delay: 1s;
+					gap: 0;
+					div{
+						transform: skew(0,0) rotate(0);
+						transition: var(--transition1);
+					}
+				}
 			}
 		}
 	}
