@@ -1799,6 +1799,24 @@ input:checked + .slider .light {
 .article-recette {
   background-color: var(--white);
 }
+.article-recette:before {
+  content: "";
+  position: fixed;
+  width: 100px;
+  height: 120VH;
+  right: -100px;
+  top: -10vh;
+  filter: blur(100px);
+}
+.article-recette.recette-plat:before {
+  background-color: var(--oc-indigo-7);
+}
+.article-recette.recette-dessert:before {
+  background-color: var(--oc-pink-5);
+}
+.article-recette.recette-sauce:before {
+  background-color: #fcc419;
+}
 
 .page h1 {
   margin-bottom: 0;

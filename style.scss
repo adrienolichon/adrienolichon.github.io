@@ -1898,6 +1898,30 @@ input:checked + .slider .light {
 }
 .article-recette{
 	background-color: var(--white);
+	&:before{
+		content: "";
+		position: fixed;
+		width: 100px;
+		height: 120VH;
+		right: -100px;
+		top: -10vh;
+		filter: blur(100px);
+	}
+	&.recette-plat{
+		&:before{
+			background-color: var(--oc-indigo-7);
+		}
+	}
+	&.recette-dessert{
+		&:before{
+			background-color: var(--oc-pink-5);
+		}
+	}
+	&.recette-sauce{
+		&:before{
+			background-color: #fcc419;
+		}
+	}
 }
 .page {
 	h1 {
