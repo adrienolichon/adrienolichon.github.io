@@ -1796,6 +1796,10 @@ input:checked + .slider .light {
   color: rgb(252, 196, 25);
 }
 
+.article-recette {
+  background-color: var(--white);
+}
+
 .page h1 {
   margin-bottom: 0;
 }
@@ -1807,6 +1811,7 @@ input:checked + .slider .light {
   background-color: var(--white);
   border-radius: var(--radius-large);
   position: relative;
+  box-shadow: 0 0 0 2px var(--oc-gray-3);
 }
 .page .header .page-title {
   padding: 0 0 16px 0;
