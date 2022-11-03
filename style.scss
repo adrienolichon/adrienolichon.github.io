@@ -1677,19 +1677,26 @@ button {
 		transition: var(--transition1);
 		margin: auto;
 		display: flex;
+		position: relative;
 		span {
 			margin: auto;
 			color: var(--colortext);
 			font-size: 24px;
 			transition: var(--transition1);
-			transform: translateX(13px);
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			//transform: translateX(13px);
+			transform-origin: left top;
 		}
 	}
 	.moon {
 		opacity: 1;
+		transform: scale(1) translate(-50%, -50%);
 	}
 	.light {
-		opacity: 0;
+		opacity: 1;
+		transform: scale(0) translate(-50%, -50%);
 	}
 	@media (hover: hover) {
 		&:hover {
@@ -1700,20 +1707,13 @@ button {
 	}
 }
 
-input:checked + .slider {
-	.moon {
-		opacity: 0;
-	}
-	.light {
-		opacity: 1;
-	}
-}
+
 
 input:checked + .slider .moon {
-	transform: translateX(-16px);
+	transform: scale(0) translate(-50%, -50%);
 }
 input:checked + .slider .light {
-	transform: translateX(-13px);
+	transform: scale(1) translate(-50%, -50%);
 }
 /*
 .lien-tableau {
