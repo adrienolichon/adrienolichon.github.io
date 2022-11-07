@@ -817,22 +817,12 @@ button {
 					padding: 0;
 					margin: 0;
 					font-weight: 600;
-					background-image: linear-gradient(
-						90deg,
-						var(--dark-blue-gradient) -200%,
-						var(--light-blue-gradient) -100%,
-						var(--white) 0%
-					);
-					filter: blur(5px);
-					animation: h2home 0.8s ease-in-out forwards;
-					animation-delay: 0.9s;
-					width: fit-content;
-					background-size: auto 200%;
-					-webkit-background-clip: text;
+				
+					background: linear-gradient(90deg, var(--dark-blue-gradient), var(--light-blue-gradient), var(--dark-blue-gradient)) 0 0 /
+					400% 100%;
+					color: transparent;
 					background-clip: text;
-					-webkit-text-fill-color: transparent;
-					-webkit-box-decoration-break: clone;
-					box-decoration-break: clone;
+					animation: move-bg 10s linear infinite;
 				}
 			}
 
@@ -844,7 +834,12 @@ button {
 		}
 	}
 }
-
+@keyframes move-bg {
+	to {
+		background-position: 400% 0;
+	}
+}
+/*
 @keyframes h2home {
 	0% {
 		background-image: linear-gradient(
@@ -1036,6 +1031,7 @@ button {
 		filter: blur(0px);
 	}
 }
+*/
 
 .second-section {
 	padding-top: 80px;
@@ -1707,8 +1703,6 @@ button {
 	}
 }
 
-
-
 input:checked + .slider .moon {
 	transform: scale(0) translate(-50%, -50%);
 }
@@ -1896,29 +1890,29 @@ input:checked + .slider .light {
 		}
 	}
 }
-.article-recette{
+.article-recette {
 	background-color: var(--white);
-	&:before{
+	&:before {
 		content: "";
 		position: fixed;
 		width: 100px;
-		height: 120VH;
+		height: 120vh;
 		right: -100px;
 		top: -10vh;
 		filter: blur(100px);
 	}
-	&.recette-plat{
-		&:before{
+	&.recette-plat {
+		&:before {
 			background-color: var(--oc-indigo-7);
 		}
 	}
-	&.recette-dessert{
-		&:before{
+	&.recette-dessert {
+		&:before {
 			background-color: var(--oc-pink-5);
 		}
 	}
-	&.recette-sauce{
-		&:before{
+	&.recette-sauce {
+		&:before {
 			background-color: #fcc419;
 		}
 	}
@@ -5982,7 +5976,11 @@ input:checked + .slider .light {
 																				width: 94%;
 																				height: 94%;
 																				.rondgris {
-																					background-color: rgb(217, 217, 217);
+																					background-color: rgb(
+																						217,
+																						217,
+																						217
+																					);
 																					left: 53%;
 																					width: 94%;
 																					height: 94%;
