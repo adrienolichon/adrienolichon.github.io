@@ -793,6 +793,7 @@ button {
 						border-radius: var(--radius-large);
 						display: flex;
 						padding: 0;
+						border: 1px solid var(--black4);
 						transition: var(--transition1);
 
 						span {
