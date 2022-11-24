@@ -3310,6 +3310,7 @@ input:checked + .slider .light {
   background-color: black;
   min-height: 400px;
   display: flex;
+  border-radius: var(--radius-large);
 }
 .dieter .horloge .platter {
   width: 169px;

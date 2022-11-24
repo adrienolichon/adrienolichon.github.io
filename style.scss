@@ -3368,6 +3368,7 @@ input:checked + .slider .light {
 		background-color: black;
 		min-height: 400px;
 		display: flex;
+		border-radius: var(--radius-large);
 		.platter{
 			width: 169px;
 			height: 169px;
