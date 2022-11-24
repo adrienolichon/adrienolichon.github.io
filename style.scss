@@ -3670,7 +3670,8 @@ input:checked + .slider .light {
 											}
 											.rec1,
 											.rec2,
-											.rec3.rec4,
+											.rec3,
+											.rec4,
 											.circle,
 											.square {
 												position: absolute;
@@ -3682,8 +3683,8 @@ input:checked + .slider .light {
 												border-radius: 100px;
 												left: 50%;
 												top: 50%;
-												transform-origin: 17px 27px;
-												transform: translate(-50%, -50%) rotate(57.47deg);
+												transform-origin: 0% 100% !important;
+												transform: translate(-5px, -100%) rotate(57.47deg);
 											}
 											.rec2 {
 												width: 3px;
@@ -3692,8 +3693,8 @@ input:checked + .slider .light {
 												border-radius: 100px;
 												left: 50%;
 												top: 50%;
-												transform-origin: -19px 43px;
-												transform: translate(-50%, -50%) rotate(-66.94deg);
+												transform-origin: 0% 100% !important;
+												transform: translate(-3px, -100%) rotate(-66.94deg);
 											}
 											.rec3 {
 												width: 1px;
@@ -3701,8 +3702,8 @@ input:checked + .slider .light {
 												background-color: #caab41;
 												left: 50%;
 												top: 50%;
-												transform-origin: 32px 69px;
-												transform: translate(-50%, -50%) rotate(-161.13deg);
+												transform-origin: 0% 80% !important;
+												transform: translate(1px, -80%) rotate(-161.13deg);
 											}
 											.rec4 {
 												width: 3px;
@@ -3745,6 +3746,8 @@ input:checked + .slider .light {
 			}
 		}
 	}
+
+	
 }
 .guide,
 .index {
