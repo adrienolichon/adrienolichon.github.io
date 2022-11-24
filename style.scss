@@ -818,9 +818,14 @@ button {
 					padding: 0;
 					margin: 0;
 					font-weight: 600;
-				
-					background: linear-gradient(90deg, var(--dark-blue-gradient), var(--light-blue-gradient), var(--dark-blue-gradient)) 0 0 /
-					400% 100%;
+
+					background: linear-gradient(
+							90deg,
+							var(--dark-blue-gradient),
+							var(--light-blue-gradient),
+							var(--dark-blue-gradient)
+						)
+						0 0 / 400% 100%;
 					color: transparent;
 					background-clip: text;
 					animation: move-bg 10s linear infinite;
@@ -3364,18 +3369,18 @@ input:checked + .slider .light {
 			}
 		}
 	}
-	.horloge{
+	.horloge {
 		background-color: black;
 		min-height: 400px;
 		display: flex;
 		border-radius: var(--radius-large);
-		.platter{
+		.platter {
 			width: 169px;
 			height: 169px;
 			margin: auto;
 			background-color: #171719;
 			border-radius: 24px;
-			.metalic{
+			.metalic {
 				border-radius: 24px;
 				width: 100%;
 				height: 100%;
@@ -3383,29 +3388,36 @@ input:checked + .slider .light {
 				border: 1px solid #3f3f3f;
 				position: relative;
 				display: flex;
-				.circle-1{
+				.circle-1 {
 					width: 137px;
 					height: 137px;
 					margin: auto;
 					display: flex;
 					border-radius: 200px;
 					//background-color: #2a2b2f;
-					background:linear-gradient(159.14deg, #A3A3A3 13.8%, #2A2B2F 18.41%, #2A2B2F 23.41%, #FFFFFF 35.34%, #2A2B2F 49.57%);
-					.circle-2{
+					background: linear-gradient(
+						159.14deg,
+						#a3a3a3 13.8%,
+						#2a2b2f 18.41%,
+						#2a2b2f 23.41%,
+						#ffffff 35.34%,
+						#2a2b2f 49.57%
+					);
+					.circle-2 {
 						width: 133px;
 						height: 133px;
 						margin: auto;
 						display: flex;
 						border-radius: 200px;
 						background-color: #171518;
-						.circle-3{
+						.circle-3 {
 							width: 129px;
 							height: 129px;
 							margin: auto;
 							border-radius: 200px;
-							background-color: #2A2B2F;
+							background-color: #2a2b2f;
 							display: flex;
-							.circle-4{
+							.circle-4 {
 								width: 125px;
 								height: 125px;
 								margin: auto;
@@ -3414,15 +3426,19 @@ input:checked + .slider .light {
 								background-color: #161618;
 								position: relative;
 								overflow: hidden;
-								.final-blur{
+								.final-blur {
 									position: absolute;
 									width: 100%;
 									height: 100%;
 									border-radius: 200px;
 									filter: blur(10px);
-									background: linear-gradient(180deg, transparent 75%, rgba(255, 255, 255, 0.25) 100%);
+									background: linear-gradient(
+										180deg,
+										transparent 75%,
+										rgba(255, 255, 255, 0.25) 100%
+									);
 								}
-								.innercircle1{
+								.innercircle1 {
 									width: 115px;
 									height: 115px;
 									margin: auto;
@@ -3431,14 +3447,14 @@ input:checked + .slider .light {
 									background-color: transparent;
 									//border: 3px dashed #696c6e;
 									position: relative;
-									
-									.dashedmin{
+
+									.dashedmin {
 										width: 1px;
 										height: 2px;
 										position: absolute;
-										background-color: #9BA0A3;
+										background-color: #9ba0a3;
 									}
-									.dashedcontain1{
+									.dashedcontain1 {
 										width: 115px;
 										height: 115px;
 										position: absolute;
@@ -3446,7 +3462,7 @@ input:checked + .slider .light {
 										border-radius: 200px;
 										transform: rotate(6deg);
 									}
-									.dashedcontain2{
+									.dashedcontain2 {
 										width: 115px;
 										height: 115px;
 										position: absolute;
@@ -3454,7 +3470,7 @@ input:checked + .slider .light {
 										border-radius: 200px;
 										transform: rotate(12deg);
 									}
-									.dashedcontain3{
+									.dashedcontain3 {
 										width: 115px;
 										height: 115px;
 										position: absolute;
@@ -3462,7 +3478,7 @@ input:checked + .slider .light {
 										border-radius: 200px;
 										transform: rotate(18deg);
 									}
-									.dashedcontain4{
+									.dashedcontain4 {
 										width: 115px;
 										height: 115px;
 										position: absolute;
@@ -3471,7 +3487,7 @@ input:checked + .slider .light {
 										transform: rotate(24deg);
 									}
 
-									.dashedcontain11{
+									.dashedcontain11 {
 										width: 115px;
 										height: 115px;
 										position: absolute;
@@ -3479,7 +3495,7 @@ input:checked + .slider .light {
 										border-radius: 200px;
 										transform: rotate(36deg);
 									}
-									.dashedcontain22{
+									.dashedcontain22 {
 										width: 115px;
 										height: 115px;
 										position: absolute;
@@ -3487,7 +3503,7 @@ input:checked + .slider .light {
 										border-radius: 200px;
 										transform: rotate(42deg);
 									}
-									.dashedcontain33{
+									.dashedcontain33 {
 										width: 115px;
 										height: 115px;
 										position: absolute;
@@ -3495,7 +3511,7 @@ input:checked + .slider .light {
 										border-radius: 200px;
 										transform: rotate(48deg);
 									}
-									.dashedcontain44{
+									.dashedcontain44 {
 										width: 115px;
 										height: 115px;
 										position: absolute;
@@ -3504,7 +3520,7 @@ input:checked + .slider .light {
 										transform: rotate(54deg);
 									}
 
-									.dashedcontain111{
+									.dashedcontain111 {
 										width: 115px;
 										height: 115px;
 										position: absolute;
@@ -3512,7 +3528,7 @@ input:checked + .slider .light {
 										border-radius: 200px;
 										transform: rotate(66deg);
 									}
-									.dashedcontain222{
+									.dashedcontain222 {
 										width: 115px;
 										height: 115px;
 										position: absolute;
@@ -3520,7 +3536,7 @@ input:checked + .slider .light {
 										border-radius: 200px;
 										transform: rotate(72deg);
 									}
-									.dashedcontain333{
+									.dashedcontain333 {
 										width: 115px;
 										height: 115px;
 										position: absolute;
@@ -3528,7 +3544,7 @@ input:checked + .slider .light {
 										border-radius: 200px;
 										transform: rotate(78deg);
 									}
-									.dashedcontain444{
+									.dashedcontain444 {
 										width: 115px;
 										height: 115px;
 										position: absolute;
@@ -3537,54 +3553,49 @@ input:checked + .slider .light {
 										transform: rotate(84deg);
 									}
 
-									.dashedmin1{
+									.dashedmin1 {
 										top: 0;
 										left: 50%;
 										transform: translateX(-50%) translateY(0%);
 									}
-									.dashedmin2{
+									.dashedmin2 {
 										top: 50%;
 										right: 0;
 										transform: translateX(-50%) translateY(-50%) rotate(90deg);
 									}
-									.dashedmin3{
+									.dashedmin3 {
 										top: 50%;
 										left: 0;
 										transform: translateX(1px) translateY(-50%) rotate(90deg);
 									}
-									.dashedmin4{
+									.dashedmin4 {
 										bottom: 0%;
 										left: 50%;
 										transform: translateX(-50%) translateY(-50%);
 									}
 
-
-
-
-
-									.innercircle2{
+									.innercircle2 {
 										width: 115px;
 										height: 115px;
 										margin: auto;
 										display: flex;
 										border-radius: 200px;
 										position: relative;
-										.dashed{
+										.dashed {
 											width: 2px;
 											height: 4px;
 											position: absolute;
-											background-color: #9BA0A3;
+											background-color: #9ba0a3;
 										}
-										.dashed-1-4-7-10{
-										width: 115px;
-										height: 115px;
-										position: absolute;
-										inset: 0;
-										border-radius: 200px;
-										transform: rotate(30deg);
-										
+										.dashed-1-4-7-10 {
+											width: 115px;
+											height: 115px;
+											position: absolute;
+											inset: 0;
+											border-radius: 200px;
+											transform: rotate(30deg);
 										}
-										.dashed-2-5-8-11{
+										.dashed-2-5-8-11 {
 											width: 115px;
 											height: 115px;
 											border-radius: 200px;
@@ -3592,132 +3603,139 @@ input:checked + .slider .light {
 											position: absolute;
 											inset: 0;
 										}
-										.dashed1{
+										.dashed1 {
 											top: 0;
 											left: 50%;
 											transform: translateX(-50%) translateY(0%);
 										}
-										.dashed2{
+										.dashed2 {
 											top: 50%;
 											right: 0;
 											transform: translateX(-50%) translateY(-50%) rotate(90deg);
 										}
-										.dashed3{
+										.dashed3 {
 											top: 50%;
 											left: 0;
 											transform: translateX(1px) translateY(-50%) rotate(90deg);
 										}
-										.dashed4{
+										.dashed4 {
 											bottom: 0%;
 											left: 50%;
 											transform: translateX(-50%) translateY(0%);
 										}
 
-										.numbers{
+										.numbers {
 											position: absolute;
-												width: 115px;
-												height: 115px;
-											h4{
+											width: 115px;
+											height: 115px;
+											h4 {
 												margin: 0;
 												padding: 0;
 												font-size: 16px;
 												font-weight: 600;
 												position: absolute;
-												color: #9BA0A3;
+												color: #9ba0a3;
 											}
-											.n3{
+											.n3 {
 												right: 7px;
-												top:50%;
+												top: 50%;
 												transform: translateY(-50%);
 											}
-											.n6{
-												bottom:7px;
+											.n6 {
+												bottom: 7px;
 												left: 50%;
 												transform: translateX(-50%);
 											}
-											.n9{
+											.n9 {
 												left: 7px;
-												top:50%;
+												top: 50%;
 												transform: translateY(-50%);
 											}
-											.n12{
-												top:7px;
+											.n12 {
+												top: 7px;
 												left: 50%;
 												transform: translateX(-50%);
 											}
 										}
 
-										.indicationheure{
+										.indicationheure {
 											position: absolute;
 											width: 115px;
 											height: 115px;
-											.rec1, .rec2, .rec3{
-												box-shadow: inset 0 -2px 2px 0 #AF9C6A, 0 2px 2px rgba(255, 255, 255, 0.25);
+											.rec1,
+											.rec2,
+											.rec3 {
+												box-shadow: inset 0 -2px 2px 0 #af9c6a,
+													0 2px 2px rgba(255, 255, 255, 0.25);
 											}
-											.rec1, .rec2, .rec3.rec4, .circle, .square{
+											.rec1,
+											.rec2,
+											.rec3.rec4,
+											.circle,
+											.square {
 												position: absolute;
 											}
-											.rec1{
+											.rec1 {
 												width: 5px;
 												height: 38.54px;
-												background-color: #CFBB88;
+												background-color: #cfbb88;
 												border-radius: 100px;
 												left: 50%;
 												top: 50%;
 												transform-origin: 17px 27px;
 												transform: translate(-50%, -50%) rotate(57.47deg);
 											}
-											.rec2{
+											.rec2 {
 												width: 3px;
 												height: 58.92px;
-												background-color: #CFBB88;
+												background-color: #cfbb88;
 												border-radius: 100px;
 												left: 50%;
 												top: 50%;
 												transform-origin: -19px 43px;
 												transform: translate(-50%, -50%) rotate(-66.94deg);
 											}
-											.rec3{
+											.rec3 {
 												width: 1px;
 												height: 67.9px;
-												background-color: #CAAB41;
+												background-color: #caab41;
 												left: 50%;
 												top: 50%;
 												transform-origin: 32px 69px;
 												transform: translate(-50%, -50%) rotate(-161.13deg);
 											}
-											.rec4{
+											.rec4 {
 												width: 3px;
 												height: 39.72px;
-												background-color: #0A0A0B;
+												background-color: #0a0a0b;
 												position: absolute;
 												left: 50%;
 												top: 50%;
 												transform-origin: 3px 29px;
 												transform: translate(-50%, -50%) rotate(155.66deg);
 
-												.square{
+												.square {
 													width: 3px;
 													height: 2.65px;
-													background-color: #F04B4B;
+													background-color: #f04b4b;
 													position: absolute;
 													top: 0;
 													left: 0;
 												}
 											}
-										
-											.circle{
+
+											.circle {
 												width: 10px;
 												height: 10px;
 												border-radius: 100px;
-												background-color: #CAAB41;
-												box-shadow: inset -1px 2px 3px 0 rgba(219, 219, 219, 0.5), 0 2px 4px rgba(255, 255, 255, 0.5);
+												background-color: #caab41;
+												box-shadow: inset -1px 2px 3px 0 rgba(219, 219, 219, 0.5),
+													0 2px 4px rgba(255, 255, 255, 0.5);
 												left: 50%;
 												top: 50%;
 												transform: translate(-50%, -50%);
 											}
 										}
-										
 									}
 								}
 							}
