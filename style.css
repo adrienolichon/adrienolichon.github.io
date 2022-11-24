@@ -3359,6 +3359,7 @@ input:checked + .slider .light {
   border-radius: 200px;
   background-color: #161618;
   position: relative;
+  overflow: hidden;
 }
 .dieter .horloge .platter .metalic .circle-1 .circle-2 .circle-3 .circle-4 .final-blur {
   position: absolute;
