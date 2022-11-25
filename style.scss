@@ -3735,6 +3735,38 @@ input:checked + .slider .light {
 												top: 50%;
 												transform: translate(-50%, -50%);
 											}
+											.milli-hand-container{
+												position: absolute;
+												width: 40px;
+												height: 40px;
+												left: 50%;
+												top: 50%;
+												transform: translate(-50%, -50%);
+												background-color: transparent;
+												border-radius: 500px;
+												.milli-hand{
+													position: absolute;
+													width: 2px;
+													height: calc(115px / 2);
+													background-color: transparent;
+													border-radius: 50px;
+													left: 50%;
+													top: 50%;
+													transform-origin: 50% 100%;
+													transform: translate(-50%, -100%) rotate(250deg);
+													//transition: transform linear 1ms;
+													&::before{
+														content: "";
+														background-color: white;
+														width: 2px;
+														height: 2px;
+														position: absolute;
+														border-radius: 50px;
+														top: 0;
+														left: 0;
+													}
+												}
+											}
 										}
 									}
 								}
@@ -3746,7 +3778,7 @@ input:checked + .slider .light {
 		}
 	}
 	.workinghorlogescale{
-		transform: scale(7);
+		//transform: scale(7);
 		transform-origin: top;
 	}
 	
@@ -6401,3 +6433,9 @@ input:checked + .slider .light {
 		}
 	}
 }
+
+
+
+
+
+

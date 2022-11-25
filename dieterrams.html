@@ -604,7 +604,7 @@
 				</div>
 			</div>
 		</div>
-<!--
+		<!--
 		<div class="section-content horloge workinghorloge">
 			<div class="platter">
 				<div class="metalic">
@@ -844,13 +844,18 @@
 											</div>
 											<div class="indicationheure">
 												<div class="rec1 hour-hand"></div>
-												<div class="rec2 min-hand"></div>
+												<div class="rec2 min-hand "></div>
 												<div class="rec3 second-hand"></div>
 												<div class="rec4">
 													<div class="square"></div>
 												</div>
 
 												<div class="circle"></div>
+												
+												<div class="milli-hand-container">
+													<div class="milli-hand"></div>
+												</div>
+											
 											</div>
 
 										</div>
@@ -871,12 +876,21 @@
 	</footer>
 	<script type="text/javascript" src="script.js"></script>
 	<script>
+
+		const milliHand = document.querySelector('.milli-hand');
 		const secondHand = document.querySelector('.second-hand');
 		const minsHand = document.querySelector('.min-hand');
 		const hourHand = document.querySelector('.hour-hand');
 
+		
+
 		function setDate() {
 		const now = new Date();
+
+		const milliSeconds = now.getMilliseconds();
+		const milliSecondsDegree = ((milliSeconds / 1000) * 360) + 0;
+		milliHand.style.transform = `translate(-50%, -100%) rotate(${milliSecondsDegree}deg)`;
+
 
 		const seconds = now.getSeconds();
 		const secondsDegrees = ((seconds / 60) * 360) + 0;
@@ -891,9 +905,13 @@
 		hourHand.style.transform = `translate(-50%, -100%) rotate(${hourDegrees}deg)`;
 		}
 
-		setInterval(setDate, 1000);
+		setInterval(setDate, 1);
 
 		setDate();
+
+
+
+
 	</script>
 </body>
 
