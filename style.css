@@ -3494,12 +3494,12 @@ input:checked + .slider .light {
 .dieter .horloge .platter .metalic .circle-1 .circle-2 .circle-3 .circle-4 .innercircle1 .dashedmin3 {
   top: 50%;
   left: 0;
-  transform: translateX(1px) translateY(-50%) rotate(90deg);
+  transform: translateX(50%) translateY(-50%) rotate(90deg);
 }
 .dieter .horloge .platter .metalic .circle-1 .circle-2 .circle-3 .circle-4 .innercircle1 .dashedmin4 {
-  bottom: 0%;
+  bottom: 0;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(0%);
 }
 .dieter .horloge .platter .metalic .circle-1 .circle-2 .circle-3 .circle-4 .innercircle1 .innercircle2 {
   width: 115px;
@@ -3605,41 +3605,40 @@ input:checked + .slider .light {
 .dieter .horloge .platter .metalic .circle-1 .circle-2 .circle-3 .circle-4 .innercircle1 .innercircle2 .indicationheure .rec1 {
   width: 5px;
   height: 38.54px;
-  background-color: #cfbb88;
+  background-color: #fff;
   border-radius: 100px;
   left: 50%;
   top: 50%;
-  transform-origin: 0% 100% !important;
-  transform: translate(-5px, -100%) rotate(57.47deg);
+  transform-origin: 50% 100%;
+  transform: translate(-50%, -100%) rotate(57.47deg);
 }
 .dieter .horloge .platter .metalic .circle-1 .circle-2 .circle-3 .circle-4 .innercircle1 .innercircle2 .indicationheure .rec2 {
   width: 3px;
-  height: 58.92px;
-  background-color: #cfbb88;
+  height: 54px;
+  background-color: #fff;
   border-radius: 100px;
   left: 50%;
   top: 50%;
-  transform-origin: 0% 100% !important;
-  transform: translate(-3px, -100%) rotate(-66.94deg);
+  transform-origin: 50% 100%;
+  transform: translate(-50%, -100%) rotate(-66.94deg);
 }
 .dieter .horloge .platter .metalic .circle-1 .circle-2 .circle-3 .circle-4 .innercircle1 .innercircle2 .indicationheure .rec3 {
   width: 1px;
   height: 67.9px;
-  background-color: #caab41;
+  background-color: #ffb907;
   left: 50%;
   top: 50%;
-  transform-origin: 0% 80% !important;
-  transform: translate(1px, -80%) rotate(-161.13deg);
+  transform-origin: 50% 80%;
+  transform: translate(-50%, -80%) rotate(-161.13deg);
 }
 .dieter .horloge .platter .metalic .circle-1 .circle-2 .circle-3 .circle-4 .innercircle1 .innercircle2 .indicationheure .rec4 {
   width: 3px;
   height: 39.72px;
   background-color: #0a0a0b;
-  position: absolute;
   left: 50%;
   top: 50%;
-  transform-origin: 3px 29px;
-  transform: translate(-50%, -50%) rotate(155.66deg);
+  transform-origin: 50% 100%;
+  transform: translate(-50%, -100%) rotate(250deg);
 }
 .dieter .horloge .platter .metalic .circle-1 .circle-2 .circle-3 .circle-4 .innercircle1 .innercircle2 .indicationheure .rec4 .square {
   width: 3px;
@@ -3654,10 +3653,14 @@ input:checked + .slider .light {
   height: 10px;
   border-radius: 100px;
   background-color: #caab41;
-  box-shadow: inset -1px 2px 3px 0 rgba(219, 219, 219, 0.5), 0 2px 4px rgba(255, 255, 255, 0.5);
+  box-shadow: inset -1px 2px 3px 0 rgba(219, 219, 219, 0.5), 0 2px 4px rgba(0, 0, 0, 0.5);
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+.dieter .workinghorlogescale {
+  transform: scale(7);
+  transform-origin: top;
 }
 
 .guide .card-blueprint,
