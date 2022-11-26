@@ -845,7 +845,9 @@
 											<div class="indicationheure">
 												<div class="rec1 hour-hand"></div>
 												<div class="rec2 min-hand "></div>
-												<div class="rec3 second-hand"></div>
+												<div class="rec3 second-hand">
+													<div class="milli-hand-into"></div>
+												</div>
 												<div class="rec4">
 													<div class="square"></div>
 												</div>
@@ -882,6 +884,7 @@
 		const minsHand = document.querySelector('.min-hand');
 		const hourHand = document.querySelector('.hour-hand');
 
+		const milliHandinto = document.querySelector('.milli-hand-into');
 		
 
 		function setDate() {
@@ -890,6 +893,11 @@
 		const milliSeconds = now.getMilliseconds();
 		const milliSecondsDegree = ((milliSeconds / 1000) * 360) + 0;
 		milliHand.style.transform = `translate(-50%, -100%) rotate(${milliSecondsDegree}deg)`;
+
+
+		const milliSecondsInto = now.getMilliseconds();
+		const milliSecondsIntoDegree = ((milliSeconds / 1000) * 6) + 0;
+		milliHandinto.style.transform = `translate(0%, 0%) rotate(${milliSecondsIntoDegree}deg)`;
 
 
 		const seconds = now.getSeconds();
