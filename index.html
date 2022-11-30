@@ -478,8 +478,9 @@
 						</a>
 
 					</div>
-				</div>
+			
 
+				<!--
 				<div class="grid gridtitle title-grid mb20">
 					<div>
 						<h2 class="nom-nop align-center">
@@ -487,13 +488,13 @@
 						</h2>
 					</div>
 				</div>
+			-->
 
-				<div class="grid grid1 gridcontact">
-					<div></div>
+				
 					<div class="tile-item-2 tile-tableau">
 
 						<div class="nom-nop headline pb10">
-							Liens
+							Contacts
 						</div>
 						<a href="https://github.com/adrienolichon" target="_blank" rel="noopener" class="lien-tableau">
 							<p class="nom-nop mtbauto">Github</p>
@@ -561,8 +562,63 @@
 							</span>
 						</a>
 					</div>
-					<div></div>
+
+					<div class="tile-item-2 tile-tableau">
+						<div class="customclock">
+							<div class="platter">
+								<div class="metalic">
+									<div class="circle-1">
+										
+												<div class="circle-4">
+													
+													<div class="innercircle1">
+														
+				
+				
+				
+															<div class="numbers">
+																<h4 class="n3">3</h4>
+																<h4 class="n6">6</h4>
+																<h4 class="n9">9</h4>
+																<h4 class="n12">12</h4>
+																<div class="n14710">
+																	<h4 class="n1">1</h4>
+																	<h4 class="n4">4</h4>
+																	<h4 class="n7">7</h4>
+																	<h4 class="n10">10</h4>
+																</div>
+																<div class="n25811">
+																	<h4 class="n2">2</h4>
+																	<h4 class="n5">5</h4>
+																	<h4 class="n8">8</h4>
+																	<h4 class="n11">11</h4>
+																</div>
+															</div>
+															<div class="indicationheure">
+																<div class="rec1 hour-hand"></div>
+																<div class="rec2 min-hand "></div>
+																<div class="rec3 second-hand">
+																	<div class="milli-hand-into"></div>
+																</div>
+																
+																<div class="circle"></div>
+																
+																
+															
+															</div>
+				
+													</div>
+												
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
 				</div>
+
+			
 			</div>
 		</section>
 	</main>
@@ -573,6 +629,40 @@
 
 	</footer>
 	<script type="text/javascript" src="script.js"></script>
+	<script>
+		const secondHand = document.querySelector('.second-hand');
+		const minsHand = document.querySelector('.min-hand');
+		const hourHand = document.querySelector('.hour-hand');
+
+		const milliHandinto = document.querySelector('.milli-hand-into');
+		
+
+		function setDate() {
+		const now = new Date();
+
+
+		const milliSecondsInto = now.getMilliseconds();
+		const milliSecondsIntoDegree = ((milliSecondsInto / 1000) * 6) + 0;
+		milliHandinto.style.transform = `translate(0%, 0%) rotate(${milliSecondsIntoDegree}deg)`;
+
+
+		const seconds = now.getSeconds();
+		const secondsDegrees = ((seconds / 60) * 360) + 0;
+		secondHand.style.transform = `translate(-50%, -100%) rotate(${secondsDegrees}deg)`;
+
+		const mins = now.getMinutes();
+		const minsDegrees = ((mins / 60) * 360) + ((seconds/60)*6) + 0;
+		minsHand.style.transform = `translate(-50%, -100%) rotate(${minsDegrees}deg)`;
+
+		const hour = now.getHours();
+		const hourDegrees = ((hour / 12) * 360) + ((mins/60)*30) + 0;
+		hourHand.style.transform = `translate(-50%, -100%) rotate(${hourDegrees}deg)`;
+		}
+
+		setInterval(setDate, 10);
+
+		setDate();
+	</script>
 
 </body>
 

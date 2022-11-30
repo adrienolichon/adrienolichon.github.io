@@ -734,7 +734,7 @@
 			</div>
 		</div>
 	-->
-		<div class="section-content horloge workinghorlogescale">
+		<div class="section-content horloge braunclock">
 			<div class="platter">
 				<div class="metalic">
 					<div class="circle-1">
@@ -848,10 +848,11 @@
 												<div class="rec3 second-hand">
 													<div class="milli-hand-into"></div>
 												</div>
+												<!--
 												<div class="rec4">
 													<div class="square"></div>
 												</div>
-
+											-->
 												<div class="circle"></div>
 												
 												<div class="milli-hand-container">
@@ -869,6 +870,8 @@
 				</div>
 			</div>
 		</div>
+
+		
 	</main>
 	<footer>
 		<button class="secret" onclick="gridshow();">
@@ -913,7 +916,7 @@
 		hourHand.style.transform = `translate(-50%, -100%) rotate(${hourDegrees}deg)`;
 		}
 
-		setInterval(setDate, 1);
+		setInterval(setDate, 100);
 
 		setDate();
 
