@@ -6460,24 +6460,9 @@ input:checked + .slider .light {
   position: relative;
   display: flex;
 }
-.customclock .platter .metalic .circle-1 {
-  width: 137px;
-  height: 137px;
-  margin: auto;
-  display: flex;
-  border-radius: 200px;
-  /*background: linear-gradient(
-  	159.14deg,
-  	#a3a3a3 13.8%,
-  	#2a2b2f 18.41%,
-  	#2a2b2f 23.41%,
-  	#ffffff 35.34%,
-  	#2a2b2f 49.57%
-  );*/
-}
-.customclock .platter .metalic .circle-1 .circle-4 {
-  width: 125px;
-  height: 125px;
+.customclock .platter .metalic .circle-4 {
+  width: calc(100% - 24px);
+  height: calc(100% - 24px);
   margin: auto;
   display: flex;
   border-radius: 200px;
@@ -6485,7 +6470,7 @@ input:checked + .slider .light {
   position: relative;
   overflow: hidden;
 }
-.customclock .platter .metalic .circle-1 .circle-4 .innercircle1 {
+.customclock .platter .metalic .circle-4 .innercircle1 {
   width: 100%;
   height: 100%;
   margin: auto;
@@ -6494,94 +6479,101 @@ input:checked + .slider .light {
   background-color: transparent;
   position: relative;
 }
-.customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers {
+.customclock .platter .metalic .circle-4 .innercircle1 .numbers {
   position: absolute;
   width: 100%;
   height: 100%;
+  transform: scale(1.05);
 }
-.customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers h4 {
+.customclock .platter .metalic .circle-4 .innercircle1 .numbers h4 {
   margin: 0;
   padding: 0;
   font-size: 14px;
   font-weight: 400;
   position: absolute;
   color: #212529;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
-.customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers .n3, .customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers .n4, .customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers .n5 {
+.customclock .platter .metalic .circle-4 .innercircle1 .numbers .n3, .customclock .platter .metalic .circle-4 .innercircle1 .numbers .n4, .customclock .platter .metalic .circle-4 .innercircle1 .numbers .n5 {
   right: 7px;
   top: 50%;
   transform: translateY(-50%);
-  transform-origin: 0% 0%;
+  transform-origin: 50% 0%;
 }
-.customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers .n6, .customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers .n7, .customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers .n8 {
+.customclock .platter .metalic .circle-4 .innercircle1 .numbers .n6, .customclock .platter .metalic .circle-4 .innercircle1 .numbers .n7, .customclock .platter .metalic .circle-4 .innercircle1 .numbers .n8 {
   bottom: 7px;
   left: 50%;
   transform: translateX(-50%);
   transform-origin: 0% 50%;
 }
-.customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers .n9, .customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers .n10, .customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers .n11 {
+.customclock .platter .metalic .circle-4 .innercircle1 .numbers .n9, .customclock .platter .metalic .circle-4 .innercircle1 .numbers .n10, .customclock .platter .metalic .circle-4 .innercircle1 .numbers .n11 {
   left: 7px;
   top: 50%;
   transform: translateY(-50%);
   transform-origin: 50% 0%;
 }
-.customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers .n12, .customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers .n1, .customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers .n2 {
+.customclock .platter .metalic .circle-4 .innercircle1 .numbers .n12, .customclock .platter .metalic .circle-4 .innercircle1 .numbers .n1, .customclock .platter .metalic .circle-4 .innercircle1 .numbers .n2 {
   top: 7px;
   left: 50%;
   transform: translateX(-50%);
-  transform-origin: -50% 50%;
+  transform-origin: 0% 50%;
 }
-.customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers .n14710, .customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers .n25811 {
+.customclock .platter .metalic .circle-4 .innercircle1 .numbers .n14710, .customclock .platter .metalic .circle-4 .innercircle1 .numbers .n25811 {
   position: absolute;
   width: 100%;
   height: 100%;
   inset: 0;
 }
-.customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers .n14710 .n1, .customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers .n25811 .n1 {
+.customclock .platter .metalic .circle-4 .innercircle1 .numbers .n14710 .n1, .customclock .platter .metalic .circle-4 .innercircle1 .numbers .n25811 .n1 {
   transform: rotate(-30deg) translateX(-50%);
 }
-.customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers .n14710 .n2, .customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers .n25811 .n2 {
+.customclock .platter .metalic .circle-4 .innercircle1 .numbers .n14710 .n2, .customclock .platter .metalic .circle-4 .innercircle1 .numbers .n25811 .n2 {
   transform: rotate(-60deg) translateX(-50%);
 }
-.customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers .n14710 .n4, .customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers .n25811 .n4 {
+.customclock .platter .metalic .circle-4 .innercircle1 .numbers .n14710 .n4, .customclock .platter .metalic .circle-4 .innercircle1 .numbers .n25811 .n4 {
   transform: rotate(-30deg) translateY(-50%);
 }
-.customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers .n14710 .n5, .customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers .n25811 .n5 {
+.customclock .platter .metalic .circle-4 .innercircle1 .numbers .n14710 .n5, .customclock .platter .metalic .circle-4 .innercircle1 .numbers .n25811 .n5 {
   transform: rotate(-60deg) translateY(-50%);
 }
-.customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers .n14710 .n7, .customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers .n25811 .n7 {
+.customclock .platter .metalic .circle-4 .innercircle1 .numbers .n14710 .n7, .customclock .platter .metalic .circle-4 .innercircle1 .numbers .n25811 .n7 {
   transform: rotate(-30deg) translateX(-50%);
 }
-.customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers .n14710 .n8, .customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers .n25811 .n8 {
+.customclock .platter .metalic .circle-4 .innercircle1 .numbers .n14710 .n8, .customclock .platter .metalic .circle-4 .innercircle1 .numbers .n25811 .n8 {
   transform: rotate(-60deg) translateX(-50%);
 }
-.customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers .n14710 .n10, .customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers .n25811 .n10 {
+.customclock .platter .metalic .circle-4 .innercircle1 .numbers .n14710 .n10, .customclock .platter .metalic .circle-4 .innercircle1 .numbers .n25811 .n10 {
   transform: rotate(-30deg) translateY(-50%);
 }
-.customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers .n14710 .n11, .customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers .n25811 .n11 {
+.customclock .platter .metalic .circle-4 .innercircle1 .numbers .n14710 .n11, .customclock .platter .metalic .circle-4 .innercircle1 .numbers .n25811 .n11 {
   transform: rotate(-60deg) translateY(-50%);
 }
-.customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers .n14710 {
+.customclock .platter .metalic .circle-4 .innercircle1 .numbers .n14710 {
   transform: rotate(30deg);
 }
-.customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .numbers .n25811 {
+.customclock .platter .metalic .circle-4 .innercircle1 .numbers .n25811 {
   transform: rotate(60deg);
 }
-.customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .indicationheure {
+.customclock .platter .metalic .circle-4 .innercircle1 .indicationheure {
   position: absolute;
   width: 100%;
   height: 100%;
 }
-.customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .indicationheure .rec1,
-.customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .indicationheure .rec2,
-.customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .indicationheure .rec3,
-.customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .indicationheure .rec4,
-.customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .indicationheure .circle,
-.customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .indicationheure .milli-hand-into {
+.customclock .platter .metalic .circle-4 .innercircle1 .indicationheure .rec1,
+.customclock .platter .metalic .circle-4 .innercircle1 .indicationheure .rec2,
+.customclock .platter .metalic .circle-4 .innercircle1 .indicationheure .rec3,
+.customclock .platter .metalic .circle-4 .innercircle1 .indicationheure .rec4,
+.customclock .platter .metalic .circle-4 .innercircle1 .indicationheure .circle,
+.customclock .platter .metalic .circle-4 .innercircle1 .indicationheure .milli-hand-into {
   position: absolute;
   border-radius: 40px;
 }
-.customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .indicationheure .rec1 {
+.customclock .platter .metalic .circle-4 .innercircle1 .indicationheure .rec1 {
   width: 3px;
   height: 24px;
   background-color: #212529;
@@ -6591,7 +6583,7 @@ input:checked + .slider .light {
   transform-origin: 50% 100%;
   transform: translate(-50%, -100%) rotate(57.47deg);
 }
-.customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .indicationheure .rec2 {
+.customclock .platter .metalic .circle-4 .innercircle1 .indicationheure .rec2 {
   width: 3px;
   height: 40px;
   background-color: #212529;
@@ -6601,7 +6593,7 @@ input:checked + .slider .light {
   transform-origin: 50% 100%;
   transform: translate(-50%, -100%) rotate(-66.94deg);
 }
-.customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .indicationheure .rec3 {
+.customclock .platter .metalic .circle-4 .innercircle1 .indicationheure .rec3 {
   width: 1px;
   height: 34px;
   left: 50%;
@@ -6610,7 +6602,7 @@ input:checked + .slider .light {
   transform: translate(-50%, -100%) rotate(-161.13deg);
   z-index: 10;
 }
-.customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .indicationheure .circle {
+.customclock .platter .metalic .circle-4 .innercircle1 .indicationheure .circle {
   width: 10px;
   height: 10px;
   border-radius: 100px;
@@ -6621,7 +6613,7 @@ input:checked + .slider .light {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .indicationheure .circle:before {
+.customclock .platter .metalic .circle-4 .innercircle1 .indicationheure .circle:before {
   content: "";
   background-color: #fe2600;
   width: 4px;
@@ -6632,7 +6624,7 @@ input:checked + .slider .light {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.customclock .platter .metalic .circle-1 .circle-4 .innercircle1 .indicationheure .milli-hand-into {
+.customclock .platter .metalic .circle-4 .innercircle1 .indicationheure .milli-hand-into {
   width: 2px;
   height: 100%;
   background-color: #fe2600;
