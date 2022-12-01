@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr" id="text">
+
+<head>
+    <meta charset="UTF-8">
+<link rel="preconnect" href="https://rsms.me/">
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <title>Clock iOS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet"
+        href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+    <meta name="author" content="Adrien Olichon">
+
+    <meta name="description"
+        content="Passionné de design, j'aime créer des sites web, des applications et des identités graphiques. Je donne mes photos sur internet et j'adore le design d’intérieur.">
+    <meta name="keywords" content="Adrien, Olichon, Design">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+</head>
+
+<body class="clockios">
+
+    <header class="nom-nop">
+        <div class="section-content">
+            <div class="header-content">
+                <div class="link-header">
+                    <a class="home" href="https://adrienolichon.github.io">
+                        <span class="material-symbols-rounded icon-full">
+                            home
+                        </span>
+                    </a>
+                    <a class="header-title" href="https://adrienolichon.github.io">
+                        Clock iOS 7
+                    </a>
+                </div>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <span class="slider round">
+                            <span class="svg">
+                                <span class="material-symbols-rounded icon-full moon">
+                                    dark_mode
+                                </span>
+                                <span class="material-symbols-rounded icon-full light">
+                                    light_mode
+                                </span>
+                            </span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </header>
+    <footer>
+        <button class="secret" onclick="gridshow();">
+            Grille
+        </button>
+
+    </footer>
+    <main>
+    <section>
+        <div class="customclock">
+            <div class="platter">
+                <div class="metalic"> 							
+                                <div class="circle-4">
+                                    
+                                    <div class="innercircle1">
+                                        
+
+
+
+                                            <div class="numbers">
+                                                <h4 class="n3">3</h4>
+                                                <h4 class="n6">6</h4>
+                                                <h4 class="n9">9</h4>
+                                                <h4 class="n12">12</h4>
+                                                <div class="n14710">
+                                                    <h4 class="n1">1</h4>
+                                                    <h4 class="n4">4</h4>
+                                                    <h4 class="n7">7</h4>
+                                                    <h4 class="n10">10</h4>
+                                                </div>
+                                                <div class="n25811">
+                                                    <h4 class="n2">2</h4>
+                                                    <h4 class="n5">5</h4>
+                                                    <h4 class="n8">8</h4>
+                                                    <h4 class="n11">11</h4>
+                                                </div>
+                                            </div>
+                                            <div class="indicationheure">
+                                                <div class="rec1 hour-hand"></div>
+                                                <div class="rec2 min-hand "></div>
+                                                <div class="rec3 second-hand">
+                                                    <div class="milli-hand-into"></div>
+                                                </div>
+                                                
+                                                <div class="circle"></div>
+                                                
+                                                
+                                            
+                                            </div>
+
+                                    </div>
+                                
+                        </div>
+        
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+ 
+ 
+    <script type="text/javascript" src="script.js"></script>
+ 
+    <script>
+		const secondHand = document.querySelector('.second-hand');
+		const minsHand = document.querySelector('.min-hand');
+		const hourHand = document.querySelector('.hour-hand');
+
+		const milliHandinto = document.querySelector('.milli-hand-into');
+		
+
+		function setDate() {
+		const now = new Date();
+
+
+		const milliSecondsInto = now.getMilliseconds();
+		const milliSecondsIntoDegree = ((milliSecondsInto / 1000) * 6) + 0;
+		milliHandinto.style.transform = `translate(0%, 0%) rotate(${milliSecondsIntoDegree}deg)`;
+
+
+		const seconds = now.getSeconds();
+		const secondsDegrees = ((seconds / 60) * 360) + 0;
+		secondHand.style.transform = `translate(-50%, -100%) rotate(${secondsDegrees}deg)`;
+
+		const mins = now.getMinutes();
+		const minsDegrees = ((mins / 60) * 360) + ((seconds/60)*6) + 0;
+		minsHand.style.transform = `translate(-50%, -100%) rotate(${minsDegrees}deg)`;
+
+		const hour = now.getHours();
+		const hourDegrees = ((hour / 12) * 360) + ((mins/60)*30) + 0;
+		hourHand.style.transform = `translate(-50%, -100%) rotate(${hourDegrees}deg)`;
+		}
+
+		setInterval(setDate, 10);
+
+		setDate();
+	</script>
+</body>
+
+</html>

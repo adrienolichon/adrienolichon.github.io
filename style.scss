@@ -6667,3 +6667,9 @@ input:checked + .slider .light {
 				}
 			}
 		
+.clockios{
+	.customclock{
+		transform-origin: top;
+		transform: scale(4);
+	}
+}

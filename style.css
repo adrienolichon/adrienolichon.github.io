@@ -6632,4 +6632,9 @@ input:checked + .slider .light {
   top: 0%;
   transform-origin: 50% 100%;
   transform: translate(0%, 0%);
+}
+
+.clockios .customclock {
+  transform-origin: top;
+  transform: scale(4);
 }/*# sourceMappingURL=style.css.map */
