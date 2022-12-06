@@ -6637,4 +6637,12 @@ input:checked + .slider .light {
 .clockios .customclock {
   transform-origin: top;
   transform: scale(4);
+}
+
+.map main .section-content {
+  margin-top: 32px;
+}
+.map main #map {
+  width: 100%;
+  height: 600px;
 }/*# sourceMappingURL=style.css.map */
