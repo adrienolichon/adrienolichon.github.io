@@ -613,6 +613,10 @@ button {
 	touch-action: manipulation;
 }
 
+.material-symbols-rounded{
+	font-size: 1.41176470588rem !important;
+}
+
 /* ------------------------ Base ------------------------ */
 header {
 	position: fixed;
@@ -1045,7 +1049,7 @@ button {
 .warning-p {
 	display: flex;
 	.svgcontainer {
-		width: 18px;
+		width: 1.4117647059rem !important;
 		height: 25px;
 		margin: 0 8px auto 0;
 		display: inline-flex;
