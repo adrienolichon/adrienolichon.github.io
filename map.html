@@ -21,7 +21,7 @@
     <meta name="author" content="Adrien Olichon">
 
     <script src="https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.js"></script>
-    
+
 
     <meta name="description"
         content="Passionné de design, j'aime créer des sites web, des applications et des identités graphiques. Je donne mes photos sur internet et j'adore le design d’intérieur.">
@@ -66,24 +66,8 @@
 
     <main>
         <div class="section-content">
-        <div id="map"></div>
-        </div>
-
-        <div class="container">
             <div id="map"></div>
-            <div id="infoPopup">
-                <div class="info">
-                    <span>State:</span>
-                    <span class="info-country"></span>
-                </div>
-                <div class="info">
-                    <span>Population:</span>
-                    <span class="info-population"></span>
-                </div>
-            </div>
-            <div class="map-legend"></div>
         </div>
-      
     </main>
 
     <footer>
@@ -98,23 +82,23 @@
 
     <script>
         mapkit.init({
-            authorizationCallback: function(done) {
+            authorizationCallback: function (done) {
                 var xhr = new XMLHttpRequest();
                 xhr.open("GET", "/services/jwt");
-                xhr.addEventListener("load", function() {
+                xhr.addEventListener("load", function () {
                     done(this.responseText);
                 });
                 xhr.send();
             }
         });
-        
+
         var Cupertino = new mapkit.CoordinateRegion(
             new mapkit.Coordinate(37.3316850890998, -122.030067374026),
             new mapkit.CoordinateSpan(0.167647972, 0.354985255)
         );
         var map = new mapkit.Map("map");
         map.region = Cupertino;
-        </script>
+    </script>
 
 </body>
 
