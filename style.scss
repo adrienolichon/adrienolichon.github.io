@@ -409,7 +409,7 @@
 }
 
 html {
-	font-size: 17px;
+	font-size: 1.0625rem;
 	//font-family: 'Inter', system-ui, sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-webkit-font-smoothing: antialiased;
@@ -465,7 +465,7 @@ html {
 }
 body {
 	margin: 0;
-	font-size: 1rem;
+	font-size: 1.0625rem;
 	line-height: 1.47059;
 	font-weight: 400;
 	letter-spacing: -0.022em;
@@ -534,12 +534,12 @@ h4/*Title 3*/ {
 }
 h5/*Headline*/ {
 	font-weight: 600;
-	font-size: 1rem;
+	font-size: 1.0625rem;
 	line-height: 1.1;
 }
 p/*Body*/ {
 	font-weight: 400;
-	font-size: 1rem;
+	font-size: 1.0625rem;
 	line-height: 1.47059;
 }
 button {
@@ -648,7 +648,7 @@ header {
 			width: fit-content;
 		}
 		.header-title {
-			font-size: 21px;
+			font-size: 1.23529411765rem;
 			line-height: 1;
 			font-weight: 500;
 			letter-spacing: 0.011em;
@@ -671,7 +671,7 @@ header {
 				margin: auto;
 				color: var(--colortext);
 				transition: var(--transition1);
-				font-size: 32px;
+				font-size: 1.88235294118rem;
 			}
 			@media (hover: hover) {
 				&:hover {
@@ -705,7 +705,7 @@ footer {
 		border: 1px solid var(--black4);
 		background-color: transparent;
 		font-weight: 400;
-		font-size: 1rem;
+		font-size: 1.0625rem;
 		line-height: 1.47059;
 		border-radius: var(--radius-small);
 		margin: auto;
@@ -798,7 +798,7 @@ button {
 
 						span {
 							margin: auto;
-							font-size: 24px;
+							font-size: 1.41176470588rem;
 							color: rgb(var(--blue));
 							//transition: var(--transition1);
 						}
@@ -1112,7 +1112,7 @@ button {
 		padding-top: 100px;
 	}
 	header .header-content .header-title {
-		font-size: 17px;
+		font-size: 1.0625rem;
 	}
 	header {
 		top: 8px;
@@ -1306,14 +1306,14 @@ button {
 			.material-symbols-rounded {
 				transition: var(--transition1);
 				margin: auto 0;
-				font-size: 32px;
+				font-size: 1.88235294118rem;
 				color: var(--colortext);
 				opacity: 0.16;
 				font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 0, "opsz" 48;
 			}
 			.open-in-new {
 				transition: var(--transition1);
-				font-size: 24px;
+				font-size: 1.41176470588rem;
 				opacity: 0.16;
 			}
 		}
@@ -1683,7 +1683,7 @@ button {
 		span {
 			margin: auto;
 			color: var(--colortext);
-			font-size: 24px;
+			font-size: 1.41176470588rem;
 			transition: var(--transition1);
 			position: absolute;
 			left: 50%;
@@ -1849,7 +1849,7 @@ input:checked + .slider .light {
 					display: inline-block;
 					padding: 4px 8px;
 					font-weight: 400;
-					font-size: 1rem;
+					font-size: 1.0625rem;
 					line-height: 1.47059;
 					border-radius: var(--radius-small);
 					border: 1px solid var(--black4);
@@ -1858,7 +1858,7 @@ input:checked + .slider .light {
 					display: inline-block;
 					padding: 4px 8px;
 					font-weight: 400;
-					font-size: 1rem;
+					font-size: 1.0625rem;
 					line-height: 1.47059;
 					border-radius: var(--radius-small);
 					&:before {
@@ -2389,7 +2389,7 @@ input:checked + .slider .light {
 		border-radius: var(--radius-large);
 		background-color: var(--white);
 		.material-symbols-rounded {
-			font-size: 32px;
+			font-size: 1.88235294118rem;
 			margin: auto;
 		}
 		h3 {
@@ -2643,7 +2643,7 @@ input:checked + .slider .light {
 						margin: 0;
 						padding: 0 0 2px 0;
 						font-weight: 500;
-						font-size: 1rem;
+						font-size: 1.0625rem;
 						line-height: 1;
 						color: var(--black3);
 					}
@@ -2665,7 +2665,7 @@ input:checked + .slider .light {
 				height: 100%;
 				display: flex;
 				span {
-					font-size: 32px;
+					font-size: 1.88235294118rem;
 					margin: auto;
 					color: var(--black1);
 				}
@@ -2677,7 +2677,7 @@ input:checked + .slider .light {
 				.name {
 					padding: 0 0 2px 0;
 					font-weight: 500;
-					font-size: 1rem;
+					font-size: 1.0625rem;
 					line-height: 1;
 					color: var(--black3);
 				}
@@ -2718,7 +2718,7 @@ input:checked + .slider .light {
 		background-color: var(--buttonhover);
 		border: 0px solid transparent;
 		border-bottom: 1px solid var(--black3);
-		font-size: 1rem;
+		font-size: 1.0625rem;
 		padding: 0;
 		min-height: 60px;
 	}
@@ -2734,7 +2734,7 @@ input:checked + .slider .light {
 	}
 	.form-group select {
 		width: 100%;
-		font-size: 1rem;
+		font-size: 1.0625rem;
 		height: 1.6rem;
 		padding: 0.125rem 0.125rem 0.0625rem;
 		background: none;
@@ -2750,7 +2750,7 @@ input:checked + .slider .light {
 		left: 14px;
 		padding: 2px;
 		color: var(--black1);
-		font-size: 1rem;
+		font-size: 1.0625rem;
 		transition: var(--transition1);
 		background: var(--buttonhover);
 	}
@@ -2771,7 +2771,7 @@ input:checked + .slider .light {
 	.form-group textarea {
 		display: block;
 		background: none;
-		font-size: 1rem;
+		font-size: 1.0625rem;
 		border-width: 0;
 		border-color: transparent;
 		line-height: 1.6rem;
@@ -3631,7 +3631,7 @@ input:checked + .slider .light {
 											h4 {
 												margin: 0;
 												padding: 0;
-												font-size: 16px;
+												font-size: 0.94117647058rem;
 												font-weight: 600;
 												position: absolute;
 												color: #9ba0a3;
@@ -4045,7 +4045,7 @@ input:checked + .slider .light {
 					margin: 0 32px 32px 0;
 					min-width: 150px;
 					.data-label {
-						font-size: 1rem;
+						font-size: 1.0625rem;
 						line-height: 1rem;
 						color: white;
 						font-weight: 500;
@@ -4289,7 +4289,7 @@ input:checked + .slider .light {
 							margin: 0 32px 32px 0;
 							min-width: 150px;
 							.data-label {
-								font-size: 1rem;
+								font-size: 1.0625rem;
 								line-height: 1rem;
 								color: white;
 								font-weight: 500;
@@ -4537,11 +4537,11 @@ input:checked + .slider .light {
 					align-items: baseline;
 					#daydate {
 						text-align: right;
-						font-size: 48px;
+						font-size: 2.82352941176;
 					}
 					#month {
 						text-align: left;
-						font-size: 48px;
+						font-size: 2.82352941176;
 					}
 				}
 				.row-heure {
@@ -4554,7 +4554,7 @@ input:checked + .slider .light {
 						font-size: 88px;
 					}
 					#seconde {
-						font-size: 48px;
+						font-size: 2.82352941176;
 					}
 				}
 			}
@@ -4708,7 +4708,7 @@ input:checked + .slider .light {
 				opacity: 0;
 				width: 100%;
 				color: rgba(255, 255, 255, 0.8);
-				font-size: 22px;
+				font-size: 1.29411764706rem;
 				font-weight: 500;
 				align-items: center;
 				display: contents;
@@ -4905,7 +4905,7 @@ input:checked + .slider .light {
 
 			span {
 				margin: auto;
-				font-size: 48px;
+				font-size: 2.82352941176;
 				color: white;
 			}
 			@media (hover: hover) {
@@ -4963,7 +4963,7 @@ input:checked + .slider .light {
 			align-self: center;
 			text-align: center;
 			display: flex;
-			font-size: 24px;
+			font-size: 1.41176470588rem;
 			font-weight: 600;
 			padding: 24px;
 			transform: translateX(calc(max(1024px, 100vw) / 2 - 490px));
@@ -5081,7 +5081,7 @@ input:checked + .slider .light {
 					span {
 						border-radius: 200px;
 						padding: 12px;
-						font-size: 24px;
+						font-size: 1.41176470588rem;
 						transition-duration: 0.3s;
 						color: rgb(var(--blue));
 						background-color: rgba(var(--oc-gray-6-rgb), 0);
@@ -5173,7 +5173,7 @@ input:checked + .slider .light {
 						margin-left: 0;
 						padding: 8px;
 						background: var(--white);
-						font-size: 28px;
+						font-size: 1.64705882353rem;
 						border-radius: 200px;
 						transition-duration: 0.3s;
 						font-variation-settings: "wght" 800;
@@ -5219,13 +5219,13 @@ input:checked + .slider .light {
 							}
 
 							span {
-								font-size: 24px;
+								font-size: 1.41176470588rem;
 							}
 							p {
 								text-align: center;
 								padding: 0;
 								margin: 0;
-								font-size: 12px;
+								font-size: 0.70588235294rem;
 								overflow-wrap: anywhere;
 							}
 						}
@@ -5261,7 +5261,7 @@ input:checked + .slider .light {
 					position: relative;
 
 					.text-calendar {
-						font-size: 16px;
+						font-size: 0.94117647058rem;
 						font-weight: 500;
 						margin-left: 8px;
 					}
@@ -5272,7 +5272,7 @@ input:checked + .slider .light {
 					left: 0;
 					top: 0;
 					transform-origin: left;
-					font-size: 26px;
+					font-size: 1.52941176471rem;
 					border-radius: 200px;
 
 					color: var(--white);
@@ -5292,7 +5292,7 @@ input:checked + .slider .light {
 					background: var(--oc-gray-9);
 					max-width: 240px;
 					height: auto;
-					font-size: 14px;
+					font-size: 0.82352941176rem;
 					font-weight: 400;
 					white-space: nowrap;
 					top: 0;
@@ -5355,7 +5355,7 @@ input:checked + .slider .light {
 							background-color: rgba(var(--oc-blue-1-rgb), 1);
 							display: flex;
 							span {
-								font-size: 28px;
+								font-size: 1.64705882353rem;
 								padding: 0;
 								margin: auto;
 								color: rgba(var(--oc-blue-7-rgb), 1);
@@ -5377,10 +5377,10 @@ input:checked + .slider .light {
 									grid-gap: 8px;
 									align-items: center;
 									color: rgb(var(--blue));
-									font-size: 18px;
+									font-size: 1.05882352941rem;
 
 									span {
-										font-size: 18px;
+										font-size: 1.05882352941rem;
 									}
 									@media (hover: hover) {
 										&:hover {
@@ -5394,7 +5394,7 @@ input:checked + .slider .light {
 									}
 								}
 								.montant {
-									font-size: 18px;
+									font-size: 1.05882352941rem;
 									font-weight: 600;
 									text-align: right;
 								}
@@ -5410,9 +5410,9 @@ input:checked + .slider .light {
 									display: flex;
 									grid-gap: 8px;
 									align-items: center;
-									font-size: 16px;
+									font-size: 0.94117647058rem;
 									span {
-										font-size: 16px;
+										font-size: 0.94117647058rem;
 									}
 
 									.text-horaires {
@@ -5422,7 +5422,7 @@ input:checked + .slider .light {
 								.logo-data {
 									display: flex;
 									span {
-										font-size: 20px;
+										font-size: 1.17647058824rem;
 										text-align: right;
 										margin: auto 0 auto auto;
 									}
@@ -5447,13 +5447,13 @@ input:checked + .slider .light {
 							background-color: rgba(var(--oc-gray-1-rgb), 1);
 							display: flex;
 							span {
-								font-size: 28px;
+								font-size: 1.64705882353rem;
 								padding: 0;
 								margin: auto;
 							}
 						}
 						.data {
-							font-size: 16px;
+							font-size: 0.94117647058rem;
 							line-height: calc(16px * 1.6);
 						}
 					}
@@ -5499,7 +5499,7 @@ input:checked + .slider .light {
 
 				div {
 					margin: auto;
-					font-size: 18px;
+					font-size: 1.05882352941rem;
 					font-weight: 600;
 					color: white;
 				}
@@ -5522,12 +5522,12 @@ input:checked + .slider .light {
 				grid-gap: 2px;
 
 				.main-data {
-					font-size: 18px;
+					font-size: 1.05882352941rem;
 					font-weight: 500;
 				}
 
 				.second-data {
-					font-size: 14px;
+					font-size: 0.82352941176rem;
 					font-weight: 400;
 					color: var(--oc-gray-6);
 				}
@@ -5546,11 +5546,11 @@ input:checked + .slider .light {
 				}
 			}
 			.titrepage {
-				font-size: 14px;
+				font-size: 0.82352941176rem;
 				color: var(--oc-gray-8);
 			}
 			.material-symbols-rounded {
-				font-size: 20px;
+				font-size: 1.17647058824rem;
 				color: var(--oc-gray-6);
 				width: 18px;
 			}
@@ -5577,7 +5577,7 @@ input:checked + .slider .light {
 				font-weight: 600;
 				transition-duration: 0.3s;
 				border-radius: 8px;
-				font-size: 14px;
+				font-size: 0.82352941176rem;
 				font-weight: 400;
 				display: grid;
 				grid-template-columns: 20px 20px 1fr;
@@ -5590,7 +5590,7 @@ input:checked + .slider .light {
 				}
 
 				.material-symbols-rounded {
-					font-size: 20px;
+					font-size: 1.17647058824rem;
 					color: var(--oc-gray-6);
 					width: 20px;
 					height: 20px;
@@ -5647,7 +5647,7 @@ input:checked + .slider .light {
 					}
 				}
 				.material-symbols-rounded {
-					font-size: 20px;
+					font-size: 1.17647058824rem;
 					color: var(--oc-gray-5);
 					width: 18px;
 					display: inline-block;
@@ -5716,7 +5716,7 @@ input:checked + .slider .light {
 				}
 
 				.material-symbols-rounded {
-					font-size: 24px;
+					font-size: 1.41176470588rem;
 					width: 40px;
 					padding: 8px;
 					font-variation-settings: "FILL" 0;
@@ -5784,7 +5784,7 @@ input:checked + .slider .light {
 				padding: 16px 32px;
 				margin: 16px auto auto auto;
 				width: 100%;
-				font-size: 20px;
+				font-size: 1.17647058824rem;
 				border-radius: 8px;
 				min-height: 56px;
 				transition-duration: 0.3s;
@@ -6499,7 +6499,7 @@ input:checked + .slider .light {
 										h4 {
 											margin: 0;
 											padding: 0;
-											font-size: 14px;
+											font-size: 0.82352941176rem;
 											font-weight: 400;
 											position: absolute;
 											color: #212529;

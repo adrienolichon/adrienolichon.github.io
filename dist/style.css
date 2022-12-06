@@ -237,7 +237,7 @@ header .header-content {
   grid-template-columns: repeat(3, 1fr);
 }
 header .header-content .header-title {
-  font-size: 21px;
+  font-size: 1.23529411765rem;
   line-height: 1.14286;
   font-weight: 500;
   letter-spacing: 0.011em;
