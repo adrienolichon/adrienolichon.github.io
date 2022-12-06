@@ -637,7 +637,7 @@ header {
 	.header-content {
 		height: 52px;
 		display: grid;
-		grid-template-columns: 1fr 52px;
+		grid-template-columns: 1fr minmax(52px, auto);
 		grid-gap: 16px;
 		width: fit-content;
 		margin: auto;
