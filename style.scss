@@ -6677,14 +6677,12 @@ input:checked + .slider .light {
 
 .map{
 	main{
-
-	.section-content{
-		margin-top: 32px;
+		.section-content{
+			margin-top: 32px;
+		}
+		#map {
+			width: 100%;
+			height: 600px;
+		}	
 	}
-	#map {
-		width: 100%;
-		height: 600px;
-	}
-			
-}
 }
