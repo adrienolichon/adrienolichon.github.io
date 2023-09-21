@@ -709,7 +709,7 @@ button {
   fill: var(--colortext);
   width: 20px;
   height: 20px;
-  transition: var(--transition);
+  transition: var(--transition1);
   transition: 0.4s;
   transform: translateX(13px);
 }
@@ -815,14 +815,14 @@ input:checked + .slider .light {
   display: grid;
   border-radius: var(--radius-small);
   background-color: var(--white);
-  transition: var(--transition);
+  transition: var(--transition1);
   transition: 0.4s;
 }
 @media (hover: hover) {
   .recette .collection-recettes .card-recette:hover {
     cursor: pointer;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    transition: var(--transition);
+    transition: var(--transition1);
     transition: 0.4s;
   }
 }
