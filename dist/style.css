@@ -99,8 +99,8 @@ html {
 
 body {
   margin: 0;
-  font-size: 1rem;
-  line-height: 1.47059;
+  font-size: var(--fs-body);
+  font-size: var(--fs-body);
   font-weight: 400;
   letter-spacing: -0.022em;
   color: var(--colortext);
@@ -121,48 +121,48 @@ a:visited {
 h1 {
   font-weight: 500;
   font-size: 2rem;
-  line-height: 1.1;
+  line-height: var(--lh-body);
   padding-bottom: 10px;
 }
 
 h2 {
   font-weight: 400;
-  font-size: 1.647rem;
-  line-height: 1.1;
+  font-size: var(--fs-h2);
+  line-height: var(--lh-body);
 }
 
 h3 {
   font-weight: 400;
-  font-size: 1.294rem;
-  line-height: 1.1;
+  font-size: var(--fs-h3);
+  line-height: var(--lh-body);
 }
 
 h4 {
   font-weight: 400;
-  font-size: 1.17rem;
-  line-height: 1.1;
+  font-size: var(--fs-h4);
+  line-height: var(--lh-body);
 }
 
 h5 {
   font-weight: 600;
-  font-size: 1rem;
-  line-height: 1.1;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
 }
 
 p {
   font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.47059;
+  font-size: var(--fs-body);
+  font-size: var(--fs-body);
 }
 
 button {
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: var(--fs-button);
   line-height: 2.4rem;
 }
 
 .headline {
-  font-size: 1.5rem;
+  font-size: var(--fs-button);
   line-height: 1.16667;
   font-weight: 700;
   letter-spacing: 0.009em;
@@ -171,13 +171,13 @@ button {
 .callout {
   font-weight: 400;
   font-size: 0.94rem;
-  line-height: 1.1;
+  line-height: var(--lh-body);
 }
 
 .subhead {
   font-weight: 400;
   font-size: 0.88rem;
-  line-height: 1.1;
+  line-height: var(--lh-body);
 }
 
 .date {
@@ -200,18 +200,18 @@ button {
 .footnote {
   font-weight: 400;
   font-size: 0.76rem;
-  line-height: 1.1;
+  line-height: var(--lh-body);
 }
 
 caption {
   font-weight: 400;
   font-size: 0.7rem;
-  line-height: 1.1;
+  line-height: var(--lh-body);
 }
 
 .introduction {
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: var(--fs-button);
   line-height: 2.4rem;
 }
 
@@ -245,7 +245,7 @@ header .header-content .header-title {
 }
 header .header-content .mail {
   margin: auto 0 auto auto;
-  font-size: 1rem;
+  font-size: var(--fs-body);
   font-weight: 400;
   padding: 8px;
   transform-origin: center;
@@ -795,7 +795,7 @@ input:checked + .slider .light {
   padding: 40px 0 0 0;
   font-weight: 500;
   font-size: 2rem;
-  line-height: 1.1;
+  line-height: var(--lh-body);
 }
 .recette .title-categorie:before {
   display: inline-block;
@@ -855,8 +855,8 @@ input:checked + .slider .light {
   display: inline-block;
   padding: 4px 8px;
   font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.47059;
+  font-size: var(--fs-body);
+  font-size: var(--fs-body);
   border-radius: var(--radius-small);
   border: 1px solid var(--black4);
 }
@@ -864,8 +864,8 @@ input:checked + .slider .light {
   display: inline-block;
   padding: 4px 8px;
   font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.47059;
+  font-size: var(--fs-body);
+  font-size: var(--fs-body);
   border-radius: var(--radius-small);
 }
 .recette .collection-recettes .card-recette .contenu .type:before {
