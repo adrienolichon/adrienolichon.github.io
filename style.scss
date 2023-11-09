@@ -1952,22 +1952,7 @@ input:checked + .slider .light {
 		}
 	}
 }
-.restaurants{
-	.page-body{
-		h3{
-			font-size: var(--fs-h2);
-		}
-	
-		a{
-			color: rgb(var(--blue));
-			@media (hover: hover) {
-				&:hover {
-					cursor: pointer;
-				}
-			}
-		}
-	}
-}
+
 .article-recette, .restaurants {
 	background-color: var(--white);
 	&:before {
@@ -1992,6 +1977,51 @@ input:checked + .slider .light {
 	&.recette-sauce {
 		&:before {
 			background-color: #fcc419;
+		}
+	}
+}
+.restaurants{
+	background-color: var(--bgmain);
+	.page-body{
+		h3{
+			font-size: var(--fs-h2);
+		}
+	
+		a{
+			color: rgb(var(--blue));
+			@media (hover: hover) {
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+		figure{
+			margin: 16px 0;
+			display: grid !important;
+			grid-template-columns: auto 1fr;
+			grid-gap: 16px;
+			padding: 16px 16px 32px 16px;
+			border-radius: var(--radius-medium);
+			background-color: var(--white);
+			div:first-child{
+				span{
+					
+					align-items: flex-start;
+					justify-content: center;
+					display: flex;
+					font-size: 28px;
+				}
+			}
+			div:nth-child(2){
+				display: grid;
+				grid-gap: 8px;
+				font-size: var(--fs-h3);
+			}
+			p{
+				margin: 0;
+				font-size: var(--fs-body);
+				white-space: initial;
+			}
 		}
 	}
 }
