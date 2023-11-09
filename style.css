@@ -1808,10 +1808,22 @@ input:checked + .slider .light {
   color: rgb(252, 196, 25);
 }
 
-.article-recette {
+.restaurants .page-body h3 {
+  font-size: var(--fs-h2);
+}
+.restaurants .page-body a {
+  color: rgb(var(--blue));
+}
+@media (hover: hover) {
+  .restaurants .page-body a:hover {
+    cursor: pointer;
+  }
+}
+
+.article-recette, .restaurants {
   background-color: var(--white);
 }
-.article-recette:before {
+.article-recette:before, .restaurants:before {
   content: "";
   position: fixed;
   width: 100px;
@@ -1820,13 +1832,13 @@ input:checked + .slider .light {
   top: -10vh;
   filter: blur(100px);
 }
-.article-recette.recette-plat:before {
+.article-recette.recette-plat:before, .restaurants.recette-plat:before {
   background-color: var(--oc-indigo-7);
 }
-.article-recette.recette-dessert:before {
+.article-recette.recette-dessert:before, .restaurants.recette-dessert:before {
   background-color: var(--oc-pink-5);
 }
-.article-recette.recette-sauce:before {
+.article-recette.recette-sauce:before, .restaurants.recette-sauce:before {
   background-color: #fcc419;
 }
 

@@ -1952,7 +1952,23 @@ input:checked + .slider .light {
 		}
 	}
 }
-.article-recette {
+.restaurants{
+	.page-body{
+		h3{
+			font-size: var(--fs-h2);
+		}
+	
+		a{
+			color: rgb(var(--blue));
+			@media (hover: hover) {
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+.article-recette, .restaurants {
 	background-color: var(--white);
 	&:before {
 		content: "";
