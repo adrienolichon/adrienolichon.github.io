@@ -36,39 +36,35 @@
 	/*  Fonts and line-height
 		 *  ─────────────────────────────────── */
 
-		 --fs-body: clamp(17px, 1.0625rem, 34px);
-		--fs-h1: clamp(32px, 2rem, 64px);
-		--fs-h2: clamp(26.352px, 1.647rem, 52.704px);
-		--fs-h3: clamp(20.704px, 1.294rem, 41.408px);
-		--fs-h4: clamp(18.72px, 1.17rem, 37.44px);
-		--fs-button: clamp(24px, 1.5rem, 48px);
-		--fs-callout: clamp(15.04px, 0.94rem, 30.08px);
-		--fs-subhead: clamp(14.08px, 0.88rem, 28.16px);
-		--fs-date: clamp(14px, 0.875rem, 28px);
-		--fs-categorie: clamp(12px, 0.75rem, 24px);
-		--fs-footnote: clamp(12.16px, 0.76rem, 24.32px);
-		--fs-caption: clamp(11.2px, 0.7rem, 22.4px); 
-		--fs-material-symbols-rounded: clamp(22.58px, 1.41176470588rem, 45.16px);
-		--fs-body-plus: clamp(18px, 1.125rem, 36px); 
-		--fs-24: clamp(24px, 1.4rem, 48px); 
-		--fs-small-icon:clamp(16.9411764706px, 1.05882352941rem, 33.8823529412px);
-		--fs-medium-icon: clamp(18.8235294118px, 1.17647058824rem, 37.6470588236px);
-		--fs-big-icon: clamp(30.1176470589px, 1.88235294118rem, 60.2352941178px);
-		--fs-header: clamp(21px, 1.23529411765rem, 42px);
-		--fs-08:clamp(12.8px, 0.8rem, 25.6px);
-		--fs-09:clamp(14.4px, 0.9rem, 28.8px);
+	--fs-body: clamp(17px, 1.0625rem, 34px);
+	--fs-h1: clamp(32px, 2rem, 64px);
+	--fs-h2: clamp(26.352px, 1.647rem, 52.704px);
+	--fs-h3: clamp(20.704px, 1.294rem, 41.408px);
+	--fs-h4: clamp(18.72px, 1.17rem, 37.44px);
+	--fs-button: clamp(24px, 1.5rem, 48px);
+	--fs-callout: clamp(15.04px, 0.94rem, 30.08px);
+	--fs-subhead: clamp(14.08px, 0.88rem, 28.16px);
+	--fs-date: clamp(14px, 0.875rem, 28px);
+	--fs-categorie: clamp(12px, 0.75rem, 24px);
+	--fs-footnote: clamp(12.16px, 0.76rem, 24.32px);
+	--fs-caption: clamp(11.2px, 0.7rem, 22.4px);
+	--fs-material-symbols-rounded: clamp(22.58px, 1.41176470588rem, 45.16px);
+	--fs-body-plus: clamp(18px, 1.125rem, 36px);
+	--fs-24: clamp(24px, 1.4rem, 48px);
+	--fs-small-icon: clamp(16.9411764706px, 1.05882352941rem, 33.8823529412px);
+	--fs-medium-icon: clamp(18.8235294118px, 1.17647058824rem, 37.6470588236px);
+	--fs-big-icon: clamp(30.1176470589px, 1.88235294118rem, 60.2352941178px);
+	--fs-header: clamp(21px, 1.23529411765rem, 42px);
+	--fs-08: clamp(12.8px, 0.8rem, 25.6px);
+	--fs-09: clamp(14.4px, 0.9rem, 28.8px);
 
-
-
-		--lh-body: clamp(25px, 1.47059em, 50px);
-		--lh-button: clamp(38.4px, 2.4rem, 76.8px);
-		--lh-title: 1.1em;
-		--lh-headline: clamp(26.6672px, 1.16667em, 53.3344px);
-		--lh-date: clamp(20.57232px, 1.16667em, 41.14464px);
-		--lh-categorie: clamp(21.33392px,1.33337rem,42.66784px);
-		--lh-introduciton: clamp(28.8px,1.8rem,57.6px);
-
-
+	--lh-body: clamp(25px, 1.47059em, 50px);
+	--lh-button: clamp(38.4px, 2.4rem, 76.8px);
+	--lh-title: 1.1em;
+	--lh-headline: clamp(26.6672px, 1.16667em, 53.3344px);
+	--lh-date: clamp(20.57232px, 1.16667em, 41.14464px);
+	--lh-categorie: clamp(21.33392px, 1.33337rem, 42.66784px);
+	--lh-introduciton: clamp(28.8px, 1.8rem, 57.6px);
 
 	/*  General
 		 *  ─────────────────────────────────── */
@@ -1953,7 +1949,8 @@ input:checked + .slider .light {
 	}
 }
 
-.article-recette, .restaurants {
+.article-recette,
+.restaurants {
 	background-color: var(--white);
 	&:before {
 		content: "";
@@ -1980,14 +1977,20 @@ input:checked + .slider .light {
 		}
 	}
 }
-.restaurants{
+.restaurants {
 	background-color: var(--bgmain);
-	.page-body{
-		h3{
+	.page-body {
+		h3 {
 			font-size: var(--fs-h2);
+			word-break: break-all;
 		}
-	
-		a{
+		p {
+			word-break: break-all;
+			a {
+				word-break: break-all;
+			}
+		}
+		a {
 			color: rgb(var(--blue));
 			@media (hover: hover) {
 				&:hover {
@@ -1995,7 +1998,7 @@ input:checked + .slider .light {
 				}
 			}
 		}
-		figure{
+		figure {
 			margin: 16px 0;
 			display: grid !important;
 			grid-template-columns: auto 1fr;
@@ -2003,21 +2006,20 @@ input:checked + .slider .light {
 			padding: 16px 16px 32px 16px;
 			border-radius: var(--radius-medium);
 			background-color: var(--white);
-			div:first-child{
-				span{
-					
+			div:first-child {
+				span {
 					align-items: flex-start;
 					justify-content: center;
 					display: flex;
 					font-size: 28px;
 				}
 			}
-			div:nth-child(2){
+			div:nth-child(2) {
 				display: grid;
 				grid-gap: 8px;
 				font-size: var(--fs-h3);
 			}
-			p{
+			p {
 				margin: 0;
 				font-size: var(--fs-body);
 				white-space: initial;

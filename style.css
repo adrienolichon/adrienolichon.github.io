@@ -47,19 +47,19 @@
   --fs-material-symbols-rounded: clamp(22.58px, 1.41176470588rem, 45.16px);
   --fs-body-plus: clamp(18px, 1.125rem, 36px);
   --fs-24: clamp(24px, 1.4rem, 48px);
-  --fs-small-icon:clamp(16.9411764706px, 1.05882352941rem, 33.8823529412px);
+  --fs-small-icon: clamp(16.9411764706px, 1.05882352941rem, 33.8823529412px);
   --fs-medium-icon: clamp(18.8235294118px, 1.17647058824rem, 37.6470588236px);
   --fs-big-icon: clamp(30.1176470589px, 1.88235294118rem, 60.2352941178px);
   --fs-header: clamp(21px, 1.23529411765rem, 42px);
-  --fs-08:clamp(12.8px, 0.8rem, 25.6px);
-  --fs-09:clamp(14.4px, 0.9rem, 28.8px);
+  --fs-08: clamp(12.8px, 0.8rem, 25.6px);
+  --fs-09: clamp(14.4px, 0.9rem, 28.8px);
   --lh-body: clamp(25px, 1.47059em, 50px);
   --lh-button: clamp(38.4px, 2.4rem, 76.8px);
   --lh-title: 1.1em;
   --lh-headline: clamp(26.6672px, 1.16667em, 53.3344px);
   --lh-date: clamp(20.57232px, 1.16667em, 41.14464px);
-  --lh-categorie: clamp(21.33392px,1.33337rem,42.66784px);
-  --lh-introduciton: clamp(28.8px,1.8rem,57.6px);
+  --lh-categorie: clamp(21.33392px, 1.33337rem, 42.66784px);
+  --lh-introduciton: clamp(28.8px, 1.8rem, 57.6px);
   /*  General
   	 *  ─────────────────────────────────── */
   --oc-white: #ffffff;
@@ -1808,10 +1808,12 @@ input:checked + .slider .light {
   color: rgb(252, 196, 25);
 }
 
-.article-recette, .restaurants {
+.article-recette,
+.restaurants {
   background-color: var(--white);
 }
-.article-recette:before, .restaurants:before {
+.article-recette:before,
+.restaurants:before {
   content: "";
   position: fixed;
   width: 100px;
@@ -1820,13 +1822,16 @@ input:checked + .slider .light {
   top: -10vh;
   filter: blur(100px);
 }
-.article-recette.recette-plat:before, .restaurants.recette-plat:before {
+.article-recette.recette-plat:before,
+.restaurants.recette-plat:before {
   background-color: var(--oc-indigo-7);
 }
-.article-recette.recette-dessert:before, .restaurants.recette-dessert:before {
+.article-recette.recette-dessert:before,
+.restaurants.recette-dessert:before {
   background-color: var(--oc-pink-5);
 }
-.article-recette.recette-sauce:before, .restaurants.recette-sauce:before {
+.article-recette.recette-sauce:before,
+.restaurants.recette-sauce:before {
   background-color: #fcc419;
 }
 
@@ -1835,6 +1840,13 @@ input:checked + .slider .light {
 }
 .restaurants .page-body h3 {
   font-size: var(--fs-h2);
+  word-break: break-all;
+}
+.restaurants .page-body p {
+  word-break: break-all;
+}
+.restaurants .page-body p a {
+  word-break: break-all;
 }
 .restaurants .page-body a {
   color: rgb(var(--blue));
