@@ -28,6 +28,8 @@
 	--dark-blue-gradient: #4673ee;
 	--light-blue-gradient: #4dabf7;
 
+	--radius-flutedglass: 64px;
+
 	--shadow-header: 0 0 50px rgb(206 212 218 / 70%), 0 0 0 1px rgb(0 0 0 / 5%), 0 0px 4px rgb(0 0 0 / 10%);
 
 	--animation1: 0.3192s;
@@ -7352,6 +7354,108 @@ input:checked + .slider .light {
 							inset: 0 0 0 0;
 
 							transition: var(--transition1);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.fluted-page {
+
+	.material-symbols-rounded {
+		font-family: "Material Symbols Rounded";
+		font-weight: normal;
+		font-style: normal;
+		font-size: 24px;
+		line-height: 1;
+		letter-spacing: normal;
+		text-transform: none;
+		display: inline-block;
+		white-space: wrap;
+		word-wrap: normal;
+		direction: ltr;
+		-webkit-font-feature-settings: "liga";
+		-webkit-font-smoothing: antialiased;
+		font-variation-settings:
+			"FILL" 1,
+			"wght" 400,
+			"GRAD" 0,
+			"opsz" 48;
+	}
+
+	main {
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.fluted{
+			width: 40vw;
+			height:40vh;
+			overflow: hidden;
+			position: relative;
+			border-radius: 32px;
+			box-shadow: 0 0 0 2px var(--oc-gray-0), 0 0 0 4px var(--oc-gray-4);
+			&:after {
+				content: "";
+				position: absolute;
+				inset: 0;
+				width: 100%;
+				height: 100%;
+				background-image: 
+				url(https://images.unsplash.com/photo-1534351590666-13e3e96b5017?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+				filter: blur(8px) brightness(0.9) contrast(1.4);
+			}
+			.contain-fluted {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				position: absolute;
+				inset: 0;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				z-index: 10;
+				gap: 8px;
+
+				.fluted-white {
+					height: 100%;
+					width: 4px;
+					background: transparent;
+					backdrop-filter: blur(0px);
+					filter: blur(1.5px);
+					
+
+					&:before, &:after{
+						content: "";
+						height: 100%;
+						width: 4px;
+						filter: blur(1px);
+						position: absolute;
+					}
+					&:before{
+						inset: 0 auto 0 4px;
+						background: rgba(var(--oc-gray-2-rgb), 0.2);
+					}
+					&:after{
+						inset: 0 auto 0 8px;
+						background: transparent;
+					}
+
+					&:nth-child(2n) {
+						background: rgba(var(--oc-gray-2-rgb), 0.2);
+						&:before{
+							inset: 0 auto 0 4px;
+							
+							background: transparent;
+						}
+						&:after{
+							inset: 0 auto 0 8px;
+							background: rgba(var(--oc-gray-2-rgb), 0.2);
 						}
 					}
 				}
