@@ -716,6 +716,12 @@ header .header-content #menu {
   border: none;
   gap: 24px;
 }
+@media only screen and (max-width: 500px) {
+  header .header-content #menu {
+    max-width: calc(100vw - 16px);
+    inset: 8px auto 0 8px;
+  }
+}
 header .header-content #menu::backdrop {
   opacity: 0;
   background: rgba(0, 0, 0, 0.3);
@@ -733,6 +739,11 @@ header .header-content #menu:popover-open::backdrop {
 @starting-style {
   header .header-content #menu:popover-open {
     inset: 32px auto 0 -500px;
+  }
+  @media only screen and (max-width: 500px) {
+    header .header-content #menu:popover-open {
+      inset: 8px auto 0 -500px;
+    }
   }
   header .header-content #menu:popover-open::backdrop {
     opacity: 0;

@@ -733,6 +733,10 @@ header {
 			//display: grid;
 			gap: 24px;
 			
+			@media only screen and (max-width: 500px) {
+				max-width: calc(100vw - 16px);
+				inset: 8px auto 0 8px;
+			}
 			
 			 &::backdrop {
 				opacity: 0;
@@ -750,6 +754,9 @@ header {
 				}
 				@starting-style {
 					inset: 32px auto 0 -500px;
+					@media only screen and (max-width: 500px) {
+						inset: 8px auto 0 -500px;
+					}
 					
 					&::backdrop {
 						opacity: 0;
