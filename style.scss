@@ -735,7 +735,8 @@ header {
 			
 			@media only screen and (max-width: 500px) {
 				max-width: calc(100vw - 16px);
-				inset: 8px auto 0 8px;
+				inset: 48px 8px 0 8px;
+				height: calc(100vh - 56px);
 			}
 			
 			 &::backdrop {
@@ -755,7 +756,7 @@ header {
 				@starting-style {
 					inset: 32px auto 0 -500px;
 					@media only screen and (max-width: 500px) {
-						inset: 8px auto 0 -500px;
+						inset: 48px auto 0 -500px;
 					}
 					
 					&::backdrop {
@@ -766,6 +767,11 @@ header {
 			  .close-btn{
 				color: var(--white);
 				background-color: var(--black1);
+				@media only screen and (max-width: 500px) {
+					//position: fixed;
+					inset: auto 8px 8px 8px;
+					z-index: 400;
+				}
 
 				.material-symbols-rounded{
 					font-size: var(--fs-button);
@@ -809,9 +815,12 @@ header {
 						display: flex;
 						flex-direction: row;
 						justify-content: space-between;
+						align-items: center;
 						transition: none;
-
 						text-decoration: underline;
+						@media only screen and (max-width: 500px) {
+							min-height: 48px;
+						}
 						@media (hover: hover){
 							&:hover{
 								

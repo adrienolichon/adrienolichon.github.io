@@ -719,7 +719,8 @@ header .header-content #menu {
 @media only screen and (max-width: 500px) {
   header .header-content #menu {
     max-width: calc(100vw - 16px);
-    inset: 8px auto 0 8px;
+    inset: 48px 8px 0 8px;
+    height: calc(100vh - 56px);
   }
 }
 header .header-content #menu::backdrop {
@@ -742,7 +743,7 @@ header .header-content #menu:popover-open::backdrop {
   }
   @media only screen and (max-width: 500px) {
     header .header-content #menu:popover-open {
-      inset: 8px auto 0 -500px;
+      inset: 48px auto 0 -500px;
     }
   }
   header .header-content #menu:popover-open::backdrop {
@@ -752,6 +753,12 @@ header .header-content #menu:popover-open::backdrop {
 header .header-content #menu .close-btn {
   color: var(--white);
   background-color: var(--black1);
+}
+@media only screen and (max-width: 500px) {
+  header .header-content #menu .close-btn {
+    inset: auto 8px 8px 8px;
+    z-index: 400;
+  }
 }
 header .header-content #menu .close-btn .material-symbols-rounded {
   font-size: var(--fs-button);
@@ -790,8 +797,14 @@ header .header-content #menu ul li a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   transition: none;
   text-decoration: underline;
+}
+@media only screen and (max-width: 500px) {
+  header .header-content #menu ul li a {
+    min-height: 48px;
+  }
 }
 @media (hover: hover) {
   header .header-content #menu ul li a:hover {
