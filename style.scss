@@ -717,26 +717,27 @@ header {
 			  }
 		}
 		#menu{
+			background-color: transparent;
 			width: 100%;
 			max-width: 500px;
-			background-color: transparent;
-			height: calc(100vh - 32px);
+			border-radius: 0;
+			height: 100vh;
 			padding: 0;
 			//border-radius: var(--radius-large);
 			transition: var(--transition1);
 			//transition: translate 0.5s ease-out, display 0.5s ease-out allow-discrete,    overlay 0.5s ease-out allow-discrete;
 			position: fixed;
-			inset: 32px auto 0 32px;
+			inset: 0 auto 0 32px;
 			border: none;
 			//box-shadow: inset 0 -26px 14px -14px rgba(134, 142, 150, 0.16), inset 0 26px 14px -14px rgba(134, 142, 150, 0.16);
 
 			//display: grid;
-			gap: 24px;
+			gap: 0;
 			
 			@media only screen and (max-width: 500px) {
 				max-width: calc(100vw - 16px);
-				inset: 48px 8px 0 8px;
-				height: calc(100vh - 56px);
+				inset: 0 8px 0 8px;
+				height: 100svh;
 			}
 			
 			 &::backdrop {
@@ -754,9 +755,9 @@ header {
 				  opacity: 1;
 				}
 				@starting-style {
-					inset: 32px auto 0 -500px;
+					inset: 0 auto 0 -500px;
 					@media only screen and (max-width: 500px) {
-						inset: 48px auto 0 -500px;
+						inset: 0 auto 0 -500px;
 					}
 					
 					&::backdrop {
@@ -767,6 +768,7 @@ header {
 			  .close-btn{
 				color: var(--white);
 				background-color: var(--black1);
+				margin: 32px 0 0 0;
 				@media only screen and (max-width: 500px) {
 					//position: fixed;
 					inset: auto 8px 8px 8px;
@@ -784,18 +786,25 @@ header {
 			  }
 			  ul{
 				padding: 16px;
-			background-color: var(--bgmain);
-			backdrop-filter: blur(24px);
-			border-radius: var(--radius-large);
+				background-color: var(--bgmain);
+				backdrop-filter: blur(24px);
+				border-radius: 0;
+				border-bottom: 2px solid var(--oc-gray-3);
 				list-style-type: none;
 				margin: 0;
 				display: grid;
 				gap: 4px;
 				grid-template-columns: 1fr;
 				
-
+				&:nth-child(2){
+					margin: 8px 0 0 0;
+					border-radius: var(--radius-small) var(--radius-small) 0 0;
+				}
+		
 				&:last-child{
 					margin-bottom: 32px;
+					border-bottom: 2px solid transparent;
+					border-radius: 0 0 var(--radius-small) var(--radius-small);
 				}
 				
 				h3{
