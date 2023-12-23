@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
 :root {
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: "InterVariable", system-ui, sans-serif;
   --white: #ffffff;
   --opencolor: #ffffff;
   --bgmain: #f5f5f7;
@@ -401,7 +401,7 @@
 
 @supports (font-variation-settings: normal) {
   :root {
-    font-family: "Inter var", system-ui, sans-serif;
+    font-family: "InterVariable", system-ui, sans-serif;
   }
 }
 *,
@@ -483,6 +483,7 @@ html {
 }
 
 body {
+  font-family: "InterVariable", system-ui, sans-serif;
   margin: 0;
   font-size: var(--fs-body);
   line-height: var(--lh-body);
@@ -568,6 +569,7 @@ p {
 }
 
 button {
+  font-family: "InterVariable", system-ui, sans-serif;
   font-weight: 400;
   font-size: var(--fs-button);
   line-height: var(--lh-button);
@@ -705,23 +707,31 @@ header .header-content .menu-btn .material-symbols-rounded {
   font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 24;
 }
 header .header-content #menu {
-  background-color: transparent;
+  border-radius: var(--radius-large);
+  background-color: var(--bgmain);
   width: 100%;
-  max-width: 500px;
-  border-radius: 0;
-  height: 100vh;
-  padding: 0;
+  max-width: 800px;
+  max-height: calc(100svh - 32px);
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0 0 16px 0;
   transition: var(--transition1);
   position: fixed;
-  inset: 0 auto 0 32px;
+  inset: 100svh auto auto auto;
   border: none;
   gap: 0;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: center;
 }
-@media only screen and (max-width: 500px) {
+@media (hover: none) {
   header .header-content #menu {
-    max-width: calc(100vw - 16px);
-    inset: 0 8px 0 8px;
-    height: 100svh;
+    max-width: 100vw;
+    padding: 16px 16px 80px 16px;
+    width: 100%;
+    transform: none;
+    border-radius: 0;
   }
 }
 header .header-content #menu::backdrop {
@@ -729,70 +739,120 @@ header .header-content #menu::backdrop {
   background: rgba(0, 0, 0, 0.3);
   transition: opacity 0.3s cubic-bezier(0.4, 0, 0.25, 1);
   position: fixed;
+  -webkit-backdrop-filter: blur(14px);
+          backdrop-filter: blur(14px);
+  cursor: pointer;
 }
 header .header-content #menu:popover-open {
-  translate: 0 0;
   display: flex;
-  flex-direction: column;
+  inset: 32px auto auto auto;
+}
+@media (hover: hover) {
+  header .header-content #menu:popover-open {
+    transform: translate(calc(50vw - 50%), 0px);
+  }
+}
+@media (hover: none) {
+  header .header-content #menu:popover-open {
+    inset: 0 auto auto auto;
+  }
 }
 header .header-content #menu:popover-open::backdrop {
   opacity: 1;
 }
 @starting-style {
   header .header-content #menu:popover-open {
-    inset: 0 auto 0 -500px;
-  }
-  @media only screen and (max-width: 500px) {
-    header .header-content #menu:popover-open {
-      inset: 0 auto 0 -500px;
-    }
+    inset: 100svh auto auto auto;
   }
   header .header-content #menu:popover-open::backdrop {
     opacity: 0;
   }
 }
 header .header-content #menu .close-btn {
-  color: var(--white);
-  background-color: var(--black1);
-  margin: 32px 0 0 0;
+  width: 100%;
+  color: transparent;
+  margin: 0;
+  height: 48px;
+  font-size: var(--fs-button);
+  font-weight: 500;
+  min-width: 80px;
+  text-align: center;
+  justify-content: center;
+  border: 0px solid transparent;
+  position: sticky;
+  top: 0;
+  z-index: 4000;
+  background-color: var(--bgmain);
 }
-@media only screen and (max-width: 500px) {
-  header .header-content #menu .close-btn {
-    inset: auto 8px 8px 8px;
-    z-index: 400;
-  }
+header .header-content #menu .close-btn:before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 100px;
+  inset: 16px auto auto 16px;
+  background-color: #ED6A5E;
+  border: 1px solid #D04E41;
+}
+header .header-content #menu .close-btn:after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 100px;
+  inset: 16px auto auto 44px;
+  background-color: #F5BF50;
+  border: 1px solid #D6A03E;
 }
 header .header-content #menu .close-btn .material-symbols-rounded {
   font-size: var(--fs-button);
-  font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 24;
+  font-variation-settings: "FILL" 0, "wght" 600, "GRAD" 0, "opsz" 24;
+  color: transparent;
+}
+@media (hover: none) {
+  header .header-content #menu .close-btn {
+    height: 64px;
+    position: fixed;
+    inset: auto 0 0 0;
+    border-radius: var(--radius-medium) var(--radius-medium) 0 0;
+    box-shadow: var(--shadow-header);
+    color: rgb(var(--black1));
+  }
+  header .header-content #menu .close-btn .material-symbols-rounded {
+    color: rgb(var(--black1));
+  }
+}
+@media (hover: hover) {
+  header .header-content #menu .close-btn:hover {
+    background-color: var(--bgmain);
+  }
+}
+header .header-content #menu .close-btn:focus {
+  background-color: var(--bgmain);
 }
 header .header-content #menu ul {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  max-width: 376px;
   padding: 16px;
-  background-color: var(--bgmain);
+  background-color: var(--white);
   -webkit-backdrop-filter: blur(24px);
           backdrop-filter: blur(24px);
-  border-radius: 0;
-  border-bottom: 2px solid var(--oc-gray-3);
+  border-radius: var(--radius-medium);
   list-style-type: none;
   margin: 0;
   display: grid;
   gap: 4px;
   grid-template-columns: 1fr;
-}
-header .header-content #menu ul:nth-child(2) {
-  margin: 8px 0 0 0;
-  border-radius: var(--radius-small) var(--radius-small) 0 0;
-}
-header .header-content #menu ul:last-child {
-  margin-bottom: 32px;
-  border-bottom: 2px solid transparent;
-  border-radius: 0 0 var(--radius-small) var(--radius-small);
+  box-shadow: 0px 0px 0px 0.5px rgba(var(--oc-gray-9-rgb), 0.08), 0px 1px 0px rgba(var(--oc-gray-9-rgb), 0.06), 0px 1px 2px rgba(var(--oc-gray-9-rgb), 0.05), 0px 2px 4px rgba(var(--oc-gray-9-rgb), 0.04), 0px 4px 8px rgba(var(--oc-gray-9-rgb), 0.03), 0px 2px 12px rgba(var(--oc-gray-9-rgb), 0.02), inset 0px 1px 0px rgba(var(--oc-gray-0-rgb), 1), inset 0px 1px 0px rgba(var(--oc-gray-0-rgb), 0.94), inset 0px 0px 2px 1px rgba(var(--oc-gray-0-rgb), 1);
 }
 header .header-content #menu ul h3 {
   margin: 0;
   padding: 0;
-  color: var(--black3);
-  font-weight: 800;
+  color: var(--black1);
+  font-size: var(--fs-h2);
+  font-weight: 500;
 }
 header .header-content #menu ul li {
   margin: 0;
