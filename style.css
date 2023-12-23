@@ -732,6 +732,7 @@ header .header-content #menu {
     width: 100%;
     transform: none;
     border-radius: 0;
+    max-height: 100svh;
   }
 }
 header .header-content #menu::backdrop {
@@ -754,7 +755,7 @@ header .header-content #menu:popover-open {
 }
 @media (hover: none) {
   header .header-content #menu:popover-open {
-    inset: 0 auto auto auto;
+    inset: 0;
   }
 }
 header .header-content #menu:popover-open::backdrop {

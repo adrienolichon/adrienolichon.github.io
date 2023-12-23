@@ -742,6 +742,7 @@ header {
 				width: 100%;
 				transform: none;
 				border-radius: 0;
+				max-height: 100svh;
 			}
 
 			&::backdrop {
@@ -760,7 +761,7 @@ header {
 					transform: translate(calc(50vw - 50%), 0px);
 				}
 				@media (hover: none) {
-					inset: 0 auto auto auto;
+					inset: 0;
 				}
 
 				&::backdrop {
