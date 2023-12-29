@@ -7101,4 +7101,49 @@ input:checked + .slider .light {
 .fluted-page main .fluted .contain-fluted .fluted-white:nth-child(2n):after {
   inset: 0 auto 0 8px;
   background: rgba(var(--oc-gray-2-rgb), 0.2);
+}
+
+.lights-page .art-contain {
+  transform: scale(4);
+  animation: lights 10s ease-in-out infinite;
+  filter: blur(16px);
+  gap: 0 !important;
+}
+.lights-page .art-contain .row {
+  gap: 0 !important;
+}
+.lights-page .art-contain .row .rotate {
+  transform: rotate(0);
+}
+.lights-page .art-contain .row .rotate2 {
+  transform: rotate(0deg);
+}
+.lights-page .art-contain .row .skew {
+  transform: skew(0deg, 0deg);
+}
+.lights-page .art-contain .row .skew2 {
+  transform: skew(0deg, 0deg);
+}
+.lights-page .art-contain .row .skew3 {
+  transform: skew(0deg, 0);
+}
+.lights-page .art-contain .row .skew4 {
+  transform: skew(0deg, 0);
+}
+.lights-page .art-contain .row .skew5 {
+  transform: skew(0, 0deg);
+}
+.lights-page .art-contain .row .skew6 {
+  transform: skew(0deg, 0deg);
+}
+@keyframes lights {
+  0% {
+    transform: scale(4);
+  }
+  50% {
+    transform: scale(4.4);
+  }
+  100% {
+    transform: scale(4);
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -7690,3 +7690,62 @@ input:checked + .slider .light {
 		}
 	}
 }
+
+.lights-page{
+	
+	.art-contain{
+		transform: scale(4);
+		animation: lights 10s ease-in-out infinite;
+		filter: blur(16px);
+		gap: 0 !important;
+		.row{ 
+			gap: 0 !important;
+			.rotate {
+				transform: rotate(0);
+				
+			}
+			.rotate2 {
+				transform: rotate(0deg);
+				
+			}
+			.skew {
+				transform: skew(0deg, 0deg);
+				
+			}
+			.skew2 {
+				transform: skew(0deg, 0deg);
+				
+			}
+			.skew3 {
+				transform: skew(0deg, 0);
+				
+			}
+			.skew4 {
+				transform: skew(0deg, 0);
+				
+			}
+			.skew5 {
+				transform: skew(0, 0deg);
+				
+			}
+			.skew6 {
+				transform: skew(0deg, 0deg);
+				
+			}
+		}
+		@keyframes lights {
+			0%{
+				transform: scale(4);
+				
+			}
+			50%{
+				transform: scale(4.4);
+				
+			}
+			100%{
+				transform: scale(4);
+			
+			}
+		}
+	}
+}
