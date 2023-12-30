@@ -715,7 +715,6 @@ header .header-content #menu {
   height: -moz-fit-content;
   height: fit-content;
   padding: 0 0 16px 0;
-  transition: var(--transition1);
   position: fixed;
   inset: 100svh auto auto auto;
   border: none;
