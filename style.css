@@ -33,7 +33,8 @@
   --animation1: 0.3192s;
   --animation2: 0.5s;
   /*  Fonts and line-height
-  	 *  ─────────────────────────────────── */
+
+  *  ─────────────────────────────────── */
   --fs-body: clamp(17px, 1.0625rem, 34px);
   --fs-h1: clamp(32px, 2rem, 64px);
   --fs-h2: clamp(26.352px, 1.647rem, 52.704px);
@@ -409,6 +410,10 @@
 *::after {
   box-sizing: border-box;
   text-rendering: optimizeLegibility;
+}
+
+*:focus {
+  outline: 2px dashed var(--black1);
 }
 
 html {
@@ -1604,6 +1609,38 @@ button {
   	background-color: var(--warning);
   }
   */
+}
+
+.tile-stats p {
+  padding: 0;
+  margin: 8px 0;
+}
+.tile-stats p span.numbers {
+  padding: 0;
+  margin: 0;
+  font-weight: 600;
+  background: linear-gradient(90deg, var(--dark-blue-gradient), var(--light-blue-gradient), var(--dark-blue-gradient)) 0 0/400% 100%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: move-bg 10s linear infinite;
+}
+.tile-stats p span.classment {
+  padding: 2px 4px;
+  border-radius: var(--radius-small);
+  background-color: var(--black1);
+  color: var(--white);
+}
+.tile-stats .date-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.tile-stats .date-container h6 {
+  padding: 0;
+  margin: 0;
+  color: var(--black2);
+  font-size: var(--fs-subhead);
 }
 
 .title-grid #lottie {
