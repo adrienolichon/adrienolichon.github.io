@@ -445,7 +445,11 @@
 	box-sizing: border-box;
 	text-rendering: optimizeLegibility;
 }
-
+*{
+	&:focus{
+		outline: 2px dashed var(--black1);
+	}
+}
 html {
 	font-size: var(--fs-body);
 	//font-family: 'Inter', system-ui, sans-serif;
@@ -1676,6 +1680,39 @@ button {
 		background-color: var(--warning);
 	}
 	*/
+}
+.tile-stats{
+	p{
+		padding: 0; 
+		margin: 8px 0;
+		span.numbers{
+			padding: 0;
+    margin: 0;
+    font-weight: 600;
+    background: linear-gradient(90deg, var(--dark-blue-gradient), var(--light-blue-gradient), var(--dark-blue-gradient)) 0 0 / 400% 100%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: move-bg 10s linear infinite;
+		}
+		span.classment{
+			padding: 2px 4px;
+			border-radius: var(--radius-small);
+			background-color: var(--black1);
+			color: var(--white);
+		}
+	}
+	.date-container{
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		h6{
+			padding: 0;
+			margin: 0;
+			color: var(--black2);
+			font-size: var(--fs-subhead);
+		}
+	}
 }
 .title-grid {
 	#lottie {
