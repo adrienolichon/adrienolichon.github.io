@@ -49,7 +49,7 @@
 	--fs-callout: clamp(15.04px, 0.94rem, 30.08px);
 	--fs-subhead: clamp(14.08px, 0.88rem, 28.16px);
 	--fs-date: clamp(14px, 0.875rem, 28px);
-	--fs-categorie: clamp(12px, 0.75rem, 24px);
+	--fs-categorie: clamp(14px, 0.75rem, 24px);
 	--fs-footnote: clamp(12.16px, 0.76rem, 24.32px);
 	--fs-caption: clamp(11.2px, 0.7rem, 22.4px);
 	--fs-material-symbols-rounded: clamp(22.58px, 1.41176470588rem, 45.16px);
@@ -641,7 +641,7 @@ button {
 .categorie {
 	font-size: var(--fs-categorie);
 	line-height: var(--lh-categorie);
-	font-weight: 700;
+	font-weight: 500;
 	letter-spacing: -0.01rem;
 	text-transform: uppercase;
 	color: var(--greydatecat);
@@ -1454,6 +1454,18 @@ button {
 		width: 100%;
 		border-radius: var(--radius-large-top);
 		position: relative;
+		.categorie{
+			position: absolute;
+			inset: 16px 16px auto auto;
+			padding: 6px 10px;
+			border: 1px solid #1c1c1e;
+			border-radius: 72px;
+			text-transform: none;
+			color: #1c1c1e;
+			z-index: 100;
+			backdrop-filter: blur(16px);
+			background-color: white;
+		}
 		&:after {
 			opacity: 0;
 			transition: var(--transition1);
@@ -1486,6 +1498,7 @@ button {
 			.content-show {
 				flex-direction: column;
 				justify-content: space-between;
+				
 			}
 			.description-supp {
 				transition: var(--transition1);
