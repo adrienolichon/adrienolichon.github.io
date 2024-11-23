@@ -7203,4 +7203,6 @@ input:checked + .slider .light {
   width: -moz-fit-content;
   width: fit-content;
   align-items: center;
+  border-bottom: 1px solid var(--black3);
+  margin: 16px 0;
 }/*# sourceMappingURL=style.css.map */

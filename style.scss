@@ -7809,6 +7809,8 @@ input:checked + .slider .light {
 				display: flex;
 				width: fit-content;
 				align-items: center;
+				border-bottom: 1px solid var(--black3);
+				margin: 16px 0;
 			}
 		}
 	}
