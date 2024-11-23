@@ -7801,3 +7801,15 @@ input:checked + .slider .light {
 		}
 	}
 }
+.watches{
+	.contain-a-watches{
+		dt{
+			a{
+				min-height: 32px;
+				display: flex;
+				width: fit-content;
+				align-items: center;
+			}
+		}
+	}
+}

@@ -7195,4 +7195,12 @@ input:checked + .slider .light {
   100% {
     transform: scale(4);
   }
+}
+
+.watches .contain-a-watches dt a {
+  min-height: 32px;
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
