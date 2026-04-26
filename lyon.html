@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurants à Lyon</title>
+    
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="lyon-files/hugeicons/hugeicons-font.css">
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lyon-files/style.css">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+    <meta name="author" content="Adrien Olichon">
+    <meta name="description" content="Découvrez mes recommandations de restaurants, cafés et bars à Lyon.">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Restaurants à Lyon</h1>
+            <p>Mes recommandations pour bien manger, boire et passer du temps.</p>
+             
+			<!-- Recherche --> 
+                <div class="search-group">
+                    <input type="text" id="searchInput" placeholder="🔍 Chercher par nom, catégorie..." class="search-input">
+                </div>
+			
+		</header>
+
+        <section class="filters-section">
+            <div class="filters-container">
+                <!-- Occasions -->
+                <div class="filter-group-inline">
+                    <button class="filter-btn active" data-filter="occasion" data-value="">Tous</button>
+                    <button class="filter-btn" data-filter="occasion" data-value="amoureux"><i class="hgi hgi-duotone hgi-rounded hgi-favourite"></i> Amoureux</button>
+                    <button class="filter-btn" data-filter="occasion" data-value="groupe"><i class="hgi hgi-duotone hgi-rounded hgi-user-group-03"></i> Groupe</button>
+                    <button class="filter-btn" data-filter="occasion" data-value="famille"><i class="hgi hgi-duotone hgi-rounded hgi-user-group-02"></i> Famille</button>
+                </div>
+
+                <!-- Budget -->
+                <div class="filter-group-inline">
+                    <button class="filter-btn active" data-filter="budget" data-value="">Tous budgets</button>
+                    <button class="filter-btn" data-filter="budget" data-value="€">€</button>
+                    <button class="filter-btn" data-filter="budget" data-value="€€">€€</button>
+                    <button class="filter-btn" data-filter="budget" data-value="€€€">€€€</button>
+                    <button class="filter-btn" data-filter="budget" data-value="€€€€">€€€€</button>
+                </div>
+
+                <!-- Types -->
+                <div class="filter-group-inline">
+                    <button class="filter-btn active" data-filter="type" data-value="">Tous types</button>
+                    <button class="filter-btn" data-filter="type" data-value="restaurant"><i class="hgi hgi-duotone hgi-rounded hgi-restaurant-01"></i> Restaurant</button>
+                    <button class="filter-btn" data-filter="type" data-value="café"><i class="hgi hgi-duotone hgi-rounded hgi-coffee-02"></i> Café</button>
+                    <button class="filter-btn" data-filter="type" data-value="bar"><i class="hgi hgi-duotone hgi-rounded hgi-drink"></i> Bar</button>
+                </div>
+
+                <!-- Quartiers -->
+                <div class="filter-group-inline">
+                    <button class="filter-btn active" data-filter="quartier" data-value="">Tous quartiers</button>
+                    <button class="filter-btn" data-filter="quartier" data-value="Presqu'île">Presqu'île</button>
+                    <button class="filter-btn" data-filter="quartier" data-value="Vieux Lyon">Vieux Lyon</button>
+                    <button class="filter-btn" data-filter="quartier" data-value="6e">6e</button>
+                    <button class="filter-btn" data-filter="quartier" data-value="7e">7e</button>
+                    <button class="filter-btn" data-filter="quartier" data-value="Part-Dieu">Part-Dieu</button>
+                    <button class="filter-btn" data-filter="quartier" data-value="Vaise">Vaise</button>
+                    <button class="filter-btn" data-filter="quartier" data-value="Villeurbanne">Villeurbanne</button>
+                </div>
+
+               
+            </div>
+        </section>
+
+        <section class="results-section">
+			   <h2><span id="resultCount">0</span> restaurants</h2>
+
+            <div id="cardsContainer" class="cards-grid"></div>
+
+            <div id="emptyState" class="empty-state" style="display: none;">
+                <p>Aucun restaurant ne correspond à vos critères.</p>
+            </div>
+        </section>
+    </div>
+	<footer class="footer">
+	  <a href="mailto:olichon.adrien@gmail.com?subject=Proposition de restaurant à Lyon" class="footer-link"><i class="hgi hgi-duotone hgi-rounded hgi-mail-01"></i> Proposer un restaurant</a>
+	</footer>
+
+
+    <script>
+        let allRestaurants = [];
+        let activeFilters = {
+            occasion: '',
+            budget: '',
+            type: '',
+            quartier: ''
+        };
+
+        async function loadRestaurants() {
+            try {
+                const response = await fetch('lyon-files/restaurants.json');
+                if (!response.ok) throw new Error('Erreur lors du chargement du JSON');
+                const data = await response.json();
+                allRestaurants = Array.isArray(data) ? data : (data.restaurants || []);
+                console.log('Restaurants chargés:', allRestaurants.length);
+                renderCards(allRestaurants);
+            } catch (error) {
+                console.error('Erreur lors du chargement des restaurants:', error);
+                document.getElementById('emptyState').textContent = 'Erreur lors du chargement des données.';
+                document.getElementById('emptyState').style.display = 'block';
+            }
+        }
+
+        function renderCards(restaurants) {
+            const container = document.getElementById('cardsContainer');
+            const emptyState = document.getElementById('emptyState');
+            const resultCount = document.getElementById('resultCount');
+
+            resultCount.textContent = restaurants.length;
+
+            if (restaurants.length === 0) {
+                container.innerHTML = '';
+                emptyState.style.display = 'block';
+                return;
+            }
+
+            emptyState.style.display = 'none';
+
+            container.innerHTML = restaurants.map(restaurant => `
+                <a href="${restaurant.mapsUrl}" target="_blank" class="card">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <h3>${restaurant.name}</h3>
+							<span>${restaurant.budget}</span>
+					
+
+							${restaurant.michelin ? '<img src="lyon-files/michelin.png" alt="Michelin Star" class="michelin">' : ''}
+							
+							
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">${restaurant.description}</p>
+                        <div>
+                            ${restaurant.occasions.map(occ => `<span class="tag">${occ}</span>`).join('')}
+                            <span class="tag">${restaurant.quartier}</span>
+                        </div>
+                    </div>
+                </a>
+            `).join('');
+        }
+
+        function applyFilters() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+
+            const filtered = allRestaurants.filter(r => {
+                if (activeFilters.occasion && !r.occasions.includes(activeFilters.occasion)) return false;
+                if (activeFilters.budget && r.budget !== activeFilters.budget) return false;
+                if (activeFilters.type && r.type !== activeFilters.type) return false;
+                if (activeFilters.quartier && r.quartier !== activeFilters.quartier) return false;
+                
+                if (searchTerm) {
+                    const matchesName = r.name.toLowerCase().includes(searchTerm);
+                    const matchesCategory = r.category.toLowerCase().includes(searchTerm);
+                    const matchesDescription = r.description.toLowerCase().includes(searchTerm);
+                    if (!matchesName && !matchesCategory && !matchesDescription) return false;
+                }
+                
+                return true;
+            });
+
+            renderCards(filtered);
+        }
+
+        // Gestion des clics sur les boutons de filtre
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const filterType = this.dataset.filter;
+                const filterValue = this.dataset.value;
+                
+                // Retirer la classe active des autres boutons du même groupe
+                document.querySelectorAll(`[data-filter="${filterType}"]`).forEach(b => {
+                    b.classList.remove('active');
+                });
+                
+                // Ajouter la classe active au bouton cliqué
+                this.classList.add('active');
+                
+                // Mettre à jour le filtre actif
+                activeFilters[filterType] = filterValue;
+                
+                // Appliquer les filtres
+                applyFilters();
+            });
+        });
+
+        // Gestion de la recherche en temps réel
+        document.getElementById('searchInput').addEventListener('input', applyFilters);
+
+        loadRestaurants();
+    </script>
+</body>
+
+</html>
