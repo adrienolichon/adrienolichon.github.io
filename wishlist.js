@@ -4,6 +4,7 @@ const SUPABASE_ANON_KEY = 'sb_publishable_p5srmCHLdgYL-SsOtFeFlg_0CnvyH_H'; // C
 
 // Headers simples pour les requêtes Supabase
 const headers = {
+  'Content-Type': 'application/json',
   'apikey': SUPABASE_ANON_KEY
 };
 
@@ -14,7 +15,9 @@ async function loadPurchasedItems() {
       `${SUPABASE_URL}/rest/v1/wishlist_items?select=product_id&is_purchased=eq.true`,
       {
         method: 'GET',
-        headers: headers
+        headers: {
+          'apikey': SUPABASE_ANON_KEY
+        }
       }
     );
     
@@ -41,7 +44,7 @@ async function markAsPurchased(productId) {
       `${SUPABASE_URL}/rest/v1/wishlist_items?product_id=eq.${productId}`,
       {
         method: 'PATCH',
-        headers,
+        headers: headers,
         body: JSON.stringify({
           is_purchased: true,
           purchased_at: new Date().toISOString(),
@@ -51,6 +54,7 @@ async function markAsPurchased(productId) {
     );
 
     if (updateResponse.ok) {
+      console.log('Article mis à jour:', productId);
       return true;
     }
 
@@ -59,7 +63,7 @@ async function markAsPurchased(productId) {
       `${SUPABASE_URL}/rest/v1/wishlist_items`,
       {
         method: 'POST',
-        headers,
+        headers: headers,
         body: JSON.stringify({
           product_id: productId,
           is_purchased: true,
@@ -69,7 +73,13 @@ async function markAsPurchased(productId) {
       }
     );
 
-    return insertResponse.ok;
+    if (insertResponse.ok) {
+      console.log('Article inséré:', productId);
+      return true;
+    }
+    
+    console.error('Erreur insertion:', insertResponse.status, await insertResponse.text());
+    return false;
   } catch (error) {
     console.error('Erreur sauvegarde:', error);
     return false;
