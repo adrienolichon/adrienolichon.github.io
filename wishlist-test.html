@@ -69,7 +69,7 @@
 
     <script>
         const SUPABASE_URL = 'https://syxeszmebfizvshaypnq.supabase.co';
-        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN5eGVzem1lYmZpenZzaGF5cG5xIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyOTg5MDYsImV4cCI6MjA5Mjg3NDkwNn0.aQmuD002TMefSwovBw6RWiQqbMVBYJUF4p3G36q-MbY';
+        const SUPABASE_ANON_KEY = 'sb_publishable_p5srmCHLdgYL-SsOtFeFlg_0CnvyH_H';
 
         document.getElementById('url').textContent = SUPABASE_URL;
         document.getElementById('key').textContent = SUPABASE_ANON_KEY.substring(0, 20) + '...';
@@ -79,9 +79,13 @@
             status.textContent = '⏳ Test en cours...';
             
             try {
-                const response = await fetch(`${SUPABASE_URL}/rest/v1/`, {
-                    headers: { 'apikey': SUPABASE_ANON_KEY }
-                });
+                const response = await fetch(
+                    `${SUPABASE_URL}/rest/v1/wishlist_items?limit=1`,
+                    {
+                        method: 'GET',
+                        headers: { 'apikey': SUPABASE_ANON_KEY }
+                    }
+                );
                 
                 if (response.ok) {
                     status.innerHTML = '✅ <span style="color: green">Connexion réussie !</span>';

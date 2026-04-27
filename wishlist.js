@@ -1,12 +1,10 @@
 // ⚠️ À REMPLACER : Vos identifiants Supabase
 const SUPABASE_URL = 'https://syxeszmebfizvshaypnq.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN5eGVzem1lYmZpenZzaGF5cG5xIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyOTg5MDYsImV4cCI6MjA5Mjg3NDkwNn0.aQmuD002TMefSwovBw6RWiQqbMVBYJUF4p3G36q-MbY';
+const SUPABASE_ANON_KEY = 'sb_publishable_p5srmCHLdgYL-SsOtFeFlg_0CnvyH_H'; // Clé publique (pas JWT)
 
-// Headers pour les requêtes Supabase
+// Headers simples pour les requêtes Supabase
 const headers = {
-  'Content-Type': 'application/json',
-  'apikey': SUPABASE_ANON_KEY,
-  'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+  'apikey': SUPABASE_ANON_KEY
 };
 
 // Récupérer les articles achetés depuis Supabase
@@ -16,20 +14,17 @@ async function loadPurchasedItems() {
       `${SUPABASE_URL}/rest/v1/wishlist_items?select=product_id&is_purchased=eq.true`,
       {
         method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          'apikey': SUPABASE_ANON_KEY
-        }
+        headers: headers
       }
     );
     
     if (!response.ok) {
-      console.error('Erreur GET:', response.status, response.statusText);
+      console.error('Erreur GET:', response.status, await response.text());
       return [];
     }
     
     const data = await response.json();
-    return data.map(item => item.product_id);
+    return Array.isArray(data) ? data.map(item => item.product_id) : [];
   } catch (error) {
     console.error('Erreur chargement:', error);
     return [];
