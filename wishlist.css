@@ -10,13 +10,28 @@ body {
   margin: 0;
   padding: 32px;
 }
+body .header {
+  padding: 0;
+  width: 100%;
+}
 body h1 {
   font-size: 36px;
-  margin: 16px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
-main {
+.divider {
+  height: 2px;
+  background-color: black;
+  margin: 24px auto;
+  width: 100%;
+  max-width: 1020px;
+}
+
+section {
+  padding-bottom: 32px;
   margin: auto;
   display: flex;
   flex-direction: row;
@@ -25,7 +40,20 @@ main {
   max-width: 1020px;
   width: 100%;
 }
-main .card {
+
+.section {
+  padding-bottom: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  max-width: 1020px;
+  width: 100%;
+}
+.section .card {
   background: transparent;
   border: 1px solid #e5e5e5;
   border-radius: 8px;
@@ -35,8 +63,9 @@ main .card {
   max-width: 500px;
   width: 100%;
   gap: 8px;
+  position: relative;
 }
-main .card .card-image {
+.section .card .card-image {
   width: 100%;
   height: 200px;
   border-radius: 8px;
@@ -44,21 +73,21 @@ main .card .card-image {
   background-repeat: no-repeat;
   background-position: center;
 }
-main .card h2 {
+.section .card h2 {
   font-size: 24px;
   margin: 0;
   font-weight: bold;
 }
-main .card p {
+.section .card p {
   font-size: 20px;
   margin: 0;
 }
-main .card h3 {
+.section .card h3 {
   font-size: 22px;
   margin: 0;
   font-weight: bold;
 }
-main .card a {
+.section .card a {
   font-size: 20px;
   background-color: black;
   color: white;
@@ -67,7 +96,7 @@ main .card a {
   padding: 8px 16px;
   text-align: center;
 }
-main .card button {
+.section .card button {
   font-family: "Instrument Serif", serif;
   font-size: 20px;
   background-color: red;
@@ -79,26 +108,33 @@ main .card button {
   border: none;
   cursor: pointer;
 }
-main .card.purchased {
-  opacity: 0.6;
+.section .card {
+  /* État "acheté" */
+}
+.section .card.purchased {
+  opacity: 1;
   border-color: #999;
   background-color: #f5f5f5;
 }
-main .card.purchased::before {
-  content: "✓ Article déjà acheté par quelqu'un";
+.section .card.purchased::before {
+  content: "✓ Acheté par quelqu'un";
   display: block;
-  background-color: #4caf50;
-  color: white;
-  padding: 8px;
+  position: absolute;
+  background-color: #b5d5b6;
+  color: black;
+  padding: 8px 24px;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 19px;
   margin-bottom: 8px;
   text-align: center;
+  inset: auto;
+  width: -moz-fit-content;
+  width: fit-content;
 }
-main .card.purchased button {
+.section .card.purchased button {
   background-color: #ccc;
   cursor: not-allowed;
 }
-main .card.purchased button:hover {
+.section .card.purchased button:hover {
   background-color: #ccc;
 }/*# sourceMappingURL=wishlist.css.map */
