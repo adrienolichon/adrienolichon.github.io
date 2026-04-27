@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Supabase - Wishlist</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            background: #f5f5f5;
+        }
+        .test-box {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+        }
+        .success { border-left-color: #28a745; }
+        .error { border-left-color: #dc3545; }
+        .warning { border-left-color: #ffc107; }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover { background: #0056b3; }
+        pre {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        .status { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>🧪 Test Supabase - Wishlist</h1>
+    
+    <div class="test-box">
+        <h2>1. Configuration</h2>
+        <p><span class="status">URL :</span> <code id="url"></code></p>
+        <p><span class="status">Clé :</span> <code id="key"></code></p>
+    </div>
+
+    <div class="test-box">
+        <h2>2. Test de connexion</h2>
+        <button onclick="testConnection()">Tester la connexion</button>
+        <p id="connection-status"></p>
+    </div>
+
+    <div class="test-box">
+        <h2>3. Récupérer les données</h2>
+        <button onclick="fetchData()">Charger les articles</button>
+        <pre id="data-result"></pre>
+    </div>
+
+    <div class="test-box">
+        <h2>4. Insérer un test</h2>
+        <button onclick="insertTest()">Tester l'insertion</button>
+        <p id="insert-status"></p>
+    </div>
+
+    <script>
+        const SUPABASE_URL = 'https://syxeszmebfizvshaypnq.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN5eGVzem1lYmZpenZzaGF5cG5xIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyOTg5MDYsImV4cCI6MjA5Mjg3NDkwNn0.aQmuD002TMefSwovBw6RWiQqbMVBYJUF4p3G36q-MbY';
+
+        document.getElementById('url').textContent = SUPABASE_URL;
+        document.getElementById('key').textContent = SUPABASE_ANON_KEY.substring(0, 20) + '...';
+
+        async function testConnection() {
+            const status = document.getElementById('connection-status');
+            status.textContent = '⏳ Test en cours...';
+            
+            try {
+                const response = await fetch(`${SUPABASE_URL}/rest/v1/`, {
+                    headers: { 'apikey': SUPABASE_ANON_KEY }
+                });
+                
+                if (response.ok) {
+                    status.innerHTML = '✅ <span style="color: green">Connexion réussie !</span>';
+                } else {
+                    status.innerHTML = `❌ <span style="color: red">Erreur : ${response.status}</span>`;
+                }
+            } catch (error) {
+                status.innerHTML = `❌ <span style="color: red">Erreur : ${error.message}</span>`;
+            }
+        }
+
+        async function fetchData() {
+            const result = document.getElementById('data-result');
+            result.textContent = '⏳ Chargement...';
+            
+            try {
+                const response = await fetch(
+                    `${SUPABASE_URL}/rest/v1/wishlist_items`,
+                    {
+                        headers: {
+                            'apikey': SUPABASE_ANON_KEY,
+                            'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+                        }
+                    }
+                );
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    result.textContent = JSON.stringify(data, null, 2);
+                    result.parentElement.classList.add('success');
+                } else {
+                    result.textContent = `Erreur ${response.status}: ${response.statusText}`;
+                    result.parentElement.classList.add('error');
+                }
+            } catch (error) {
+                result.textContent = `Erreur : ${error.message}`;
+                result.parentElement.classList.add('error');
+            }
+        }
+
+        async function insertTest() {
+            const status = document.getElementById('insert-status');
+            status.textContent = '⏳ Test d\'insertion...';
+            
+            try {
+                const testId = `test-${Date.now()}`;
+                const response = await fetch(
+                    `${SUPABASE_URL}/rest/v1/wishlist_items`,
+                    {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'apikey': SUPABASE_ANON_KEY,
+                            'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+                        },
+                        body: JSON.stringify({
+                            product_id: testId,
+                            is_purchased: true,
+                            purchased_by_email: 'test@wishlist.local'
+                        })
+                    }
+                );
+                
+                if (response.ok) {
+                    status.innerHTML = '✅ <span style="color: green">Insertion réussie !</span>';
+                } else {
+                    const errorText = await response.text();
+                    status.innerHTML = `❌ <span style="color: red">Erreur : ${response.status} - ${errorText}</span>`;
+                }
+            } catch (error) {
+                status.innerHTML = `❌ <span style="color: red">Erreur : ${error.message}</span>`;
+            }
+        }
+    </script>
+</body>
+</html>

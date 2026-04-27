@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
@@ -77,4 +78,27 @@ main .card button {
   text-align: center;
   border: none;
   cursor: pointer;
+}
+main .card.purchased {
+  opacity: 0.6;
+  border-color: #999;
+  background-color: #f5f5f5;
+}
+main .card.purchased::before {
+  content: "✓ Article déjà acheté par quelqu'un";
+  display: block;
+  background-color: #4caf50;
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+main .card.purchased button {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+main .card.purchased button:hover {
+  background-color: #ccc;
 }/*# sourceMappingURL=wishlist.css.map */

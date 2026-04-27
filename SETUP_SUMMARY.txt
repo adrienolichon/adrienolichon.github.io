@@ -1,0 +1,125 @@
+
+╔═══════════════════════════════════════════════════════════════╗
+║                                                               ║
+║        🎁 WISHLIST SUPABASE - CONFIGURATION COMPLÈTE 🎁       ║
+║                                                               ║
+╚═══════════════════════════════════════════════════════════════╝
+
+┌─────────────────────────────────────────────────────────────┐
+│ ✅ FICHIERS CRÉÉS / MODIFIÉS                                │
+└─────────────────────────────────────────────────────────────┘
+
+📄 wishlist.html              ✅ HTML de base (inchangé)
+🎨 wishlist.css               ✅ Styles + classe .purchased
+🔧 wishlist.js                ✅ MODIFIÉ - API Supabase intégrée
+🧪 wishlist-test.html         ✅ CRÉÉ - Tests de connexion
+📋 sql-setup.sql              ✅ CRÉÉ - Script SQL Supabase
+📚 README-WISHLIST.md         ✅ CRÉÉ - Guide complet
+📋 CHECKLIST.md               ✅ CRÉÉ - Étapes à suivre
+🔍 check-wishlist.sh          ✅ CRÉÉ - Vérification config
+🔧 .env.example               ✅ CRÉÉ - Template d'env
+🚫 .gitignore                 ✅ CRÉÉ - Protection des clés
+📖 SUPABASE_SETUP.md          ✅ CRÉÉ - Setup Supabase
+🔐 wishlist-config.md         ✅ CRÉÉ - Config documentée
+
+
+┌─────────────────────────────────────────────────────────────┐
+│ 🔌 CONFIGURATION SUPABASE                                   │
+└─────────────────────────────────────────────────────────────┘
+
+📍 Project ID    : syxeszmebfizvshaypnq
+🔗 URL          : https://syxeszmebfizvshaypnq.supabase.co
+🔑 Public Key   : sb_publishable_p5srmCHLdgYL-SsOtFeFlg_0CnvyH_H
+✅ Status       : Intégrée dans wishlist.js
+
+
+┌─────────────────────────────────────────────────────────────┐
+│ 📊 TABLE SUPABASE                                           │
+└─────────────────────────────────────────────────────────────┘
+
+wishlist_items
+├── id                    BIGINT (PRIMARY KEY)
+├── product_id            TEXT (UNIQUE)
+├── is_purchased          BOOLEAN
+├── purchased_at          TIMESTAMP
+├── purchased_by_email    TEXT
+└── created_at            TIMESTAMP
+
+✅ RLS Policies Activées (Lecture/Écriture Publiques)
+
+
+┌─────────────────────────────────────────────────────────────┐
+│ 🚀 FLUX DE FONCTIONNEMENT                                   │
+└─────────────────────────────────────────────────────────────┘
+
+   VISITEUR CLIQUE
+        ⬇️
+   wishlist.js envoie requête
+        ⬇️
+   API Supabase reçoit
+        ⬇️
+   DB met à jour wishlist_items
+        ⬇️
+   Classe .purchased ajoutée
+        ⬇️
+   TOUS les visiteurs voient ✅
+
+
+┌─────────────────────────────────────────────────────────────┐
+│ 📋 PROCHAINES ÉTAPES (10 MIN)                               │
+└─────────────────────────────────────────────────────────────┘
+
+1️⃣  CRÉER LA TABLE SUPABASE
+    → Allez dans SQL Editor de Supabase
+    → Exécutez sql-setup.sql
+    → Vérifiez que 4 lignes sont insérées
+
+2️⃣  TESTER LA CONNEXION
+    → Ouvrez wishlist-test.html
+    → Testez "Connexion", "Charger", "Insérer"
+    → Tous les tests doivent être ✅
+
+3️⃣  TESTER SUR VOTRE SITE
+    → Ouvrez wishlist.html
+    → Cliquez sur "Marquer comme acheté"
+    → Vérifiez la classe .purchased
+
+4️⃣  TEST MULTI-NAVIGATEURS
+    → Ouvrez dans 2 navigateurs
+    → Cliquez dans l'un, rafraîchissez l'autre
+    → Vérifiez que ça se synchronise ✅
+
+5️⃣  METTRE EN LIGNE
+    → git add .
+    → git commit -m "feat: add Supabase wishlist sync"
+    → git push origin main
+    → Attendez 1-2 min que GitHub Pages se mette à jour
+
+
+┌─────────────────────────────────────────────────────────────┐
+│ 🆘 BESOIN D'AIDE ?                                          │
+└─────────────────────────────────────────────────────────────┘
+
+📖 CHECKLIST.md          → Checklist détaillée + troubleshooting
+📚 README-WISHLIST.md    → Guide complet
+🧪 wishlist-test.html    → Tests de connexion
+🔍 check-wishlist.sh     → Vérification automatique
+
+
+┌─────────────────────────────────────────────────────────────┐
+│ ✨ RÉSUMÉ                                                    │
+└─────────────────────────────────────────────────────────────┘
+
+✅ Frontend HTML/CSS/JS      → PRÊT
+✅ API Supabase              → CONFIGURÉE
+✅ Documentation             → COMPLÈTE
+✅ Tests                     → FOURNIS
+⏳ Table SQL                 → À CRÉER (5 min)
+
+Une fois la table créée, votre wishlist sera 100% fonctionnelle !
+
+
+╔═══════════════════════════════════════════════════════════════╗
+║                    🎉 PRÊT À LANCER ! 🎉                      ║
+╚═══════════════════════════════════════════════════════════════╝
+

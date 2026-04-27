@@ -1,0 +1,16 @@
+# Configuration locale (ne pas commit)
+wishlist-config.js
+.env
+.env.local
+.env.*.local
+
+# Node modules
+node_modules/
+package-lock.json
+yarn.lock
+
+# IDE
+.vscode/
+.DS_Store
+*.swp
+*.swo
