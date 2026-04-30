@@ -28,80 +28,35 @@
         <header class="header">
             <h1>Restaurants à Lyon</h1>
             <p>Mes recommandations pour bien manger, boire et passer du temps.</p>
+            <a href="https://maps.app.goo.gl/sgo9ETv2czm7os4s7" target="_blank" class="map-link">
+                <i class="hgi hgi-duotone hgi-rounded hgi-location-01"></i>
+                La liste Google Maps des Les +180 restaurants sur Lyon
+            </a>
              
 			<!-- Recherche --> 
                 <div class="search-group">
                     <input type="text" id="searchInput" placeholder="🔍 Chercher par nom, catégorie..." class="search-input">
                 </div>
 			
-		</header>
-
-        <section class="filters-section">
-            <div class="filters-container">
-                <!-- Occasions -->
-                <div class="filter-group-inline">
-                    <button class="filter-btn active" data-filter="occasion" data-value="">Tous</button>
-                    <button class="filter-btn" data-filter="occasion" data-value="amoureux"><i class="hgi hgi-duotone hgi-rounded hgi-favourite"></i> Amoureux</button>
-                    <button class="filter-btn" data-filter="occasion" data-value="groupe"><i class="hgi hgi-duotone hgi-rounded hgi-user-group-03"></i> Groupe</button>
-                    <button class="filter-btn" data-filter="occasion" data-value="famille"><i class="hgi hgi-duotone hgi-rounded hgi-user-group-02"></i> Famille</button>
-                </div>
-
-                <!-- Budget -->
-                <div class="filter-group-inline">
-                    <button class="filter-btn active" data-filter="budget" data-value="">Tous budgets</button>
-                    <button class="filter-btn" data-filter="budget" data-value="€">€</button>
-                    <button class="filter-btn" data-filter="budget" data-value="€€">€€</button>
-                    <button class="filter-btn" data-filter="budget" data-value="€€€">€€€</button>
-                    <button class="filter-btn" data-filter="budget" data-value="€€€€">€€€€</button>
-                </div>
-
-                <!-- Types -->
-                <div class="filter-group-inline">
-                    <button class="filter-btn active" data-filter="type" data-value="">Tous types</button>
-                    <button class="filter-btn" data-filter="type" data-value="restaurant"><i class="hgi hgi-duotone hgi-rounded hgi-restaurant-01"></i> Restaurant</button>
-                    <button class="filter-btn" data-filter="type" data-value="café"><i class="hgi hgi-duotone hgi-rounded hgi-coffee-02"></i> Café</button>
-                    <button class="filter-btn" data-filter="type" data-value="bar"><i class="hgi hgi-duotone hgi-rounded hgi-drink"></i> Bar</button>
-                </div>
-
-                <!-- Quartiers -->
-                <div class="filter-group-inline">
-                    <button class="filter-btn active" data-filter="quartier" data-value="">Tous quartiers</button>
-                    <button class="filter-btn" data-filter="quartier" data-value="Presqu'île">Presqu'île</button>
-                    <button class="filter-btn" data-filter="quartier" data-value="Vieux Lyon">Vieux Lyon</button>
-                    <button class="filter-btn" data-filter="quartier" data-value="6e">6e</button>
-                    <button class="filter-btn" data-filter="quartier" data-value="7e">7e</button>
-                    <button class="filter-btn" data-filter="quartier" data-value="Part-Dieu">Part-Dieu</button>
-                    <button class="filter-btn" data-filter="quartier" data-value="Vaise">Vaise</button>
-                    <button class="filter-btn" data-filter="quartier" data-value="Villeurbanne">Villeurbanne</button>
-                </div>
-
-               
-            </div>
-        </section>
+        </header>
 
         <section class="results-section">
-			   <h2><span id="resultCount">0</span> restaurants</h2>
-
-            <div id="cardsContainer" class="cards-grid"></div>
-
-            <div id="emptyState" class="empty-state" style="display: none;">
+			 <section class="results-title">
+            <i class="hgi hgi-duotone hgi-rounded hgi-star-award-01"></i>
+			<h2>Les top du top restaurants, expérience et claque culinaire</h2>
+        </section>
+            <div id="cardsContainer" class="cards-grid"></div>            <div id="emptyState" class="empty-state" style="display: none;">
                 <p>Aucun restaurant ne correspond à vos critères.</p>
             </div>
         </section>
     </div>
 	<footer class="footer">
-	  <a href="mailto:olichon.adrien@gmail.com?subject=Proposition de restaurant à Lyon" class="footer-link"><i class="hgi hgi-duotone hgi-rounded hgi-mail-01"></i> Proposer un restaurant</a>
+	  <a href="mailto:olichon.adrien@gmail.com?subject=Proposition de restaurant à Lyon" class="footer-link"><i class="hgi hgi-duotone hgi-rounded hgi-mail-01"></i>Proposer un restaurant</a>
 	</footer>
 
 
     <script>
         let allRestaurants = [];
-        let activeFilters = {
-            occasion: '',
-            budget: '',
-            type: '',
-            quartier: ''
-        };
 
         async function loadRestaurants() {
             try {
@@ -121,9 +76,6 @@
         function renderCards(restaurants) {
             const container = document.getElementById('cardsContainer');
             const emptyState = document.getElementById('emptyState');
-            const resultCount = document.getElementById('resultCount');
-
-            resultCount.textContent = restaurants.length;
 
             if (restaurants.length === 0) {
                 container.innerHTML = '';
@@ -138,71 +90,18 @@
                     <div class="card-header">
                         <div class="card-title">
                             <h3>${restaurant.name}</h3>
-							<span>${restaurant.budget}</span>
-					
-
-							${restaurant.michelin ? '<img src="lyon-files/michelin.png" alt="Michelin Star" class="michelin">' : ''}
-							
-							
                         </div>
                     </div>
                     <div class="card-body">
-                        <p class="card-description">${restaurant.description}</p>
+                        <p class="card-description focus-why">${restaurant.why}</p>
                         <div>
-                            ${restaurant.occasions.map(occ => `<span class="tag">${occ}</span>`).join('')}
+                            <span class="tag">${restaurant.category}</span>
                             <span class="tag">${restaurant.quartier}</span>
                         </div>
                     </div>
                 </a>
             `).join('');
         }
-
-        function applyFilters() {
-            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-
-            const filtered = allRestaurants.filter(r => {
-                if (activeFilters.occasion && !r.occasions.includes(activeFilters.occasion)) return false;
-                if (activeFilters.budget && r.budget !== activeFilters.budget) return false;
-                if (activeFilters.type && r.type !== activeFilters.type) return false;
-                if (activeFilters.quartier && r.quartier !== activeFilters.quartier) return false;
-                
-                if (searchTerm) {
-                    const matchesName = r.name.toLowerCase().includes(searchTerm);
-                    const matchesCategory = r.category.toLowerCase().includes(searchTerm);
-                    const matchesDescription = r.description.toLowerCase().includes(searchTerm);
-                    if (!matchesName && !matchesCategory && !matchesDescription) return false;
-                }
-                
-                return true;
-            });
-
-            renderCards(filtered);
-        }
-
-        // Gestion des clics sur les boutons de filtre
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const filterType = this.dataset.filter;
-                const filterValue = this.dataset.value;
-                
-                // Retirer la classe active des autres boutons du même groupe
-                document.querySelectorAll(`[data-filter="${filterType}"]`).forEach(b => {
-                    b.classList.remove('active');
-                });
-                
-                // Ajouter la classe active au bouton cliqué
-                this.classList.add('active');
-                
-                // Mettre à jour le filtre actif
-                activeFilters[filterType] = filterValue;
-                
-                // Appliquer les filtres
-                applyFilters();
-            });
-        });
-
-        // Gestion de la recherche en temps réel
-        document.getElementById('searchInput').addEventListener('input', applyFilters);
 
         loadRestaurants();
     </script>

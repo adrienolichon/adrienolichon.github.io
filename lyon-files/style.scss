@@ -30,20 +30,42 @@ h1, h2, h3 {
 h1 { 
     font-size: 3rem; 
     line-height: 1.1; 
-    margin-bottom: 1rem; 
+    margin-bottom: 0; 
 }
 
-
+.map-link{
+    color: white;
+    background-color: black;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: .2s all ease-in-out;
+    i {
+    color: white;
+    }
+    @media (hover:hover){
+        &:hover {
+            box-shadow: 0 0 0 2px black;
+        }
+    }
+}
 
 .container { 
     max-width: 1400px; 
-    margin:0; 
+    margin:0 auto auto auto; 
     padding: 16px; 
 }
 
 .header { 
-    text-align: center; 
+    text-align: left; 
     padding: 32px 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
 }
 
 .header p { 
@@ -51,8 +73,23 @@ h1 {
     color: #000; 
      font-family: 'Instrument Serif', serif; 
 }
-.results-section { 
+.results-section{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.results-title { 
     margin-top: 8px; 
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+    color: #000;
+    padding-bottom: 4px;
+    i{
+        font-size: 24px;
+    }
     h2{
         font-size: 28px;
     }
@@ -180,14 +217,22 @@ a.card {
 .card-body { 
     padding: 0 16px 8px 16px; 
     flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .card-description { 
     font-size: 22px; 
     color: black; 
-    margin-bottom: 8px; 
+    margin-bottom: 0; 
+    padding: 0;
     line-height: 1.5; 
     font-family: 'Instrument Serif', serif;
+    &.focus-why { 
+        font-size: 24px; 
+         font-weight: 500;
+    }
 }
 
 .tag { 
