@@ -2,18 +2,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Instrument Serif", serif;
 }
 
 :root {
-  --text-color: #1a1a1a;
+  --text-color: black;
   --bg: #fff;
   --border: #e5e5e5;
-  --fun-gold: #d4af37;
-  --fun-dark: #1a472a;
 }
 
 body {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Instrument Serif", serif;
   background: var(--bg);
   color: var(--text-color);
   line-height: 1.6;
@@ -26,12 +25,20 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 48px;
   line-height: 1.1;
   margin-bottom: 0;
 }
 
-.map-link {
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+.map-link, .footer-link {
   color: white;
   background-color: black;
   padding: 8px 16px;
@@ -39,22 +46,18 @@ h1 {
   text-decoration: none;
   display: inline-flex;
   align-items: center;
+  font-size: 20px;
   gap: 8px;
   transition: 0.2s all ease-in-out;
 }
-.map-link i {
+.map-link i, .footer-link i {
   color: white;
-}
-@media (hover: hover) {
-  .map-link:hover {
-    box-shadow: 0 0 0 2px black;
-  }
 }
 
 .container {
   max-width: 700px;
-  margin: 0 auto auto auto;
-  padding: 16px;
+  margin: 0 auto;
+  padding: 24px;
 }
 
 .header {
@@ -68,8 +71,6 @@ h1 {
 
 .header p {
   font-size: 24px;
-  color: #000;
-  font-family: "Instrument Serif", serif;
 }
 
 .results-section {
@@ -84,58 +85,13 @@ h1 {
   flex-direction: row;
   gap: 8px;
   align-items: center;
-  justify-content: flex-start;
-  color: #000;
-  padding-bottom: 4px;
 }
 .results-title i {
   font-size: 24px;
 }
-.results-title h2 {
-  font-size: 32px;
-}
 
 .search-group {
-  margin-top: 8px;
-  display: flex;
-  justify-content: center;
-  width: 100%;
   display: none;
-}
-
-.filters-section {
-  background: transparent;
-  padding: 16px;
-  border-radius: 8px;
-  margin-bottom: 16px;
-  border: 1px solid var(--border);
-}
-.filters-section .filters-container {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: flex-start;
-}
-.filters-section .filters-container .filter-group-inline {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-.filters-section .filters-container .filter-group-inline .filter-btn {
-  padding: 8px 16px;
-  background: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  color: black;
-  transition: all 0.2s;
-  border: 1px solid var(--border);
-}
-.filters-section .filters-container .filter-group-inline .filter-btn.active {
-  background: #DB0007;
-  background: black;
-  color: white;
 }
 
 .cards-grid {
@@ -149,44 +105,23 @@ a.card {
   border: 1px solid var(--border);
   border-radius: 8px;
   overflow: hidden;
-  transition: all 0.3s;
   display: flex;
+  padding: 16px;
+  gap: 8px;
   flex-direction: column;
   height: -moz-fit-content;
   height: fit-content;
-  color: #000;
+  color: inherit;
   text-decoration: none;
 }
 a.card *, a.card h3, a.card p {
   text-decoration: none;
 }
 
-@media (hover: hover) {
-  .card:hover {
-    border-color: var(--text-color);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  }
-}
 .card-header {
-  padding: 16px 16px 4px 16px;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 16px;
-  position: relative;
-}
-
-.card-icon {
-  font-size: 2rem;
-  flex-shrink: 0;
-  color: #999;
-}
-
-.michelin {
-  position: absolute;
-  inset: 8px 8px auto auto;
-  width: 20px;
-  height: 20px;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .card-title {
@@ -195,9 +130,15 @@ a.card *, a.card h3, a.card p {
   flex-wrap: wrap;
   gap: 8px;
   align-items: center;
-  width: 100%;
 }
-.card-title .etoile {
+
+.card-title h3 {
+  margin: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.etoile {
   width: 24px;
   height: 24px;
   background-image: url("michelin.png");
@@ -205,101 +146,33 @@ a.card *, a.card h3, a.card p {
   background-repeat: no-repeat;
 }
 
-.card-title h3 {
-  margin: 0;
-  font-size: 2rem;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.card-body {
-  padding: 0 16px 8px 16px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
 .card-description {
   font-size: 22px;
-  color: black;
-  margin-bottom: 0;
+  font-weight: 500;
+  margin: 0;
   padding: 0;
   line-height: 1.5;
-  font-family: "Instrument Serif", serif;
-}
-.card-description.focus-why {
-  font-size: 24px;
-  font-weight: 500;
 }
 
 .tag {
   display: inline-block;
-  padding: 4px 8px;
-  border: 1px solid #f0f0f0;
-  font-family: "Instrument Serif", serif;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
   border-radius: 4px;
   font-size: 18px;
-  color: #000;
-}
-
-.card-footer a {
-  display: block;
-  padding: 16px;
-  background: #F4F1EA;
-  color: var(--text-color);
-  text-decoration: none;
-  border-radius: 4px;
-  text-align: center;
-  font-weight: 500;
-  transition: all 0.2s;
+  line-height: 18px;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .empty-state {
   text-align: center;
-  padding: 3rem;
-  color: #999;
-}
-
-.fun-checkbox {
-  width: 1.2rem;
-  height: 1.2rem;
-  cursor: pointer;
+  padding: 48px 24px;
+  color: black;
 }
 
 .footer {
   padding: 32px 0;
   margin-bottom: 32px;
-  text-align: center;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.footer-link {
-  margin: 8px 0 0 0;
-  text-decoration: none;
-  color: black;
-  padding: 16px 24px;
-  font-weight: 500;
-  transition: all 0.2s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
-
-.footer-link:hover {
-  color: #000;
-}
-
-.footer-separator {
-  width: 1px;
-  height: 1.5rem;
-  background: var(--border);
+  text-align: left;
 }/*# sourceMappingURL=style.css.map */
