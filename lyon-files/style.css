@@ -52,7 +52,7 @@ h1 {
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 700px;
   margin: 0 auto auto auto;
   padding: 16px;
 }
@@ -92,7 +92,7 @@ h1 {
   font-size: 24px;
 }
 .results-title h2 {
-  font-size: 28px;
+  font-size: 32px;
 }
 
 .search-group {
@@ -140,18 +140,10 @@ h1 {
 
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: 1fr;
   gap: 16px;
 }
 
-@media (max-width: 768px) {
-  .cards-grid {
-    grid-template-columns: 1fr;
-  }
-  h1 {
-    font-size: 2rem;
-  }
-}
 a.card {
   background: white;
   border: 1px solid var(--border);
@@ -173,7 +165,6 @@ a.card *, a.card h3, a.card p {
   .card:hover {
     border-color: var(--text-color);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    transform: translateY(-2px);
   }
 }
 .card-header {
@@ -199,15 +190,26 @@ a.card *, a.card h3, a.card p {
 }
 
 .card-title {
-  display: grid;
-  grid-template-columns: 1fr auto auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 8px;
   align-items: center;
+  width: 100%;
+}
+.card-title .etoile {
+  width: 24px;
+  height: 24px;
+  background-image: url("michelin.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .card-title h3 {
   margin: 0;
   font-size: 2rem;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .card-body {
@@ -234,13 +236,11 @@ a.card *, a.card h3, a.card p {
 .tag {
   display: inline-block;
   padding: 4px 8px;
-  background: #f0f0f0;
+  border: 1px solid #f0f0f0;
   font-family: "Instrument Serif", serif;
-  border-radius: 2px;
+  border-radius: 4px;
   font-size: 18px;
   color: #000;
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
 }
 
 .card-footer a {
@@ -268,9 +268,8 @@ a.card *, a.card h3, a.card p {
 }
 
 .footer {
-  border-top: 1px solid var(--border);
-  padding: 3rem 0;
-  margin-top: 3rem;
+  padding: 32px 0;
+  margin-bottom: 32px;
   text-align: center;
 }
 
@@ -284,8 +283,9 @@ a.card *, a.card h3, a.card p {
 
 .footer-link {
   margin: 8px 0 0 0;
-  text-decoration: underline;
+  text-decoration: none;
   color: black;
+  padding: 16px 24px;
   font-weight: 500;
   transition: all 0.2s;
   display: flex;

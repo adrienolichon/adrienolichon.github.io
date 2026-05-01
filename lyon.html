@@ -30,7 +30,7 @@
             <p>Mes recommandations pour bien manger, boire et passer du temps.</p>
             <a href="https://maps.app.goo.gl/sgo9ETv2czm7os4s7" target="_blank" class="map-link">
                 <i class="hgi hgi-duotone hgi-rounded hgi-location-01"></i>
-                La liste Google Maps des Les +180 restaurants sur Lyon
+                La liste Google Maps des +180 restaurants
             </a>
              
 			<!-- Recherche --> 
@@ -43,12 +43,13 @@
         <section class="results-section">
 			 <section class="results-title">
             <i class="hgi hgi-duotone hgi-rounded hgi-star-award-01"></i>
-			<h2>Les top du top restaurants, expérience et claque culinaire</h2>
+			<h2>La sélection des meilleures</h2>
         </section>
             <div id="cardsContainer" class="cards-grid"></div>            <div id="emptyState" class="empty-state" style="display: none;">
                 <p>Aucun restaurant ne correspond à vos critères.</p>
             </div>
         </section>
+        <div class="map"></div>
     </div>
 	<footer class="footer">
 	  <a href="mailto:olichon.adrien@gmail.com?subject=Proposition de restaurant à Lyon" class="footer-link"><i class="hgi hgi-duotone hgi-rounded hgi-mail-01"></i>Proposer un restaurant</a>
@@ -90,14 +91,16 @@
                     <div class="card-header">
                         <div class="card-title">
                             <h3>${restaurant.name}</h3>
+                            ${restaurant.etoile ? '<span class="etoile"></span>' : ''}
+                            
+                            <span class="tag">${restaurant.category}</span>
+                            <span class="tag">${restaurant.quartier}</span>
+                      
                         </div>
                     </div>
                     <div class="card-body">
                         <p class="card-description focus-why">${restaurant.why}</p>
-                        <div>
-                            <span class="tag">${restaurant.category}</span>
-                            <span class="tag">${restaurant.quartier}</span>
-                        </div>
+                        
                     </div>
                 </a>
             `).join('');

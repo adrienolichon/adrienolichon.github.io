@@ -2,164 +2,155 @@
   "restaurants": [
     {
       "name": "Fujiyama 55",
-      "category": "japonais",
-      "quartier": "7e - Jean Macé (Métro: Jean Macé)",
-      "mapsUrl": "https://maps.app.goo.gl/D3q5iCYRdrGmSqr98",
-      "why": "Excellence culinaire, fraîcheur des produits"
+      "category": "Japonais",
+      "quartier": "7e, métro Jean Macé",
+      "mapsUrl": "https://maps.app.goo.gl/nvrvCHTxU1h4N18j6",
+      "why": "Mon bistro Japonais préféré"
     },
   {
       "name": "La Table de Max",
-      "category": "français",
-      "quartier": "7e - Jean Macé (Métro: Jean Macé)",
-      "mapsUrl": "https://maps.app.goo.gl/ucQZ61qgaVQ2eMY38",
-      "why": "Chef passionné, assiettes surprenantes"
+      "category": "Français",
+      "quartier": "7e, métro Jean Macé",
+      "mapsUrl": "https://maps.app.goo.gl/P5F9E6irgfFscAW57",
+      "why": "Un peu n'importe quoi, mais en bien"
     },
     {
       "name": "Veronatuti",
-      "category": "italien",
-      "quartier": "3e - Préfecture (Métro: Saxe-Gambetta)",
-      "mapsUrl": "https://maps.app.goo.gl/8sJqE9xMYkf27ifd8",
-      "why": "L'unique italien différent, saveurs vraies"
+      "category": "Italien",
+      "quartier": "3e, métro Saxe-Gambetta",
+      "mapsUrl": "https://maps.app.goo.gl/6Vxgzw4E7STJtJPeA",
+      "why": "Un Italien très différent"
     },
     {
       "name": "Mertensia",
-      "category": "végétarien",
-      "quartier": "7e - Jean Macé (Métro: Saxe-Gambetta)",
+      "category": "Végétale",
+      "quartier": "6e, métro Massena",
       "mapsUrl": "https://maps.app.goo.gl/LuGX2rARkcTHT5yU8",
       "why": "Cuisine végétale gastronomique d'exception"
     },
     {
       "name": "Culina Hortus",
-      "category": "végétarien",
-      "quartier": "1er - Hôtel de Ville (Métro: Hôtel de Ville)",
+      "category": "Végétarien",
+      "quartier": "1er, métro Hôtel de Ville",
       "mapsUrl": "https://maps.app.goo.gl/hNTTuvKjawQXvu148",
-      "why": "Référence mondiale de la cuisine végétale"
+      "why": "Référence mondiale de la cuisine végétarienne gastronomique"
     },
     {
       "name": "Le Limonadier",
-      "category": "français",
-      "quartier": "1er - Terreaux (Métro: Hôtel de Ville)",
+      "category": "Français",
+      "quartier": "1er, métro Hôtel de Ville",
+
       "mapsUrl": "https://maps.app.goo.gl/FsXsR87jTBMc5fmR6",
-      "why": "Classiques revisités, carte variée"
+      "why": "Le restaurant le plus engagé pour l'environnement, prendre tout la carte et partager"
     },
     {
       "name": "Alebrije",
-      "category": "mexicain",
-      "quartier": "4e - Croix-Rousse (Métro: Croix-Rousse)",
+      "category": "Mexicain",
+      "quartier": "4e, métro Croix-Rousse",
       "mapsUrl": "https://maps.app.goo.gl/Y9hBeFpu3Wuuo5Jm9",
-      "why": "Saveurs mexicaines authentiques"
+      "why": "Le Mexique en gastronomique"
     },
     {
       "name": "Ombellule",
-      "category": "français",
-      "quartier": "1er - Pentes (Métro: Hôtel de Ville)",
+      "category": "Français",
+      "quartier": "6e, métro Foch",
+      "etoile": true,
       "mapsUrl": "https://maps.app.goo.gl/McNaFKjNdff362KZ6",
-      "why": "Décor élégant, expérience raffinée"
+      "why": "Art déco, Homard en 2 services"
     },
     {
       "name": "L'Atelier des Augustins",
-      "category": "français",
-      "quartier": "1er - Terreaux (Métro: Hôtel de Ville)",
+      "category": "Français",
+      "quartier": "1er, métro Hôtel de Ville",
+      "etoile": true,
       "mapsUrl": "https://maps.app.goo.gl/ieNwJUTQcTsaAHUs6",
-      "why": "Créativité et précision"
+      "why": "Très attentionné, des vins d'exceptions"
     },
     {
       "name": "Prairial",
-      "category": "gastronomique",
-      "quartier": "5e - Vieux Lyon (Métro: Vieux Lyon)",
+      "category": "Français",
+      "quartier": "2e, tramway Confluence",
+      "etoile": true,
       "mapsUrl": "https://maps.app.goo.gl/pnXLcvPtW5wZPmPQ7",
-      "why": "Étoilé Michelin, produits de saison"
+      "why": "Cuisine ouverte et engagement durable"
     },
     {
       "name": "Circle",
-      "category": "français",
-      "quartier": "2e - Bellecour (Métro: Bellecour)",
+      "category": "Français",
+      "etoile": true,
+      "quartier": "1er, métro Hôtel de Ville",
       "mapsUrl": "https://maps.app.goo.gl/fDspGYdZA7ahxjGK7",
-      "why": "Concept moderne et durable"
+      "why": "Un étoilé moderne, accord mets/boissons sans alcool exceptionnel"
     },
     {
       "name": "O'Kypos",
-      "category": "grec",
-      "quartier": "1er - Pentes (Métro: Hôtel de Ville)",
+      "category": "Grec",
+      "quartier": "9e, métro Valmy",
       "mapsUrl": "https://maps.app.goo.gl/qE9gYLCsuSVJJ5Qi9",
-      "why": "Cuisine grecque raffinée"
+      "why": "Prendre tout la carte et partager"
     },
     {
       "name": "Leptine",
-      "category": "français",
-      "quartier": "7e - Jean Macé (Métro: Jean Macé)",
+      "category": "Français",
+      "quartier": "1er, métro Hôtel de Ville",
       "mapsUrl": "https://maps.app.goo.gl/dxx1USZYHs2mD8ZM7",
-      "why": "Finesse et légèreté"
-    },
-    {
-      "name": "Brume",
-      "category": "français",
-      "quartier": "2e - Ainay (Métro: Ampère)",
-      "mapsUrl": "https://maps.app.goo.gl/pDj9w3rfJxVLFTPq8",
-      "why": "Atmosphère unique"
+      "why": "On ne voit pas ce que l'on mange, mais c'est bon"
     },
     {
       "name": "Contrast.",
-      "category": "fusion",
-      "quartier": "3e - Préfecture (Métro: Guillotière)",
+      "category": "Cocktails",
+      "quartier": "2e, métro Cordeliers",
       "mapsUrl": "https://maps.app.goo.gl/pYCuMF9KBotMWWH29",
-      "why": "Saveurs contrastées"
-    },
-    {
-      "name": "Brutal",
-      "category": "français",
-      "quartier": "3e - Préfecture (Métro: Saxe-Gambetta)",
-      "mapsUrl": "https://maps.app.goo.gl/7xJhD3EyjmznM7ZQ6",
-      "why": "Produits bruts sublimés"
+      "why": "Le seul bar à cocktails de la liste"
     },
     {
       "name": "Les Téléphones",
-      "category": "bouchon",
-      "quartier": "5e - Fourvière (Métro: Vieux Lyon)",
+      "category": "Français",
+      "quartier": "5e, métro Fourvière",
       "mapsUrl": "https://maps.app.goo.gl/96kkeZ1o42exQxpi7",
-      "why": "Ambiance lyonnaise authentique"
+      "why": "Lieu exceptionnel, cuisine fraiche et chic"
     },
     {
       "name": "Croûton",
-      "category": "bistrot",
-      "quartier": "1er - Hôtel de Ville (Métro: Hôtel de Ville)",
+      "category": "Bistro",
+      "quartier": "7e, métro Jean Macé",
       "mapsUrl": "https://maps.app.goo.gl/sY5GWHVyTDXEjzYy7",
-      "why": "Convivial et accessible"
+      "why": "Convivial et copieux (meilleur que n'importe quelle bouchon)"
     },
     {
       "name": "Tomo",
-      "category": "asiatique",
-      "quartier": "6e - Foch (Métro: Foch)",
+      "category": "Japonais",
+      "quartier": "6e, métro Foch",
       "mapsUrl": "https://maps.app.goo.gl/P2Wwj1ytXr4YR7Ur6",
-      "why": "Fusion créative"
+      "why": "Japonais sans sushi, prendez ce que vous ne connaissez pas"
     },
     {
       "name": "Ayla",
-      "category": "turc",
-      "quartier": "7e - Jean Macé (Métro: Jean Macé)",
+      "category": "Franco-Libanais",
+      "quartier": "6e, métro Part-Dieu",
       "mapsUrl": "https://maps.app.goo.gl/gPJAVQjY6ZY9euVJ8",
-      "why": "Cuisine généreuse"
+      "why": "Fusion rare, prendre toute la carte et partager"
     },
     {
       "name": "New China",
-      "category": "chinois",
-      "quartier": "7e - Guillotière (Métro: Guillotière)",
+      "category": "Chinois",
+     "quartier": "6e, métro Part-Dieu",
       "mapsUrl": "https://maps.app.goo.gl/XKYEMFpxk969aF1o8",
-      "why": "Spécialités authentiques"
+      "why": "Appelez à l'avance pour le canard laqué"
     },
     {
       "name": "Décalé",
-      "category": "français",
-      "quartier": "3e - Part-Dieu (Métro: Part-Dieu)",
+      "category": "Français",
+      "quartier": "6e, métro Brotteaux",
       "mapsUrl": "https://maps.app.goo.gl/nzmfCM3XYPCkZHKh8",
-      "why": "Originalité"
+      "why": "De beaux posissons, un bistro moderne"
     },
     {
       "name": "Brasserie de l'Est",
-      "category": "brasserie",
-      "quartier": "6e - Brotteaux (Métro: Brotteaux)",
+      "category": "Français",
+      "quartier": "6e, métro Brotteaux",
       "mapsUrl": "https://maps.app.goo.gl/fJpN1Meq9Ljnwthz8",
-      "why": "Institution Lyonnaise"
+      "why": "Le meilleur de Bocuse"
     }
   ]
 }
