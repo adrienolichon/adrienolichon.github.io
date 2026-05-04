@@ -99,30 +99,36 @@ document.addEventListener('DOMContentLoaded', async function() {
       button.disabled = true;
     }
   });
-
-  // Ajouter les event listeners aux boutons
+  
+  // Ajouter les écouteurs de clic sur les boutons
   document.querySelectorAll('.buy-button').forEach(button => {
     button.addEventListener('click', async function(e) {
       e.preventDefault();
       
-      const card = this.closest('.card');
-      const productId = card.getAttribute('data-product-id');
+      const card = this.closest('[data-product-id]');
+      const productId = card.dataset.productId;
+      const productName = card.querySelector('h2').textContent;
       
-      // Vérifier si déjà acheté
-      if (!card.classList.contains('purchased')) {
-        this.disabled = true;
-        this.textContent = 'Sauvegarde...';
-        
-        // Marquer comme acheté dans Supabase
+      // Déterminer le propriétaire (Alicia ou Adrien)
+      let owner = 'Alicia';
+      const section = card.closest('section');
+      if (section && section.querySelector('h1').textContent.includes('Adrien')) {
+        owner = 'Adrien';
+      }
+      
+      // Afficher la confirmation native du navigateur
+      const isConfirmed = confirm(
+        `Es-tu sûr de marquer comme acheté ce produit pour ${owner} ?\n\n"${productName}"`
+      );
+      
+      if (isConfirmed) {
         const success = await markAsPurchased(productId);
-        
         if (success) {
           card.classList.add('purchased');
-          this.textContent = 'Acheté !';
+          this.disabled = true;
+          this.textContent = '✓ Acheté';
         } else {
-          this.disabled = false;
-          this.textContent = 'Marquer comme acheté';
-          alert('Erreur de sauvegarde');
+          alert('Erreur lors de la sauvegarde. Veuillez réessayer.');
         }
       }
     });
