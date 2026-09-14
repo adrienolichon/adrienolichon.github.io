@@ -661,6 +661,22 @@ html {
 				}
 			}
 		}
+		li {
+			padding: 8px 0;
+			color: white;
+			list-style: inside;
+			width: 100%;
+			a {
+				color: white;
+				font-size: var(--fs-body);
+				width: 100%;
+				@media (hover: hover) {
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+			}
+		}
 	}
 
 }
